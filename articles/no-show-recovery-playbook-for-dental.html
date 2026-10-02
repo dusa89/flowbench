@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The No-Show Recovery Playbook for Dental Practices (2026) — FlowBench</title>
+<meta name="description" content="A how-to playbook for dental practices losing chair hours to no-shows and late cancellations: a ranked short-notice waitlist, a 10-minute AI fill call that books the empty slot, and a dignity-first rebook path for the patient who didn't show — with the HIPAA and consent constraints stated first and every figure sourced and dated. Independent — verify on vendor sites before buying.">
+<style>
+  :root { --ink:#1a1a1a; --mut:#5c5c5c; --line:#d8d8d8; --acc:#7c3aed; --bg:#f6f7f9; --warn:#fbf3df; }
+  * { box-sizing:border-box; }
+  body { font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); margin:0; line-height:1.6; }
+  header.top { background:#1e1433; color:#fff; padding:16px 24px; }
+  header.top h1 { margin:0; font-size:21px; }
+  header.top p { margin:4px 0 0; font-size:13px; color:#c9bdf2; }
+  main { max-width:900px; margin:0 auto; padding:24px; }
+  .disc { background:var(--warn); border:1px solid #e3cf9a; border-radius:10px; padding:14px 16px; font-size:13.5px; margin-bottom:22px; }
+  .verdict { background:#fff; border:1px solid var(--line); border-left:5px solid var(--acc); border-radius:8px; padding:16px 18px; margin-bottom:22px; }
+  .verdict h2 { margin:0 0 8px; font-size:17px; }
+  .step { background:#fff; border:1px solid var(--line); border-radius:8px; padding:16px 18px; margin-bottom:16px; }
+  .step h2 { margin:0 0 8px; font-size:17px; }
+  .step h2 .n { display:inline-block; background:var(--acc); color:#fff; border-radius:50%; width:28px; height:28px; text-align:center; line-height:28px; font-size:15px; margin-right:8px; }
+  .step p, .step li { font-size:14px; color:#333; }
+  .step .tools { font-size:13px; color:var(--mut); }
+  .hard { background:#fdecec; border:1px solid #e8b4b4; border-radius:8px; padding:16px 18px; margin-bottom:22px; font-size:14px; }
+  .hard h2 { margin:0 0 8px; font-size:17px; }
+  table { width:100%; border-collapse:collapse; background:#fff; font-size:14px; margin:0 0 22px; }
+  th, td { border:1px solid var(--line); padding:10px 12px; text-align:left; vertical-align:top; }
+  th { background:#f0eafa; font-size:12.5px; text-transform:uppercase; letter-spacing:.4px; }
+  td.src { font-size:12px; color:var(--mut); }
+  h2.sec { font-size:19px; margin:30px 0 10px; }
+  .cta { display:flex; gap:12px; flex-wrap:wrap; margin:18px 0 26px; }
+  .cta a { background:var(--acc); color:#fff; text-decoration:none; padding:12px 20px; border-radius:8px; font-weight:600; font-size:14.5px; }
+  .cta a.ghost { background:#fff; color:var(--acc); border:1px solid var(--acc); }
+  .faq { background:#fff; border:1px solid var(--line); border-radius:8px; padding:16px 18px; margin-bottom:14px; }
+  .faq h3 { margin:0 0 6px; font-size:15.5px; }
+  .faq p { margin:0; font-size:14px; color:#333; }
+  footer.note { max-width:900px; margin:0 auto; padding:0 24px 34px; font-size:12.5px; color:var(--mut); }
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>FlowBench — Automation picks for small business</h1>
+  <p>Playbooks, not just picks: step-by-step automation setups for specific industries. Every tool term below is labeled with its source and date — vendors change tiers often, so verify on the vendor site before you buy.</p>
+</header>
+<main>
+  <h2 class="sec" style="margin-top:6px">Playbook #7: The No-Show Recovery Playbook for Dental Practices (2026)</h2>
+
+  <div class="disc">
+    <strong>Disclosure:</strong> FlowBench is independent — not affiliated with Make, Synthflow, ElevenLabs, or n8n.
+    The buttons below are <strong>affiliate placeholders</strong>: if we join their partner programs,
+    we may earn a commission when you sign up, at no added cost to you. We never accept payment for
+    placement. Affiliate terms were checked against the vendors' own pages on <strong>October 1–2, 2026</strong>
+    (make.com/en/affiliate; n8n.io/affiliates; official Synthflow partner terms; elevenlabs.io/affiliates-terms).
+    Tool pricing and vendor claims named here come from the third-party sources noted — <strong>confirm current
+    pricing and terms on each vendor's own site before buying.</strong> Nothing here is legal or compliance
+    advice — review HIPAA and the TCPA with counsel before automating any patient outreach.
+  </div>
+
+  <div class="hard">
+    <h2>The constraints: HIPAA is a gate, not a checkbox — and the short-notice list gets consent at intake</h2>
+    <p>Three hard gates, and they sit before step 0 because a dental schedule is protected health information.
+    <strong>Gate 1 — HIPAA:</strong> appointment data is PHI. Only HIPAA-capable tooling with a signed business
+    associate agreement (BAA) touches the schedule or patient list — the same box as our dental voice-agent
+    playbook (#2). In practice that means the reminder/consent layer runs on a HIPAA-flagged tool (the #2
+    playbook documents the Trillet $49/month non-PHI lane versus Voicify's quote-gated HIPAA fork as the fork
+    point) and nothing carrying patient identity or visit detail ever flows through a non-BAA automation or
+    model. <strong>Gate 2 — outreach consent:</strong> the AI fill call and the short-notice texts are automated
+    outreach, governed by the TCPA in the US and CASL in Canada. Consent is captured at intake or first booking
+    ("we may text or call about your appointments and openings that fit you") and recorded in the practice
+    management system before step 1 fires — and every automated message carries a working opt-out. This is the
+    same discipline the established vendors observe: Solutionreach, for example, notes TCPA and CASL support and
+    asks staff to check each message against them before sending (softwarefinder.com, vendor page updated
+    September 2, 2026). <strong>Gate 3 — the AI identifies itself:</strong> the fill call opens by saying it is
+    the practice's automated scheduler — never a front-desk staffer — and hands to a human the moment a patient
+    sounds confused, upset, or in pain. A patient in pain is triaged to the on-call line like our after-hours
+    playbook (#5), never left in automation. And the playbook's founding rule: <strong>a no-show is a schedule
+    event, never a blame event.</strong> The patient who didn't show gets rebooked with dignity, not lectured
+    by a machine. This page is a playbook, not compliance advice.</p>
+  </div>
+
+  <div class="verdict">
+    <h2>The short version</h2>
+    <p>Our missed-call playbooks (#1 for contractors, #2 for dental) catch the calls you miss — this playbook
+    <strong>catches the appointments that go empty</strong>. The trigger is the schedule itself, not the phone:
+    a no-show flag or a late cancellation opens a chair slot, and a ranked short-notice waitlist starts working
+    it in minutes, because the refill window is minutes, not hours — <strong>ten minutes is the target, not the
+    same afternoon</strong> (hamzaasumah.org, September 2026). The AI calls down the waitlist in order and books
+    the first patient who says yes straight into the practice management schedule; the patient who didn't show
+    gets a separate, dignity-first rebook path. Reminders already do the prevention work — <strong>automated
+    reminders cut dental no-shows 25–45%</strong> (compilation via hamzaasumah.org, September 2026) — but the
+    residual is still the industry's biggest recoverable leak: Planet DDS's 2025 data across 3,400 practices
+    puts the no-show rate at <strong>7.4%</strong> with <strong>15.5%</strong> in advance cancellations (via
+    iSedate's 2026 compilation, crawled October 2026); without automated reminders the American Dental
+    Association's benchmark is <strong>30%</strong>, and <strong>new-patient no-shows run 35–40%</strong> (2026
+    industry compilation via trtc.io, crawled October 2026). At <strong>$200–$400 in lost production per missed
+    appointment</strong> and <strong>$500–$800 per empty chair hour</strong>, the annual cost lands at
+    <strong>$105,000–$300,000+ per provider</strong> (iSedate 2026, crawled October 2, 2026). And the recovery
+    math is measured, not hopeful: short-notice waitlists are accepted <strong>25–40%</strong> of the time, a
+    10-point no-show reduction is worth <strong>$60,000–$120,000 recovered against $4,000–$10,000 in technology
+    cost</strong>, and one study of <strong>1,604,184 appointments across 64 practices cut no-shows
+    22.95%</strong> (compilation via hamzaasumah.org, September 2026). The build is <strong>Make</strong> (the
+    schedule watch, the ranked waitlist engine, the SMS branch), <strong>Synthflow</strong> (the AI fill call —
+    consent-gated, self-identifying), and <strong>ElevenLabs</strong> voices so the call sounds like your
+    office. All stats above are third-party and dated — direction, not a guarantee for your market.</p>
+  </div>
+
+  <div class="step">
+    <h2 class="sec">Step 0 — Write the two rules before you automate anything</h2>
+    <h2><span class="n">0</span>The consent line and the no-blame line, on paper</h2>
+    <p>Rule one: the short-notice list is opt-in at intake. Every new patient is asked, plainly: "If a slot
+    opens sooner than yours, may we text or call to offer it?" The answer is recorded as a structured field
+    (consent date, channel) in the practice management system — this is gate 2 of the hard box, and the
+    waitlist is dead without it. Rule two: no-shows are handled by policy, not by robot. Write the practice's
+    missed-appointment policy on one page — rebook-first language, how the team tightens confirmation after a
+    second miss, what the cancellation window is — and sign it off with counsel. The automation in this
+    playbook never invents policy, never lectures, and never penalizes; it recovers the slot and rebooks the
+    patient. Same family principle as #2's HIPAA box: the system enforces the written rule, it doesn't write
+    the rule.</p>
+    <p class="tools"><strong>Built with:</strong> the practice's existing consent field in the PMS — no new
+    software; Make holds a copy of the ranked list (see step 2).</p>
+  </div>
+
+  <div class="step">
+    <h2 class="sec">Step 1 — The empty-slot trigger</h2>
+    <h2><span class="n">1</span>Schedule watch: no-show flag, late-cancel flag, gap opened</h2>
+    <p>Make watches the schedule three ways: a no-show flag from the front desk (the appointment starts and the
+    patient isn't there), a late-cancellation event (patient cancels inside the practice's window), and a gap
+    detection (a slot sits unfilled within 72 hours). Each trigger fires with the same payload: procedure type
+    and chair time needed, provider, date/time of the slot, and how long until the slot expires. The payload
+    carries no PHI outside HIPAA-gated systems — gate 1 runs through every step. The trigger also opens the
+    timer: the practice's rule is that every empty slot gets a first fill attempt within 10 minutes of the
+    flag, per the hamzaasumah ten-minute rule above. The rest of the playbook exists to make that SLA
+    automatic instead of heroic.</p>
+    <p class="tools"><strong>Built with:</strong> Make — the schedule watcher (PMS webhook, email-to-webhook
+    bridge, or SMS-flag relay for systems without an API; integration load is disclosed — see FAQ), the 10-minute
+    SLA timer.</p>
+  </div>
+
+  <div class="step">
+    <h2 class="sec">Step 2 — The ranked short-notice waitlist</h2>
+    <h2><span class="n">2</span>Built at booking, ordered by fit, not first-come</h2>
+    <p>The waitlist is the engine. It is built every time a patient books or confirms: "Want first dibs if
+    something opens sooner?" Opt-ins land on a ranked list — not first-come-first-served, but ordered by
+    procedure fit (does this patient need the chair time this slot offers?), then by how long they've waited,
+    then by provider preference and distance. When step 1 fires, Make scores the list against the open slot
+    and queues the top three to five candidates. The list is a living thing: patients roll off when booked,
+    pause when they decline twice in a month, and re-confirm their spot at every recall visit. This is the
+    difference from a reminder system: reminders shout at the patient who might not come; the waitlist talks
+    to the patients who want to come sooner. Published waitlist fill benchmarks exist in the buy market — Luma
+    Health's "Smart Waitlist" product ships with published fill-rate benchmarks (via emitrr.com, crawled
+    October 2026) — which tells you this lane is proven enough that vendors name numbers.</p>
+    <p class="tools"><strong>Built with:</strong> Make — the ranked-list data store (patients keyed by procedure
+    type, wait duration, preference, consent state); refreshes on every booking/confirmation.</p>
+  </div>
+
+  <div class="step">
+    <h2 class="sec">Step 3 — The AI fill call</h2>
+    <h2><span class="n">3</span>Call down the list in order, book the first yes</h2>
+    <p>Synthflow calls the ranked candidates in order, each call self-identifying in the first sentence:
+    "This is the automated scheduler for [practice] — a slot opened today at [time] for [procedure]. Would
+    you like it?" A yes books straight into the PMS and stops the cascade; a no or no-answer moves to the next
+    candidate; a third strike triggers the SMS branch — a two-way text with a one-tap "CLAIM" link and the
+    front-desk number. The human fallback is explicit: if nobody claims the slot within the 10-minute window,
+    the system pages the front desk with the slot details and the three closest candidates, so the recovery
+    attempt is never worse than what the practice did before. The voice is an ElevenLabs office-warm voice —
+    the family rule — never a chipper robot, never pretending to be staff. Two measured anchors for this step:
+    waitlist offers are accepted <strong>25–40%</strong> of the time (compilation via hamzaasumah.org, September
+    2026), and <strong>20–35% of the no-show revenue loss is recoverable</strong> (same compilation) — which is
+    why the cascade keeps calling: a few attempts at 30% acceptance is how a 60%+ slot-fill rate happens.</p>
+    <p class="tools"><strong>Built with:</strong> Synthflow (the fill call, self-identifying script, SMS branch)
+    + ElevenLabs (the voice — a warm office voice, never a chipper robot) + Make (the cascade engine, the
+    10-minute window, the front-desk fallback page).</p>
+  </div>
+
+  <div class="step">
+    <h2 class="sec">Step 4 — The no-show patient's own recovery</h2>
+    <h2><span class="n">4</span>Rebook with dignity, tighten the confirmation</h2>
+    <p>This is a separate path from the fill cascade — and the reason gate 3 exists. The patient who didn't
+    show gets their own call, on their own cadence: a Synthflow rebook call that opens with understanding, not
+    policy — "We missed you today. Are you all right? Can we find you a new time?" — and offers two concrete
+    slots. A second consecutive miss triggers the practice's written confirmation tightening (card-hold language
+    is the practice's own written policy, never invented by the automation). Note what this step is not: it is
+    not a punishment, not a lecture, and not a review-style blast. No-show patients are future revenue — a new
+    patient who vanishes after booking is already-paid-for marketing spend walking away (one 2026 practice
+    audit of new-patient show rates put the monthly leak near six figures, documented in a Root Data walkthrough
+    video, 2026). Recovering them is worth more than replacing them.</p>
+    <p class="tools"><strong>Built with:</strong> Synthflow (the rebook call — dignity-first script, two-slot
+    offer) + Make (the consecutive-miss counter, the policy-escalation branch).</p>
+  </div>
+
+  <div class="step">
+    <h2 class="sec">Step 5 — The monthly schedule-leakage check</h2>
+    <h2><span class="n">5</span>Count recovered slots like leads</h2>
+    <p>Once a month, the practice pulls four numbers: no-show rate and late-cancel rate (against the Planet DDS
+    7.4% / 15.5% anchors), slot-fill rate (empty slots that got booked over empty slots that opened), recovered
+    production dollars (filled slots × average appointment value), and waitlist health (opt-ins per 100
+    bookings, decline-pauses). The recovery benchmark to beat: <strong>$60,000–$120,000 recovered per 10-point
+    no-show reduction against $4,000–$10,000 in technology cost</strong> (compilation via hamzaasumah.org,
+    September 2026). If the fill rate climbs but the no-show rate doesn't fall, the win is the waitlist — the
+    confirmation tightening in step 4 needs the practice's attention. Same as every playbook in the family: the
+    numbers decide what gets tuned next.</p>
+    <p class="tools"><strong>Built with:</strong> Make — the monthly rollup (slot events → the four metrics) +
+    a one-page report the owner reads in five minutes.</p>
+  </div>
+
+  <h2 class="sec">Build vs buy</h2>
+  <table>
+    <tr><th>Option</th><th>What you get</th><th>What it costs (third-party, dated)</th></tr>
+    <tr>
+      <td><strong>This playbook's build</strong></td>
+      <td>Schedule watch + ranked waitlist + AI fill call with SMS branch + no-show rebook path + monthly rollup. You own the stack and the 10-minute SLA.</td>
+      <td class="src">Make + Synthflow + ElevenLabs subscriptions — see the placeholders below; affiliate terms checked against vendor pages October 1–2, 2026</td>
+    </tr>
+    <tr>
+      <td><strong>Solutionreach</strong> (incl. ASAP Waitlist)</td>
+      <td>The incumbent lane: full patient-engagement suite, 400+ EHR/PM integrations, ASAP Waitlist product for cancellation-triggered two-way-text fill. TCPA/CASL support; SOC 2 Type II.</td>
+      <td class="src">~$299–$379+ per provider/month, quote-gated — appointmentreminders.com 2026 comparison (~$299 starting, packages to $400–$800+); Jefferson member portal (practice meetings) cites ~$379/month per physician plus a setup fee; vendor pricing page updated September 2, 2026 lists plan tiers by SMS allowance (Patient Connect 1,750 SMS/month)</td>
+    </tr>
+    <tr>
+      <td><strong>Weave</strong></td>
+      <td>All-in-one phone + text + waitlist for small practices. Basic list-based matching (ranked-by-fit is the build's edge).</td>
+      <td class="src">~$200–$600/month depending on practice size and bundle — lilachbullock.com, September 2026; matching described as "basic list-based" — emitrr.com waitlist comparison, crawled October 2026</td>
+    </tr>
+    <tr>
+      <td><strong>RecallMax</strong></td>
+      <td>Reminder and recall suite; listed among DentiMax comparison bench tools.</td>
+      <td class="src">$395/month — slashdot.org software comparison, 2026</td>
+    </tr>
+    <tr>
+      <td><strong>ReminderDental</strong></td>
+      <td>Reminder suite for smaller practices: call, email, and SMS reminders, two-way messaging, rescheduling.</td>
+      <td class="src">$50/month first office, $40 each additional office — slashdot.org 2026 listing</td>
+    </tr>
+    <tr>
+      <td><strong>DoctorConnect (ARIA)</strong></td>
+      <td>AI receptionist that also runs the waitlist: text, email, voice; 150+ integrations. The closest buy-side analog to this playbook's design.</td>
+      <td class="src">Pricing not stated on public pages — feature/integration claims via emitrr.com waitlist comparison, crawled October 2026</td>
+    </tr>
+    <tr>
+      <td><strong>Luma Health (Smart Waitlist)</strong></td>
+      <td>"Smart Waitlist" with published fill-rate benchmarks; strong EHR breadth including Epic.</td>
+      <td class="src">Pricing not stated on public pages — emitrr.com waitlist comparison, crawled October 2026</td>
+    </tr>
+  </table>
+  <p style="font-size:13.5px;color:var(--mut)">Honest read: the buy tools win on practice-management integrations —
+  Solutionreach's 400+ integrations is the moat no weekend build crosses. The build wins on cost, on the ranked-by-fit
+  waitlist (most bundled waitlists are simple lists), and on the 10-minute SLA being <em>yours</em> instead of a
+  vendor's roadmap. Practices already deep in a suite buy; practices with a leaner stack or a DIY bent build.</p>
+
+  <h2 class="sec">How this fits the family</h2>
+  <p>Seven playbooks, one skeleton each with a different trigger. <strong>#1 and #2 catch the calls you
+  missed; this playbook catches the appointments that go empty</strong> — the trigger is the schedule itself, not
+  the phone. That's the re-skin check, stated plainly: #2 (our dental voice-agent playbook) recovers the new
+  patient who hung up without booking; #7 recovers the booked patient who never sat in the chair and fills the
+  chair they left behind. #4 (estimate recovery) is the closest home-services cousin — both work a list over
+  time — but #4 chases the quote that never closed while #7 fills the slot that just opened, on a 10-minute
+  clock. #5 (after-hours dispatch triage) is the sibling on the other side: #5 keeps live emergencies from
+  reaching voicemail after hours; #7 keeps empty chairs from staying empty during hours. Same legs
+  (Synthflow + ElevenLabs + Make), same honesty rules, different leak.</p>
+
+  <h2 class="sec">Try the tools this playbook runs on</h2>
+  <div class="cta">
+    <a href="#affiliate-synthflow-placeholder">Try Synthflow (AI fill calls)</a>
+    <a href="#affiliate-elevenlabs-placeholder">Try ElevenLabs (office-warm voices)</a>
+    <a href="#affiliate-make-placeholder">Try Make (waitlist engine)</a>
+  </div>
+  <div class="cta">
+    <a class="ghost" href="n8n-vs-make-workflow-automation.html">Compare n8n vs Make first</a>
+    <a class="ghost" href="voice-agent-playbook-for-contractors.html">Read playbook #1 (contractors)</a>
+    <a class="ghost" href="voice-agent-playbook-for-dental.html">Read playbook #2 (dental)</a>
+    <a class="ghost" href="speed-to-lead-playbook-for-real-estate.html">Read playbook #3 (real estate)</a>
+    <a class="ghost" href="estimate-recovery-playbook-for-contractors.html">Read playbook #4 (estimate recovery)</a>
+    <a class="ghost" href="after-hours-dispatch-triage-playbook.html">Read playbook #5 (after-hours dispatch)</a>
+    <a class="ghost" href="review-capture-playbook-for-home-services.html">Read playbook #6 (review capture)</a>
+  </div>
+
+  <h2 class="sec">Common objections, answered honestly</h2>
+  <div class="faq">
+    <h3>We already run playbook #2 — isn't this the same system?</h3>
+    <p>No — same AI, different event. #2 answers a question about the phone: "who tried to reach us and didn't
+    book?" #7 answers a question about the schedule: "which slots went empty, and who's on the short-notice
+    list to take them?" The consent gate, the HIPAA box, and the voice stack are shared — the triggers,
+    the lists, and the scripts are entirely separate. A practice can run both without double-calling anyone,
+    because the two never call the same patient about the same thing.</p>
+  </div>
+  <div class="faq">
+    <h3>Aren't SMS reminders enough?</h3>
+    <p>Reminders are the prevention layer, and they work — automated confirmation cuts no-shows 25–45%
+    (compilation via hamzaasumah.org, September 2026). But even with reminders, the ADA's benchmark is 14–18%
+    no-shows, plus the 15.5% advance cancellations the Planet DDS data records. Reminders shrink the leak;
+    they don't fill the slot it leaves behind. This playbook is the recovery layer on top of reminders —
+    prevention first, recovery second, always both.</p>
+  </div>
+  <div class="faq">
+    <h3>What about HIPAA with AI calling patients?</h3>
+    <p>Same box as our dental voice-agent playbook (#2): appointment data is PHI, so only HIPAA-capable tooling
+    with a signed BAA touches the schedule or patient list. The AI never receives more than it needs — the fill
+    call carries the slot, the procedure type, and the patient's opt-in; clinical detail never leaves the PMS.
+    Review this with counsel before you automate, the same as any patient outreach.</p>
+  </div>
+  <div class="faq">
+    <h3>Won't patients find an AI call creepy?</h3>
+    <p>They find it creepy when it pretends to be human. The script self-identifies in the first sentence as
+    the practice's automated scheduler — the same honesty rule as every playbook in the family — and the call
+    exists because the patient opted into the short-notice list. Nobody is surprised by a call they asked for.
+    The human fallback is explicit: confusion, upset, or pain hands to a person immediately.</p>
+  </div>
+  <div class="faq">
+    <h3>What if our practice management software has no API?</h3>
+    <p>That's the heaviest integration step, and we're honest about it: it's where most DIY builds stall. Three
+    routes exist. One, buy the integration: Solutionreach's 400+ EHR/PM integrations are the moat in the
+    build-vs-buy table above. Two, bridge it: Make can watch for schedule events through email-to-webhook
+    bridges, SMS-flag relays from the front desk, or a scheduled export poll — slower than a native webhook,
+    but enough for the 10-minute SLA in most shops. Three, the hybrid: run the fill cascade on the build and
+    keep confirmation inside the PMS's own tools. Pick the route that fits the PMS, not the philosophy.</p>
+  </div>
+
+  <footer class="note" style="padding:0;margin:20px 0 0">
+  FlowBench playbook #7 (2026-10-02). Affiliate links are placeholders (no real URLs) until partner signups are
+  completed. Every price, term, and statistic is labeled with its third-party source and date — confirm current
+  figures on vendor and publisher sites before buying. This is a playbook, not legal or compliance advice.
+  </footer>
+</main>
+</body>
+</html>
