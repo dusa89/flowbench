@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The 4-Step Missed-Call Playbook for Home-Service Contractors (2026) — FlowBench</title>
+<meta name="description" content="A how-to playbook for contractors who lose jobs to voicemail: missed-call text-back, AI voice answering, automatic reminders, and review requests — with every tool term sourced and dated. Independent — verify on vendor sites before buying.">
+<style>
+  :root { --ink:#1a1a1a; --mut:#5c5c5c; --line:#d8d8d8; --acc:#7c3aed; --bg:#f6f7f9; --warn:#fbf3df; }
+  * { box-sizing:border-box; }
+  body { font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); margin:0; line-height:1.6; }
+  header.top { background:#1e1433; color:#fff; padding:16px 24px; }
+  header.top h1 { margin:0; font-size:21px; }
+  header.top p { margin:4px 0 0; font-size:13px; color:#c9bdf2; }
+  main { max-width:900px; margin:0 auto; padding:24px; }
+  .disc { background:var(--warn); border:1px solid #e3cf9a; border-radius:10px; padding:14px 16px; font-size:13.5px; margin-bottom:22px; }
+  .verdict { background:#fff; border:1px solid var(--line); border-left:5px solid var(--acc); border-radius:8px; padding:16px 18px; margin-bottom:22px; }
+  .verdict h2 { margin:0 0 8px; font-size:17px; }
+  .step { background:#fff; border:1px solid var(--line); border-radius:8px; padding:16px 18px; margin-bottom:16px; }
+  .step h2 { margin:0 0 8px; font-size:17px; }
+  .step h2 .n { display:inline-block; background:var(--acc); color:#fff; border-radius:50%; width:28px; height:28px; text-align:center; line-height:28px; font-size:15px; margin-right:8px; }
+  .step p, .step li { font-size:14px; color:#333; }
+  .step .tools { font-size:13px; color:var(--mut); }
+  table { width:100%; border-collapse:collapse; background:#fff; font-size:14px; margin:0 0 22px; }
+  th, td { border:1px solid var(--line); padding:10px 12px; text-align:left; vertical-align:top; }
+  th { background:#f0eafa; font-size:12.5px; text-transform:uppercase; letter-spacing:.4px; }
+  td.src { font-size:12px; color:var(--mut); }
+  h2.sec { font-size:19px; margin:30px 0 10px; }
+  .cta { display:flex; gap:12px; flex-wrap:wrap; margin:18px 0 26px; }
+  .cta a { background:var(--acc); color:#fff; text-decoration:none; padding:12px 20px; border-radius:8px; font-weight:600; font-size:14.5px; }
+  .cta a.ghost { background:#fff; color:var(--acc); border:1px solid var(--acc); }
+  .faq { background:#fff; border:1px solid var(--line); border-radius:8px; padding:16px 18px; margin-bottom:14px; }
+  .faq h3 { margin:0 0 6px; font-size:15.5px; }
+  .faq p { margin:0; font-size:14px; color:#333; }
+  footer.note { max-width:900px; margin:0 auto; padding:0 24px 34px; font-size:12.5px; color:var(--mut); }
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>FlowBench — Automation picks for small business</h1>
+  <p>Playbooks, not just picks: step-by-step automation setups for specific industries. Every tool term below is labeled with its source and date — vendors change tiers often, so verify on the vendor site before you buy.</p>
+</header>
+<main>
+  <h2 class="sec" style="margin-top:6px">Playbook #1: The 4-Step Missed-Call Recovery System for Home-Service Contractors (2026)</h2>
+
+  <div class="disc">
+    <strong>Disclosure:</strong> FlowBench is independent — not affiliated with Make, Synthflow, ElevenLabs, or n8n.
+    The buttons below are <strong>affiliate placeholders</strong>: if we join their partner programs,
+    we may earn a commission when you sign up, at no added cost to you. We never accept payment for
+    placement. Affiliate terms were checked against the vendors' own pages on <strong>October 1–2, 2026</strong>
+    (make.com/en/affiliate; n8n.io/affiliates; official Synthflow partner terms; elevenlabs.io/affiliates-terms).
+    Tool pricing named here comes from the third-party sources noted — <strong>confirm current pricing on each
+    vendor's own site before buying.</strong>
+  </div>
+
+  <div class="verdict">
+    <h2>The short version</h2>
+    <p>A home-service contractor's phone rings while the tech is in an attic — and voicemail loses the job to the
+    competitor who picked up. This playbook wires four automations together: (1) instant missed-call text-back,
+    (2) an AI voice agent that answers after hours and books into your calendar, (3) automatic appointment
+    confirmations and reminders that cut no-shows, and (4) automatic review requests after every finished job.
+    The back end is <strong>Make</strong> (visual automation, start with the free 1,000 credits/mo tier) plus
+    <strong>Synthflow</strong> for the voice agent; <strong>ElevenLabs</strong> voices make the agent sound human.
+    You can buy this as a turnkey product instead — vendors selling ready-made versions run roughly $59–$199/mo
+    (reported by ai.advalorem.io, October 2026) — but the DIY route below runs on the same tools for less and you
+    keep the customer data.</p>
+  </div>
+
+  <h2 class="sec">Step 1 — Catch every missed call in under 60 seconds</h2>
+  <div class="step">
+    <h2><span class="n">1</span>The missed-call text-back</h2>
+    <p>When a call goes unanswered, the automation texts the caller immediately: "Sorry we missed you — what's
+    the job? We'll reply in minutes." For a plumber, this is the whole game: an emergency customer dials the
+    next number on Google in under a minute. Speed of response is the close.</p>
+    <p class="tools"><strong>Built with:</strong> Make scenario — missed-call trigger → send SMS → log the lead.
+    This is the easiest first automation and the highest-ROI one. Compare: <a href="n8n-vs-make-workflow-automation.html">why Make over n8n for this playbook's back end</a> (free 1,000 credits/mo, gentlest learning curve for a non-technical owner).</p>
+  </div>
+
+  <h2 class="sec">Step 2 — Let an AI voice agent answer after hours</h2>
+  <div class="step">
+    <h2><span class="n">2</span>The after-hours voice agent</h2>
+    <p>A voice agent answers the overflow and after-hours calls: it greets the caller, captures name, address, job
+    type and urgency, checks your real calendar availability, and books the appointment. It handles the morning-rush
+    stack of three calls at once — no second phone needed.</p>
+    <p class="tools"><strong>Built with:</strong> Synthflow (voice agent, books into your calendar; agency tier exists
+    for agencies reselling to contractors — Synthflow's own materials, October 2026) with an ElevenLabs voice under
+    the hood for natural speech. One honest caveat: ElevenLabs affiliate terms pay 22% of payments for the first 12
+    months on Starter/Creator/Pro/Scale tiers, 11% on Business (elevenlabs.io/affiliates-terms, "Last Updated: 10 June
+    2026") — no earnings cap, but cookie duration and payout minimum are not published on the public page.</p>
+  </div>
+
+  <h2 class="sec">Step 3 — Kill no-shows with automatic confirmations and reminders</h2>
+  <div class="step">
+    <h2><span class="n">3</span>The confirmation + reminder chain</h2>
+    <p>The moment a job books — by the voice agent or by you — the automation sends an instant confirmation, then a
+    reminder 24 hours before and again 2 hours before the appointment. Every reminder carries a one-tap "running
+    late / reschedule" path back into the calendar. This is pure calendar → SMS plumbing; no AI needed.</p>
+    <p class="tools"><strong>Built with:</strong> Make — calendar event → timed SMS sends → reschedule webhook. If a
+    customer replies "can't make it," route it back to the voice agent (Step 2) to rebook instead of to your pocket.</p>
+  </div>
+
+  <h2 class="sec">Step 4 — Turn every finished job into a Google review</h2>
+  <div class="step">
+    <h2><span class="n">4</span>The automatic review request</h2>
+    <p>After the invoice is paid or the job is marked complete, the automation texts the customer a direct Google
+    review link. Home-service businesses live on reviews — this one converts jobs you already finished into the
+    star rating that wins the next job.</p>
+    <p class="tools"><strong>Built with:</strong> Make — job-complete trigger → delayed SMS with your review link.
+    Send it within a day of the finished job; waiting longer measurably shrinks response rates.</p>
+  </div>
+
+  <h2 class="sec">What this costs to build vs. buy</h2>
+  <table>
+    <tr><th>Route</th><th>What you pay</th><th>Source</th></tr>
+    <tr>
+      <td>DIY (this playbook)</td>
+      <td>Make free 1,000 credits/mo to start; Synthflow tiered by minutes; ElevenLabs voice billed separately</td>
+      <td class="src">make.com/en/affiliate + official program pages, Oct 1–2, 2026 — verify current pricing on vendor sites</td>
+    </tr>
+    <tr>
+      <td>Turnkey alternatives</td>
+      <td>Roughly $59–$199/mo for missed-call recovery / inbound answering (Goodcall, My AI Front Desk); up to $249–$597/mo for full custom voice agents</td>
+      <td class="src">ai.advalorem.io 2026 SMB voice-AI price table (crawled Oct 2, 2026); Anvoa PR release (Jan 2026) — third-party reported, verify before buying</td>
+    </tr>
+  </table>
+  <p style="font-size:13.5px;color:var(--mut)">The honest read: if you will never build anything yourself, the turnkey
+  options exist and contractors are already buying them (a Central Florida voice-agent startup reports 80+ active
+  customers, mostly trades, per its January 2026 PR release). If you can follow a setup wizard, the DIY route keeps
+  your data in your own accounts and costs less — and the same four automations are the core either way.</p>
+
+  <h2 class="sec">Try the tools this playbook runs on</h2>
+  <div class="cta">
+    <a href="#affiliate-make-placeholder">Try Make (automation back end)</a>
+    <a href="#affiliate-synthflow-placeholder">Try Synthflow (voice agent)</a>
+    <a href="#affiliate-elevenlabs-placeholder">Try ElevenLabs (voice quality)</a>
+  </div>
+  <div class="cta">
+    <a class="ghost" href="n8n-vs-make-workflow-automation.html">Compare n8n vs Make first</a>
+    <a class="ghost" href="voice-agent-playbook-for-dental.html">Dental practice? Read playbook #2</a>
+    <a class="ghost" href="estimate-recovery-playbook-for-contractors.html">Losing estimates to silence? Read playbook #4</a>
+    <a class="ghost" href="after-hours-dispatch-triage-playbook.html">After-hours calls? Read playbook #5 (dispatch triage)</a>
+  </div>
+
+  <h2 class="sec">Common objections, answered honestly</h2>
+  <div class="faq">
+    <h3>Will customers know it's AI?</h3>
+    <p>Some will, some won't. What matters is it picks up, gets the details right, and books the job — a voice
+    agent that answers in one ring beats a human who answers tomorrow. Disclose it as an assistant; pretending
+    otherwise backfires.</p>
+  </div>
+  <div class="faq">
+    <h3>I'm not technical — can I actually set this up?</h3>
+    <p>Step 1 and Step 3 are point-and-click Make scenarios. Step 2 (the voice agent) is the hard one; Synthflow's
+    no-code builder is made for non-developers and agencies resell it to contractors who never touch the dashboard
+    themselves. Start with Step 1 alone — it pays for everything else.</p>
+  </div>
+  <div class="faq">
+    <h3>What about outbound calls and compliance?</h3>
+    <p>This playbook is inbound-first on purpose. Automated outbound calling has federal and state rules (and
+    carrier rules) that change often — check the current rules for your state before automating any outbound
+    calls. Nothing here requires outbound.</p>
+  </div>
+</main>
+<footer class="note">
+  FlowBench playbook #1 (2026-10-02). Affiliate links are placeholders (no real URLs) until partner signups are
+  approved. Competitor pricing and third-party case claims are reported from the named sources on the named dates —
+  nothing above is a live quote, and we never invent vendor terms.
+</footer>
+</body>
+</html>
