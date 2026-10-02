@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Post-Job Review Capture Playbook for Home Services (2026) — FlowBench</title>
+<meta name="description" content="A how-to playbook for plumbing, HVAC, and electrical shops whose finished jobs never turn into reviews: an AI check-in call that splits happy from unhappy customers, texts everyone the same Google review link, and routes complaints to the owner — with the no-gating rules stated first and every figure sourced and dated. Independent — verify on vendor sites before buying.">
+<style>
+  :root { --ink:#1a1a1a; --mut:#5c5c5c; --line:#d8d8d8; --acc:#7c3aed; --bg:#f6f7f9; --warn:#fbf3df; }
+  * { box-sizing:border-box; }
+  body { font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); margin:0; line-height:1.6; }
+  header.top { background:#1e1433; color:#fff; padding:16px 24px; }
+  header.top h1 { margin:0; font-size:21px; }
+  header.top p { margin:4px 0 0; font-size:13px; color:#c9bdf2; }
+  main { max-width:900px; margin:0 auto; padding:24px; }
+  .disc { background:var(--warn); border:1px solid #e3cf9a; border-radius:10px; padding:14px 16px; font-size:13.5px; margin-bottom:22px; }
+  .verdict { background:#fff; border:1px solid var(--line); border-left:5px solid var(--acc); border-radius:8px; padding:16px 18px; margin-bottom:22px; }
+  .verdict h2 { margin:0 0 8px; font-size:17px; }
+  .step { background:#fff; border:1px solid var(--line); border-radius:8px; padding:16px 18px; margin-bottom:16px; }
+  .step h2 { margin:0 0 8px; font-size:17px; }
+  .step h2 .n { display:inline-block; background:var(--acc); color:#fff; border-radius:50%; width:28px; height:28px; text-align:center; line-height:28px; font-size:15px; margin-right:8px; }
+  .step p, .step li { font-size:14px; color:#333; }
+  .step .tools { font-size:13px; color:var(--mut); }
+  .hard { background:#fdecec; border:1px solid #e8b4b4; border-radius:8px; padding:16px 18px; margin-bottom:22px; font-size:14px; }
+  .hard h2 { margin:0 0 8px; font-size:17px; }
+  table { width:100%; border-collapse:collapse; background:#fff; font-size:14px; margin:0 0 22px; }
+  th, td { border:1px solid var(--line); padding:10px 12px; text-align:left; vertical-align:top; }
+  th { background:#f0eafa; font-size:12.5px; text-transform:uppercase; letter-spacing:.4px; }
+  td.src { font-size:12px; color:var(--mut); }
+  h2.sec { font-size:19px; margin:30px 0 10px; }
+  .cta { display:flex; gap:12px; flex-wrap:wrap; margin:18px 0 26px; }
+  .cta a { background:var(--acc); color:#fff; text-decoration:none; padding:12px 20px; border-radius:8px; font-weight:600; font-size:14.5px; }
+  .cta a.ghost { background:#fff; color:var(--acc); border:1px solid var(--acc); }
+  .faq { background:#fff; border:1px solid var(--line); border-radius:8px; padding:16px 18px; margin-bottom:14px; }
+  .faq h3 { margin:0 0 6px; font-size:15.5px; }
+  .faq p { margin:0; font-size:14px; color:#333; }
+  footer.note { max-width:900px; margin:0 auto; padding:0 24px 34px; font-size:12.5px; color:var(--mut); }
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>FlowBench — Automation picks for small business</h1>
+  <p>Playbooks, not just picks: step-by-step automation setups for specific industries. Every tool term below is labeled with its source and date — vendors change tiers often, so verify on the vendor site before you buy.</p>
+</header>
+<main>
+  <h2 class="sec" style="margin-top:6px">Playbook #6: The Post-Job Review Capture Playbook for Home Services (2026)</h2>
+
+  <div class="disc">
+    <strong>Disclosure:</strong> FlowBench is independent — not affiliated with Make, Synthflow, ElevenLabs, or n8n.
+    The buttons below are <strong>affiliate placeholders</strong>: if we join their partner programs,
+    we may earn a commission when you sign up, at no added cost to you. We never accept payment for
+    placement. Affiliate terms were checked against the vendors' own pages on <strong>October 1–2, 2026</strong>
+    (make.com/en/affiliate; n8n.io/affiliates; official Synthflow partner terms; elevenlabs.io/affiliates-terms).
+    Tool pricing and vendor claims named here come from the third-party sources noted — <strong>confirm current
+    pricing and terms on each vendor's own site before buying.</strong> Nothing here is legal or compliance
+    advice — review the FTC's Consumer Review Rule and Google's policies with counsel before automating any
+    review request.
+  </div>
+
+  <div class="hard">
+    <h2>The constraints: no review gating, ever — and the check-in call gets consent at booking</h2>
+    <p>Three hard gates, and they sit before step 0 because violating them is the fastest way to lose a Google
+    Business Profile. <strong>Gate 1 — never gate the ask:</strong> Google's prohibited-content policy forbids
+    "discouraging or prohibiting negative reviews, or selectively soliciting positive reviews from customers"
+    (its fake-engagement clause). Asking only happy customers for reviews <em>is</em> gating — whether it happens
+    in software or in conversation. The FTC's Consumer Review Rule (16 CFR Part 465, in force October 21, 2024)
+    covers suppressing negative reviews, with civil penalties up to $53,088 per violation and a $4.2 million
+    precedent against a retailer that hid bad reviews (reported by Cloutly, September 2026, citing the FTC).
+    This playbook's design rule is absolute: <strong>every completed job gets the same review link on the same
+    trigger</strong>. An unhappy customer is routed to the owner for private recovery — never blocked from the
+    review link. Recovery is not suppression. <strong>Gate 2 — call consent:</strong> the AI check-in call is
+    automated outreach to a real customer. Consent is captured at job booking ("we may call or text after the
+    job to check the work") and recorded in the CRM before step 1 fires. <strong>Gate 3 — the AI never writes
+    as you:</strong> replies to reviews are drafted by the AI and <em>posted by the owner</em>. Nothing in this
+    playbook writes a review, posts a reply unattended, or fabricates a customer voice. This page is a playbook,
+    not compliance advice.</p>
+  </div>
+
+  <div class="verdict">
+    <h2>The short version</h2>
+    <p>Our contractor missed-call playbook (#1) catches the calls you miss — this playbook <strong>harvests the
+    jobs you finish</strong>. A tech closes a job in the dispatch board, an AI voice agent calls the customer
+    within hours, asks one question ("was everything handled right?"), and branches: happy customers get a text
+    with the Google review link while the goodwill is fresh; unhappy ones get the owner on the line before a
+    word goes public. Every customer gets the same link — gate 1 above is the law, not a suggestion. The demand
+    case is consumer behavior measured this year: <strong>97% of consumers read reviews</strong> for local
+    businesses and <strong>41% "always" read them</strong> (up from 29% in 2025); <strong>68% require at least 4.0
+    stars</strong> before they'll use a business (up from 55% in 2025); <strong>31% will only use 4.5 stars or
+    higher</strong>; <strong>47% won't consider a business with fewer than 20 reviews</strong>; and <strong>74%
+    want reviews written in the last three months</strong> (BrightLocal, Local Consumer Review Survey 2026,
+    published February 11, 2026, panel of 1,002 US adults). Google is still the biggest single stop, used by
+    <strong>71% of review readers</strong> (same survey). And reviews are a ranking input, not just a trust badge:
+    review quantity, recency, and sustained influx hold three top-fifteen slots in local ranking-factor
+    compilations, and one retest of eight electrician listings found listings "exploded" on hitting ten reviews
+    from nine — while steady monthly solicitation beats quarterly bursts (compiled local-SEO reference, crawled
+    October 2026). The build is <strong>Make</strong> (the job-completed trigger and the unhappy-customer owner
+    alert), <strong>Synthflow</strong> (the AI check-in call — sentiment split, review-link SMS branch), and
+    <strong>ElevenLabs</strong> voices so the call sounds like your office. All stats above are third-party and
+    dated — direction, not a guarantee for your market.</p>
+  </div>
+
+  <h2 class="sec">Step 0 — Write the two rules before you automate anything</h2>
+  <div class="step">
+    <h2><span class="n">0</span>The consent line and the no-gating line, on paper</h2>
+    <p>Before any tool is bought, the owner writes two sentences into the job paperwork. Sentence one (consent):
+    "After your job, we may call or text to check the work and ask for a review — reply STOP to opt out." It goes
+    in the booking confirmation and the CRM records the yes/no before anything fires. Sentence two (no gating):
+    "Every completed job gets the same review request, happy or not." Print it where the office staff can see it,
+    because the whole value of this playbook is the <em>unhappy-customer path</em> — a tech who "forgets" the call
+    for a job they know went badly is gating by hand. The AI handles that path automatically, which is exactly why
+    shops buy this instead of asking techs to remember.</p>
+    <p class="tools"><strong>Built with:</strong> the booking confirmation template + one CRM checkbox. No software
+    yet — the rules ARE the product until step 1.</p>
+  </div>
+
+  <h2 class="sec">Step 1 — The job-completed trigger</h2>
+  <div class="step">
+    <h2><span class="n">1</span>Dispatch board to automation, same day</h2>
+    <p>When a tech marks the job complete in the dispatch board (ServiceTitan, Housecall Pro, Jobber — whatever
+    the shop runs), a webhook fires into the automation. The trigger waits a short, configurable delay — same-day
+    afternoon for morning jobs, next-morning for evening jobs — so the customer has lived with the finished work
+    but the goodwill is still warm. The payload carries three fields: customer name, phone, and the job record
+    (tech name, service performed, consent flag from step 0). If the consent flag is no or missing, the sequence
+    stops here — silently. No consent, no call; that rule is load-bearing.</p>
+    <p class="tools"><strong>Built with:</strong> Make — the dispatch-board webhook, the consent gate, the delay,
+    and the routing in step 2. This is the same glue the family uses everywhere (see the
+    <a href="n8n-vs-make-workflow-automation.html">n8n vs Make comparison</a> if the shop already runs n8n).</p>
+  </div>
+
+  <h2 class="sec">Step 2 — The AI check-in call</h2>
+  <div class="step">
+    <h2><span class="n">2</span>One question, two branches</h2>
+    <p>The voice agent calls and does exactly three things: identifies itself as the shop's follow-up line,
+    thanks the customer, and asks one question — "Was everything handled right with today's [service]?" It does
+    not pitch, upsell, or collect a star rating on the call. <strong>Branch A (happy):</strong> the call ends
+    warm and the system texts the Google review link within the minute — short link, first name, nothing else.
+    <strong>Branch B (anything but happy):</strong> the agent apologizes, asks if the owner can call back within
+    the hour, and the automation opens an owner-callback task with the customer's words attached. No review link
+    is withheld from branch B — the owner simply gets there first with the fix. The sentiment split is why this
+    playbook exists: a text-only ask sends the review link into a complaint as happily as into a compliment. The
+    AI call is the filter a text can't be.</p>
+    <p class="tools"><strong>Built with:</strong> Synthflow (the check-in call, sentiment branch, SMS branch) +
+    ElevenLabs (the voice — a warm office voice, never a chipper robot) + Make (the owner-callback task on
+    branch B). Keep the script under 45 seconds.</p>
+  </div>
+
+  <h2 class="sec">Step 3 — The review-link text</h2>
+  <div class="step">
+    <h2><span class="n">3</span>Same link, everyone, no incentives</h2>
+    <p>The text carries the shop's Google review link — the one from the Business Profile dashboard — and nothing
+    else persuasive: no "leave us 5 stars," no discount for reviewing, no gift cards. Google's policy bans
+    incentives tied to reviews outright, and requesting specific star ratings is exactly the "selectively
+    soliciting" the policy forbids. One honest note on Yelp: Yelp's own guidance discourages asking for reviews
+    at all, so this playbook's ask targets Google only — the page a future customer actually checks (71% of
+    review readers, per the BrightLocal 2026 survey). If the customer doesn't click in 48 hours, one reminder
+    text goes out — a single reminder, not a drip. Annoyance is a review too.</p>
+    <p class="tools"><strong>Built with:</strong> the Synthflow SMS branch from step 2 (or Make's SMS module if
+    the shop prefers the review-link step outside the voice tool). The Google review link comes from the owner's
+    own Business Profile — five minutes in the dashboard, free.</p>
+  </div>
+
+  <h2 class="sec">Step 4 — The owner replies to every review</h2>
+  <div class="step">
+    <h2><span class="n">4</span>Drafted by AI, posted by a human</h2>
+    <p>New reviews get a reply within 24 hours — the compiled BrightLocal 2025 figures put readers-of-replies at
+    97% of review readers, and reply behavior is one of the few ranking-adjacent signals a shop fully controls
+    (compiled local-SEO reference, crawled October 2026). The automation drafts a reply from the review's own
+    text — naming the service and the tech, never a template sentence twice — and the owner reviews and posts it
+    with one tap. Copy-paste replies are a trust negative; the BrightLocal 2026 survey found half of consumers
+    reject them. The unhappy-customer replies from branch B get the same treatment once the owner has actually
+    fixed the problem — a resolved complaint with a thoughtful reply converts better than a silent five-star.</p>
+    <p class="tools"><strong>Built with:</strong> Make — new-review watch, draft generation from the review text,
+    owner-approval queue. The owner posts; the AI never does.</p>
+  </div>
+
+  <h2 class="sec">Step 5 — The monthly velocity check</h2>
+  <div class="step">
+    <h2><span class="n">5</span>Count reviews like leads</h2>
+    <p>Once a month the owner opens a one-page dashboard: reviews added this month, average rating, and the same
+    two numbers for the three closest competitors' Google profiles. The working rule from local-SEO practice is
+    to match the top competitor's monthly review count and add one (compiled local-SEO reference, crawled
+    October 2026) — that's the velocity target the sequence tunes against. Below ~20 total reviews the playbook's
+    job is volume (47% of consumers won't consider a business under 20, per BrightLocal 2026); past that, the job
+    is recency and rating defense. When a competitor runs a burst campaign, the steady system already in place is
+    the answer — the retest data says bursts fade and steady wins.</p>
+    <p class="tools"><strong>Built with:</strong> a spreadsheet or the dispatch board's review report + 10 minutes
+    a month. The automation feeds the count; the owner sets the target.</p>
+  </div>
+
+  <h2 class="sec">Build vs buy</h2>
+  <table>
+    <tr><th>Option</th><th>What you get</th><th>Price signal</th></tr>
+    <tr>
+      <td><strong>Podium</strong></td>
+      <td>Review generation + SMS customer messaging; the category incumbent for local services</td>
+      <td class="src">Core ~$399/mo, Pro ~$599/mo per third-party reports (pigpr.com, mid-2026); Podium does not publish pricing — confirm on a sales call</td>
+    </tr>
+    <tr>
+      <td><strong>Birdeye</strong></td>
+      <td>Review requests + monitoring + listings across locations; multi-location strength</td>
+      <td class="src">Starter ~$299/location/mo billed annually per third-party breakdowns (pabau.com; softwarefinder.com, 2026); no public pricing — quote only</td>
+    </tr>
+    <tr>
+      <td><strong>Grade.us / NiceJob</strong></td>
+      <td>Focused review generation; narrower scope, budget end of the market</td>
+      <td class="src">Grade.us ~$79–90/mo, NiceJob ~$75/mo per third-party pricing roundups (pigpr.com; subscribepr.com, 2026) — confirm before buying</td>
+    </tr>
+    <tr>
+      <td><strong>This playbook (DIY)</strong></td>
+      <td>AI check-in call with sentiment split + review-link SMS + owner recovery path — the part the SaaS tools don't do (none of them call your customers with an AI agent)</td>
+      <td class="src">Make + Synthflow + ElevenLabs subscriptions — see the placeholders below; terms checked against vendor pages Oct 1–2, 2026</td>
+    </tr>
+  </table>
+  <p style="font-size:13px;color:var(--mut)">The honest read: a shop doing under ~50 jobs a month doesn't need this
+  playbook at all — a Google review link in the invoice and a weekly habit beats software. The automation earns
+  its cost when the tech count makes the manual ask inconsistent, or when unhappy customers keep reaching Google
+  before the owner hears about them. Buy the SaaS for review <em>management</em>; build this for the
+  <em>sentiment split</em> the SaaS can't do.</p>
+
+  <h2 class="sec">How this fits the family</h2>
+  <p style="font-size:14px">Playbook <a href="voice-agent-playbook-for-contractors.html">#1 (missed-call
+  recovery)</a> catches the calls you miss — this playbook <strong>harvests the jobs you finish</strong>:
+  post-job outreach vs inbound call handling. Different trigger (a completed job in the dispatch board vs a
+  missed-call event), different skill (sentiment split + review capture + owner recovery vs speed-to-callback),
+  different automation (CRM webhook → AI check-in call → review-link SMS vs callback webhook + voicemail parsing).
+  The shop that runs both closes the loop on both ends of the phone: nothing missed on the way in, nothing wasted
+  on the way out. For the unhappy customers this system surfaces, the
+  <a href="estimate-recovery-playbook-for-contractors.html">playbook #4 quote-chase</a> is the natural next system
+  — a recovered customer is a re-bookable customer. For the automation stack behind all of them, see the
+  <a href="n8n-vs-make-workflow-automation.html">n8n vs Make comparison</a>, and
+  <a href="../index.html#sister-projects">AgencyStack — our agency-platform comparison, in staging</a>.</p>
+
+  <h2 class="sec">Try the tools this playbook runs on</h2>
+  <div class="cta">
+    <!-- AFFILIATE PLACEHOLDER: synthflow -->
+    <a href="#affiliate-synthflow-placeholder">Try Synthflow (AI check-in calls)</a>
+    <!-- AFFILIATE PLACEHOLDER: elevenlabs -->
+    <a href="#affiliate-elevenlabs-placeholder">Try ElevenLabs (office-warm voices)</a>
+    <!-- AFFILIATE PLACEHOLDER: make -->
+    <a href="#affiliate-make-placeholder">Try Make (trigger + routing engine)</a>
+  </div>
+  <div class="cta">
+    <a class="ghost" href="n8n-vs-make-workflow-automation.html">Compare n8n vs Make first</a>
+    <a class="ghost" href="voice-agent-playbook-for-contractors.html">Read playbook #1 (missed-call recovery)</a>
+    <a class="ghost" href="after-hours-dispatch-triage-playbook.html">Read playbook #5 (after-hours dispatch)</a>
+    <a class="ghost" href="voice-agent-playbook-for-dental.html">Read playbook #2 (dental)</a>
+    <a class="ghost" href="speed-to-lead-playbook-for-real-estate.html">Read playbook #3 (real estate)</a>
+    <a class="ghost" href="estimate-recovery-playbook-for-contractors.html">Read playbook #4 (estimate recovery)</a>
+  </div>
+
+  <h2 class="sec">Common objections, answered honestly</h2>
+  <div class="faq">
+    <h3>Isn't a review link in a text enough? Why add an AI call?</h3>
+    <p>For a small shop it is — and the page says so in step 3's honest read. The AI call earns its cost at
+    volume: it splits happy from unhappy customers <em>before</em> the link goes out, so complaints reach the
+    owner instead of Google. A text can't do the sentiment split; a human can't do it at 200 jobs a month. The
+    call is the filter, not the ask.</p>
+  </div>
+  <div class="faq">
+    <h3>We already run playbook #1 — isn't this the same system?</h3>
+    <p>Same tools, different job. #1 is inbound: a missed call happens, the system calls back within 60 seconds.
+    #6 is post-job: a finished job triggers a check-in call hours later. They share the voice-agent stack but
+    they never share a trigger, a script, or a metric — #1 measures recovered calls, #6 measures review velocity.
+    Most shops should run #1 first (missed calls are the bigger leak) and add #6 when the phone is handled.</p>
+  </div>
+  <div class="faq">
+    <h3>What about Yelp?</h3>
+    <p>Yelp's guidance discourages asking for reviews at all, and Yelp filters solicited-looking reviews
+    aggressively — so this playbook's ask targets Google only, where 71% of review readers already look
+    (BrightLocal 2026). Don't game Yelp; the Google profile is the asset that compounds.</p>
+  </div>
+  <div class="faq">
+    <h3>Why not just ask the happy customers and skip the unhappy ones?</h3>
+    <p>That is review gating, defined — and it's the exact practice Google's policy forbids and the FTC's rule
+    penalizes. Beyond the legal exposure, it's a losing strategy: an unhappy customer you never hear from writes
+    the one-star anyway, and now you never saw it coming. The recovery path is the whole point of step 2.</p>
+  </div>
+  <div class="faq">
+    <h3>Will Google flag AI-drafted replies?</h3>
+    <p>The AI drafts; the owner posts — that's the design, and it's the honest one. Google's business-profile API
+    explicitly provides an owner-reply function, so owner-posted replies are the permitted act. What the policy
+    forbids is fabricated customer content and manipulated reviews — this playbook writes neither. Keep the
+    drafts individuated (half of consumers reject copy-paste replies, per BrightLocal 2026) and keep the human in
+    the loop.</p>
+  </div>
+</main>
+<footer class="note">
+  FlowBench playbook #6 (2026-10-02). Affiliate links are placeholders (no real URLs) until partner signups are
+  approved. Vendor pricing, program terms, and third-party case claims are reported from the named sources on the
+  named dates — nothing above is a live quote, and we never invent vendor terms.
+</footer>
+</body>
+</html>
