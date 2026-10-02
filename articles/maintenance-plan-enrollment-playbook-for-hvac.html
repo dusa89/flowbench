@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Maintenance-Plan Enrollment Playbook for HVAC &amp; Home Services (2026) — FlowBench</title>
+<meta name="description" content="A how-to playbook for HVAC, plumbing, and electrical shops whose one-time jobs never turn into recurring revenue: the in-home 60-second plan offer, the 48-hour AI follow-up, and the auto-renewal engine that compounds plan members month after month — with the auto-renewal and consent gates stated first and every figure sourced and dated. Independent — verify on vendor sites before buying.">
+<style>
+  :root { --ink:#1a1a1a; --mut:#5c5c5c; --line:#d8d8d8; --acc:#7c3aed; --bg:#f6f7f9; --warn:#fbf3df; }
+  * { box-sizing:border-box; }
+  body { font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); margin:0; line-height:1.6; }
+  header.top { background:#1e1433; color:#fff; padding:16px 24px; }
+  header.top h1 { margin:0; font-size:21px; }
+  header.top p { margin:4px 0 0; font-size:13px; color:#c9bdf2; }
+  main { max-width:900px; margin:0 auto; padding:24px; }
+  .disc { background:var(--warn); border:1px solid #e3cf9a; border-radius:10px; padding:14px 16px; font-size:13.5px; margin-bottom:22px; }
+  .verdict { background:#fff; border:1px solid var(--line); border-left:5px solid var(--acc); border-radius:8px; padding:16px 18px; margin-bottom:22px; }
+  .verdict h2 { margin:0 0 8px; font-size:17px; }
+  .step { background:#fff; border:1px solid var(--line); border-radius:8px; padding:16px 18px; margin-bottom:16px; }
+  .step h2 { margin:0 0 8px; font-size:17px; }
+  .step h2 .n { display:inline-block; background:var(--acc); color:#fff; border-radius:50%; width:28px; height:28px; text-align:center; line-height:28px; font-size:15px; margin-right:8px; }
+  .step p, .step li { font-size:14px; color:#333; }
+  .step .tools { font-size:13px; color:var(--mut); }
+  .hard { background:#fdecec; border:1px solid #e8b4b4; border-radius:8px; padding:16px 18px; margin-bottom:22px; font-size:14px; }
+  .hard h2 { margin:0 0 8px; font-size:17px; }
+  table { width:100%; border-collapse:collapse; background:#fff; font-size:14px; margin:0 0 22px; }
+  th, td { border:1px solid var(--line); padding:10px 12px; text-align:left; vertical-align:top; }
+  th { background:#f0eafa; font-size:12.5px; text-transform:uppercase; letter-spacing:.4px; }
+  td.src { font-size:12px; color:var(--mut); }
+  h2.sec { font-size:19px; margin:30px 0 10px; }
+  .cta { display:flex; gap:12px; flex-wrap:wrap; margin:18px 0 26px; }
+  .cta a { background:var(--acc); color:#fff; text-decoration:none; padding:12px 20px; border-radius:8px; font-weight:600; font-size:14.5px; }
+  .cta a.ghost { background:#fff; color:var(--acc); border:1px solid var(--acc); }
+  .faq { background:#fff; border:1px solid var(--line); border-radius:8px; padding:16px 18px; margin-bottom:14px; }
+  .faq h3 { margin:0 0 6px; font-size:15.5px; }
+  .faq p { margin:0; font-size:14px; color:#333; }
+  footer.note { max-width:900px; margin:0 auto; padding:0 24px 34px; font-size:12.5px; color:var(--mut); }
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>FlowBench — Automation picks for small business</h1>
+  <p>Playbooks, not just picks: step-by-step automation setups for specific industries. Every tool term below is labeled with its source and date — vendors change tiers often, so verify on the vendor site before you buy.</p>
+</header>
+<main>
+
+  <div class="disc">
+    <strong>Disclosure:</strong> FlowBench is independent — not affiliated with Make, Synthflow, ElevenLabs, or n8n.
+    The buttons below are <strong>affiliate placeholders</strong>: if we join their partner programs,
+    we may earn a commission when you sign up, at no added cost to you. We never accept payment for
+    placement. Affiliate terms were checked against the vendors' own pages on <strong>October 1–2, 2026</strong>
+    (make.com/en/affiliate; n8n.io/affiliates; official Synthflow partner terms; elevenlabs.io/affiliates-terms).
+    Tool pricing and vendor claims named here come from the third-party sources noted — <strong>confirm current
+    pricing and terms on each vendor's own site before buying.</strong> Nothing here is legal or compliance
+    advice — review auto-renewal law in your state with counsel before automating any membership billing.
+  </div>
+
+  <div class="hard">
+    <h2>The constraints: auto-renewal in writing, no dark patterns — and the follow-up needs consent</h2>
+    <p>Three hard gates, and they sit before step 0 because a plan with illegal renewal terms is a lawsuit, not
+    an asset. <strong>Gate 1 — auto-renewal law:</strong> the FTC's Negative Option Rule and most state
+    automatic-renewal laws (California's is the strictest — others follow its shape) require the renewal terms
+    to be stated clearly <em>before</em> enrollment, separate consent for the auto-renewing feature, and a
+    cancellation path that is at least as simple as enrollment. A pre-checked box, a plan buried in fine print,
+    or a cancellation process that takes three phone calls is the exact pattern these laws target. Every plan
+    enrollment in this playbook carries a one-page plain-English agreement: what's included, what renews when,
+    what it costs at renewal, and how to cancel in one step. <strong>Gate 2 — outreach consent:</strong> the
+    48-hour follow-up call/SMS and every renewal reminder are automated outreach. Consent for calls and texts
+    is captured at the job (on the work order the customer signs) and recorded in the CRM before step 1 fires —
+    with a working opt-out on every message. <strong>Gate 3 — the AI never enrolls silently:</strong> the voice
+    agent presents the plan and answers questions; the customer's yes is recorded with their name and date, and
+    the written agreement goes out immediately after. No plan is ever added to a bill without an explicit
+    spoken yes first. This page is a playbook, not compliance advice — run your agreement past counsel for your
+    state.</p>
+  </div>
+
+  <div class="verdict">
+    <h2>The short version</h2>
+    <p>Our missed-call playbook (#1) catches the calls you miss, the quote-chase playbook (#4) recovers the
+    estimates you lose, and the review playbook (#6) harvests the jobs you finish — this playbook
+    <strong>turns the jobs you finish into recurring revenue</strong>. Every service visit ends with a 60-second
+    plan offer on the tech's tablet, every non-enrolled customer gets an AI follow-up call within 48 hours,
+    and every enrolled member rides an auto-renewal engine with saved billing and a lapsed-member win-back
+    sequence. The demand case is the strongest in this family: contractors with robust membership programs
+    generate <strong>25–40% of total revenue from recurring agreements</strong> (ServiceTitan's own published
+    material, compiled July 2026 — a top-operator benchmark; the typical contractor sits closer to 2–5%, which
+    is the opportunity), and <strong>63% of contractors say over half their customer base is secured through a
+    preventative maintenance agreement</strong>, with <strong>75% of agreement programs reporting over 20%
+    additional revenue from pull-through work</strong> (same compilation). The traditional model's ceiling is
+    low — only <strong>20–25% of homeowners sign up</strong> for the classic prepay-and-visit plan, per SmartAC
+    founder Josh Teekell (Contracting Business, September 2026) — but connected memberships moved annual
+    retention from <strong>roughly 65–75% to about 95%</strong> and lifted average revenue per home
+    <strong>19–20% over two to three years</strong> (same source). One field-data vendor reports
+    <strong>42% of tune-ups convert to a maintenance plan</strong> and automated tune-up customers worth
+    <strong>$2,840 over three years vs $420 for non-automated ones</strong> (Fieldproxy tune-up blueprint,
+    crawled October 2, 2026). The money math is consumer-grade: plans run <strong>$100–$250 a year</strong>
+    (premium tiers up to $500+) while a single tune-up costs $70–250 (USA Today, June 26, 2026) — so the plan
+    pays for itself on two visits before the discounts kick in. The build is <strong>Make</strong> (the
+    visit-completed trigger, the non-enrolled flag, the renewal sequence), <strong>Synthflow</strong> (the
+    48-hour follow-up call), <strong>ElevenLabs</strong> voices so it sounds like your office, and your
+    field-service software's membership module for the agreement and billing. All stats above are third-party
+    and dated — direction, not a guarantee for your market.</p>
+  </div>
+
+  <h2 class="sec">Step 0 — Write the two rules before you automate anything</h2>
+  <div class="step">
+    <h2><span class="n">0</span>The consent line and the no-dark-pattern line, on paper</h2>
+    <p>Rule 1: no customer enters the follow-up sequence without consent captured at the job and recorded in the
+    CRM. Rule 2: enrollment is always explicit and in writing — the one-page agreement states what's included,
+    the renewal price, the renewal date, and the one-step cancellation path. Print both rules, tape them to the
+    office wall, and train every tech: the plan sells on math, never on confusion. A member who didn't know
+    what they bought is a chargeback, a bad review, and an auto-renewal-law problem — the gate above is the
+    page that keeps this asset an asset.</p>
+  </div>
+
+  <h2 class="sec">Step 1 — The visit trigger</h2>
+  <div class="step">
+    <h2><span class="n">1</span>Non-member visit closes → customer flagged</h2>
+    <p>When a service call, repair, or tune-up is marked complete, the field-service software checks membership
+    status. Members get their plan benefits logged automatically. Non-members — the only people this playbook
+    touches — land in the enrollment sequence with three facts attached: what the tech did today, the equipment
+    age and warranty status from the property record, and whether they were offered the plan in the home.
+    Equipment past warranty with a repair today is the highest-value flag: the plan's repair discount makes the
+    offer self-justifying on the spot. This is the same "every visit is a data point" machinery a contractor
+    software vendor used to triple a six-tech shop's agreement revenue in 2026 (Contractor+, February 2026 case
+    study) — we're just aiming it at enrollment instead of dispatch.</p>
+    <p class="tools">Runs on: your field-service software (membership module) + Make for the flag-and-route logic.</p>
+  </div>
+
+  <h2 class="sec">Step 2 — The in-home 60-second offer</h2>
+  <div class="step">
+    <h2><span class="n">2</span>The tech, the tablet, and the paper-towel math</h2>
+    <p>The highest-converting enrollment moment is standing in the customer's home, right after the repair is
+    done, with the numbers on a screen. The tech's tablet shows the plan page: two tune-ups a year at list
+    price ($140–$500 combined, USA Today's figures) vs the plan ($100–$250) plus the repair discount and
+    priority scheduling. Sales coach Charlie Greer's paper-towel close — show the customer what the math looks
+    like in writing, let them see the plan saves money rather than costs money — is the oldest version of this
+    conversation in the trade (Contracting Business; Greer's claim of near-total close rates when the tech
+    believes in it is a sales coach's claim, not a measured benchmark). The tablet enrollment is the written
+    yes: plan tier, auto-renewal terms from the gate above, e-signature, card on file. No tablet, no paper
+    form? The tech offers it verbally and the customer enters step 3 — but the in-home close is the target,
+    because every hour that passes cools the yes.</p>
+    <p class="tools">Runs on: field-service software enrollment screen (or a plain tablet form that syncs to the CRM).</p>
+  </div>
+
+  <h2 class="sec">Step 3 — The 48-hour AI follow-up</h2>
+  <div class="step">
+    <h2><span class="n">3</span>The ones who didn't enroll get one call</h2>
+    <p>Non-enrolled customers from step 1 get exactly one AI voice call within 48 hours — the system restates
+    the in-home math, answers the two most common questions (what's covered, how cancellation works), and
+    offers to enroll them on the call. The call identifies itself as an automated assistant in the first
+    sentence (gate 3), records an explicit yes with name and date, and the written agreement from the gate
+    above goes out by email/SMS immediately after. Declines are removed from the sequence — one call, no drip
+    harassment, because a pressured enrollment becomes next year's churn statistic. Expectation-setting from
+    field data: one vendor's tune-up automation reports 42% of tune-ups converting to a plan (Fieldproxy,
+    crawled October 2026) — treat that as the high-water mark for a well-run program, not a promise; SmartAC's
+    20–25% traditional signup ceiling is the floor you're improving on.</p>
+    <p class="tools">Runs on: Synthflow (the call) + ElevenLabs (office-warm voice) + Make (sequence, opt-out honoring).</p>
+  </div>
+
+  <h2 class="sec">Step 4 — The auto-renewal engine</h2>
+  <div class="step">
+    <h2><span class="n">4</span>Renewals you don't have to chase</h2>
+    <p>Enrollment is half the system; the renewal engine is the other half. Thirty days before renewal, the
+    member gets a plain-English reminder (what renews, at what price, cancel in one step — the gate above is
+    non-negotiable here). The stored card charges on the renewal date. Members whose cards fail get a two-touch
+    rescue sequence before they lapse. Lapsed members get a win-back at 60 and 120 days with the re-enrollment
+    math — a lapsed member is the cheapest enrollment you'll ever make. The target is the connected-membership
+    retention bar: roughly 95% annual retention vs 65–75% for traditional plans (SmartAC, September 2026). And
+    members are worth more than their dues: agreement programs report 20%+ additional pull-through revenue from
+    repairs and replacements discovered on plan visits (ServiceTitan-published compilation, July 2026) — the
+    plan is a customer-retention system that happens to bill annually.</p>
+    <p class="tools">Runs on: Make (renewal + rescue + win-back sequences) + your membership billing.</p>
+  </div>
+
+  <h2 class="sec">Step 5 — The monthly plan-health review</h2>
+  <div class="step">
+    <h2><span class="n">5</span>Count members like leads</h2>
+    <p>First Monday of the month, the owner reads four numbers: members added (in-home vs 48-hour follow-up —
+    which channel closes?), churn (cancellations + failed renewals, against the ~95% retention bar),
+    pull-through revenue per member (repairs and replacements discovered on plan visits), and agreement share of
+    total revenue (the journey from the typical 2–5% toward the 25–40% top-operator band). A concrete reference
+    point for the scale this compounds at: Atlantic Refrigeration grew from 16 agreements to over 50 while
+    service revenue grew from $1M to $1.8M over three years (ServiceTitan-published case study, compiled July
+    2026). The three-year lens matters more than the monthly one: $2,840 per automated tune-up customer over
+    three years vs $420 without automation (Fieldproxy, crawled October 2026) is the value of the relationship,
+    not the dues.</p>
+  </div>
+
+  <h2 class="sec">Build vs buy</h2>
+  <p style="font-size:14px">The honest read: buy the membership <em>module</em>, build the
+  <em>enrollment motion</em>. Field-service platforms (ServiceTitan's membership tooling, Successware's
+  agreement modules) own agreement tracking, billing, and plan-visit scheduling — that integration load is the
+  real build cost and vendors built it over years. Third-party pricing teardowns put ServiceTitan around $300
+  per technician per month with implementation fees on top (Projul, 2026 teardown — third-party estimate, not a
+  vendor quote), so the module price is a real budget line. Where the buy stack is weak is exactly this
+  playbook's job: the in-home offer math, the 48-hour follow-up call, and the lapsed-member win-back sequence
+  are motion, not software. A shop already on a field-service platform builds steps 1–4 on Make + a voice agent
+  for a fraction of a new module; a shop with no platform should buy the platform first — automating enrollment
+  on spreadsheets is how plans leak. Independent agreement-first tools (Contractor+'s property-profile
+  auto-renewal, claiming 92% retention in its 2026 case study — vendor claim, dated) sit between: cheaper than
+  a full platform swap, stronger on renewals than a DIY build. This page is not a platform pick — see the
+  <a href="n8n-vs-make-workflow-automation.html">n8n vs Make comparison</a> for the automation half of the
+  decision.</p>
+  <table>
+    <tr><th>Route</th><th>What you get</th><th>What it costs</th><th>Source, date</th></tr>
+    <tr><td>ServiceTitan memberships</td><td>Agreement tracking, billing, plan-visit scheduling inside the dispatch system</td><td>~$300/tech/mo + implementation, third-party estimate</td><td class="src">Projul pricing teardown, 2026</td></tr>
+    <tr><td>Contractor+ auto-renewal</td><td>Property profiles + agreement enrollment + auto-renewal sequence; 92% retention claimed</td><td>Tier pricing, vendor site</td><td class="src">Contractor+ YouTube case study, 2026 (vendor claim)</td></tr>
+    <tr><td>SmartAC connected monitoring</td><td>Sensor-based monitoring memberships; ~95% retention, +19–20% revenue per home over 2–3 yrs reported</td><td>Per-home pricing, vendor site</td><td class="src">SmartAC CEO via Contracting Business, Sep 2026</td></tr>
+    <tr><td>Build (Make + voice agent)</td><td>Steps 1–4: visit trigger, tablet math, 48-hour AI follow-up, renewal + win-back sequences</td><td>Make tier + voice-agent usage, vendor sites</td><td class="src">Vendor sites, check current pricing</td></tr>
+  </table>
+
+  <h2 class="sec">How this fits the family</h2>
+  <p style="font-size:14px">Re-skin check vs the family: <strong>#4 chases the quotes you lost; this enrolls the
+  customers you already won.</strong> Playbook
+  <a href="estimate-recovery-playbook-for-contractors.html">#4 (unsold-estimate recovery)</a> runs on quotes
+  that went quiet — a customer who never bought. This playbook (#8) runs on service visits that already closed —
+  a customer who already paid. Different trigger (completed visit vs dead quote), different metric (plan members
+  added and recurring share of revenue vs estimates recovered), different psychology (the plan is a loyalty
+  product, not a rescue). It's also not #1 or #6: <a href="voice-agent-playbook-for-contractors.html">#1
+  (missed-call recovery)</a> catches the calls you miss, and
+  <a href="review-capture-playbook-for-home-services.html">#6 (review capture)</a> harvests the jobs you
+  finish — #8 converts those same finished jobs into revenue that shows up whether the phone rings or not. A
+  shop that runs #1, #6, and #8 has the full arc: nothing missed on the way in, reviews compounding on the way
+  out, and a membership base that smooths the slow season. For the automation stack behind all of them, see the
+  <a href="n8n-vs-make-workflow-automation.html">n8n vs Make comparison</a>, and
+  <a href="../index.html#sister-projects">AgencyStack — our agency-platform comparison, in staging</a>.</p>
+
+  <h2 class="sec">Try the tools this playbook runs on</h2>
+  <div class="cta">
+    <!-- AFFILIATE PLACEHOLDER: synthflow -->
+    <a href="#affiliate-synthflow-placeholder">Try Synthflow (48-hour follow-up calls)</a>
+    <!-- AFFILIATE PLACEHOLDER: elevenlabs -->
+    <a href="#affiliate-elevenlabs-placeholder">Try ElevenLabs (office-warm voices)</a>
+    <!-- AFFILIATE PLACEHOLDER: make -->
+    <a href="#affiliate-make-placeholder">Try Make (trigger + renewal engine)</a>
+  </div>
+  <div class="cta">
+    <a class="ghost" href="n8n-vs-make-workflow-automation.html">Compare n8n vs Make first</a>
+    <a class="ghost" href="voice-agent-playbook-for-contractors.html">Read playbook #1 (missed-call recovery)</a>
+    <a class="ghost" href="voice-agent-playbook-for-dental.html">Read playbook #2 (dental)</a>
+    <a class="ghost" href="speed-to-lead-playbook-for-real-estate.html">Read playbook #3 (real estate)</a>
+    <a class="ghost" href="estimate-recovery-playbook-for-contractors.html">Read playbook #4 (estimate recovery)</a>
+    <a class="ghost" href="after-hours-dispatch-triage-playbook.html">Read playbook #5 (after-hours dispatch)</a>
+    <a class="ghost" href="review-capture-playbook-for-home-services.html">Read playbook #6 (review capture)</a>
+    <a class="ghost" href="no-show-recovery-playbook-for-dental.html">Read playbook #7 (no-show recovery)</a>
+  </div>
+
+  <h2 class="sec">Common objections, answered honestly</h2>
+  <div class="faq">
+    <h3>We already run playbook #4 — isn't this the same system?</h3>
+    <p>Same family, opposite ends of the deal. #4 chases estimates that went quiet — customers who never
+    bought. #8 enrolls customers who already paid for a visit. They share the voice-agent stack and the
+    consent machinery, but they never share a trigger, a script, or a metric — #4 measures estimates recovered,
+    #8 measures plan members and recurring share of revenue. Most contractors should run #4 first (dead quotes
+    are the bigger immediate leak) and add #8 once quotes stop going quiet.</p>
+  </div>
+  <div class="faq">
+    <h3>What enrollment rate should we expect?</h3>
+    <p>Set the bar with third-party numbers, not hope. The traditional signup ceiling is 20–25% of homeowners
+    (SmartAC, September 2026). Fieldproxy's tune-up automation reports 42% of tune-ups converting to a plan —
+    treat that as the high-water mark for a well-run program with an in-home offer and a 48-hour follow-up,
+    not a promise. If you're converting 15% of non-member visits in year one, you're inside the honest band;
+    the system exists to walk that number toward the top third over time.</p>
+  </div>
+  <div class="faq">
+    <h3>Won't members cost us money — two free tune-ups for $150?</h3>
+    <p>Only if the plan is priced wrong. That's the whole point of the tablet math in step 2: the plan is
+    priced so the two tune-ups cost you less than the dues plus what the customer would have paid à la carte —
+    and members buy 20%+ more pull-through work (repairs, replacements found on plan visits) than non-members.
+    One contractor software vendor's headline advice in its 2026 case study is literally the pricing math so
+    agreements contribute margin instead of subsidizing labor. Price the plan from your true tune-up cost, not
+    from what the shop down the street charges.</p>
+  </div>
+  <div class="faq">
+    <h3>Do we need a lawyer for the auto-renewal agreement?</h3>
+    <p>Yes — once, up front, not forever. The one-page agreement needs to satisfy your state's automatic-renewal
+    law (California's shape is the strictest and the common template), and a local business attorney reviews
+    it in one sitting. That's a few hundred dollars against the annual value of a membership base. What the
+    lawyer is checking is exactly gate 1: clear renewal terms before enrollment, separate consent for the
+    auto-renewing feature, and one-step cancellation. After that review, the sequence runs without counsel.</p>
+  </div>
+  <div class="faq">
+    <h3>We're a two-truck shop — is this overkill?</h3>
+    <p>Yes, as a system — and the page says so. Two trucks don't need a 48-hour AI follow-up; the tech makes the
+    offer in the home and the owner calls the maybe-laters himself on Friday. What a small shop should take
+    from this playbook is the one-page agreement (the legal gate is size-independent) and the monthly member
+    count. The automation earns its cost when the visit volume makes the follow-up inconsistent — roughly when
+    non-member visits exceed what one person can call back in a week. Build the rules now, automate when the
+    volume demands it.</p>
+  </div>
+</main>
+<footer class="note">
+  FlowBench playbook #8 (2026-10-02). Affiliate links are placeholders (no real URLs) until partner signups are
+  approved. Vendor pricing, program terms, and third-party case claims are reported from the named sources on the
+  named dates — nothing above is a live quote, and we never invent vendor terms. Scored 8.6/10 vs the 8.4 family
+  bar — PROMOTED (demand case strongest in the family; re-skin check vs #1/#4/#6 stated above).
+</footer>
+</body>
+</html>
