@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The After-Hours Emergency Dispatch Playbook for Trades (2026) — FlowBench</title>
+<meta name="description" content="A how-to playbook for plumbing, HVAC, and electrical shops losing after-hours emergency calls: an AI voice agent that answers on the first ring, triages emergency vs next-day, dispatches the on-call rotation, and books morning slots — with every tool term sourced and dated. Independent — verify on vendor sites before buying.">
+<style>
+  :root { --ink:#1a1a1a; --mut:#5c5c5c; --line:#d8d8d8; --acc:#7c3aed; --bg:#f6f7f9; --warn:#fbf3df; }
+  * { box-sizing:border-box; }
+  body { font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); margin:0; line-height:1.6; }
+  header.top { background:#1e1433; color:#fff; padding:16px 24px; }
+  header.top h1 { margin:0; font-size:21px; }
+  header.top p { margin:4px 0 0; font-size:13px; color:#c9bdf2; }
+  main { max-width:900px; margin:0 auto; padding:24px; }
+  .disc { background:var(--warn); border:1px solid #e3cf9a; border-radius:10px; padding:14px 16px; font-size:13.5px; margin-bottom:22px; }
+  .verdict { background:#fff; border:1px solid var(--line); border-left:5px solid var(--acc); border-radius:8px; padding:16px 18px; margin-bottom:22px; }
+  .verdict h2 { margin:0 0 8px; font-size:17px; }
+  .step { background:#fff; border:1px solid var(--line); border-radius:8px; padding:16px 18px; margin-bottom:16px; }
+  .step h2 { margin:0 0 8px; font-size:17px; }
+  .step h2 .n { display:inline-block; background:var(--acc); color:#fff; border-radius:50%; width:28px; height:28px; text-align:center; line-height:28px; font-size:15px; margin-right:8px; }
+  .step p, .step li { font-size:14px; color:#333; }
+  .step .tools { font-size:13px; color:var(--mut); }
+  .hard { background:#fdecec; border:1px solid #e8b4b4; border-radius:8px; padding:16px 18px; margin-bottom:22px; font-size:14px; }
+  .hard h2 { margin:0 0 8px; font-size:17px; }
+  table { width:100%; border-collapse:collapse; background:#fff; font-size:14px; margin:0 0 22px; }
+  th, td { border:1px solid var(--line); padding:10px 12px; text-align:left; vertical-align:top; }
+  th { background:#f0eafa; font-size:12.5px; text-transform:uppercase; letter-spacing:.4px; }
+  td.src { font-size:12px; color:var(--mut); }
+  h2.sec { font-size:19px; margin:30px 0 10px; }
+  .cta { display:flex; gap:12px; flex-wrap:wrap; margin:18px 0 26px; }
+  .cta a { background:var(--acc); color:#fff; text-decoration:none; padding:12px 20px; border-radius:8px; font-weight:600; font-size:14.5px; }
+  .cta a.ghost { background:#fff; color:var(--acc); border:1px solid var(--acc); }
+  .faq { background:#fff; border:1px solid var(--line); border-radius:8px; padding:16px 18px; margin-bottom:14px; }
+  .faq h3 { margin:0 0 6px; font-size:15.5px; }
+  .faq p { margin:0; font-size:14px; color:#333; }
+  footer.note { max-width:900px; margin:0 auto; padding:0 24px 34px; font-size:12.5px; color:var(--mut); }
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>FlowBench — Automation picks for small business</h1>
+  <p>Playbooks, not just picks: step-by-step automation setups for specific industries. Every tool term below is labeled with its source and date — vendors change tiers often, so verify on the vendor site before you buy.</p>
+</header>
+<main>
+  <h2 class="sec" style="margin-top:6px">Playbook #5: The After-Hours Emergency Dispatch Playbook for Trades (2026)</h2>
+
+  <div class="disc">
+    <strong>Disclosure:</strong> FlowBench is independent — not affiliated with Make, Synthflow, ElevenLabs, or n8n.
+    The buttons below are <strong>affiliate placeholders</strong>: if we join their partner programs,
+    we may earn a commission when you sign up, at no added cost to you. We never accept payment for
+    placement. Affiliate terms were checked against the vendors' own pages on <strong>October 1–2, 2026</strong>
+    (make.com/en/affiliate; n8n.io/affiliates; official Synthflow partner terms; elevenlabs.io/affiliates-terms).
+    Tool pricing and vendor claims named here come from the third-party sources noted — <strong>confirm current
+    pricing and terms on each vendor's own site before buying.</strong> Nothing here is legal, compliance, or
+    emergency-response advice — check your state's contractor-board rules and current telemarketing law before
+    automating any voice answering.
+  </div>
+
+  <div class="hard">
+    <h2>The constraints: this agent is triage — never a dispatcher, never 911 — and calls get announced</h2>
+    <p>Two hard gates, and both come before any automation is built. <strong>Gate 1 — triage, not coverage:</strong>
+    the AI classifies the call and routes it; it does not guarantee emergency service. A burst pipe at 2am gets
+    escalated to your on-call rotation under <em>your</em> rules, and your emergency-fee schedule belongs in the
+    estimate paperwork, never promised on a phone call. Do not present this system as 24/7 emergency coverage —
+    a classification error on a gas-leak call is a liability event, not a software bug. Verify your state's
+    contractor-board rules and your liability coverage with counsel before going live. <strong>Gate 2 — recording
+    consent:</strong> the agent announces the call is recorded (or your state says otherwise — many states are
+    two-party consent, so the announcement-first pattern is the default). Build both gates into step 0; the
+    playbook below assumes they're in place. This page is not compliance advice.</p>
+  </div>
+
+  <div class="verdict">
+    <h2>The short version</h2>
+    <p>Our contractor missed-call playbook (#1) catches the calls you miss — this playbook makes sure
+    <strong>nothing ever misses</strong>. The phone rings at 11pm, the AI answers on the first ring, decides in
+    about a minute whether this is an emergency or a tomorrow problem, wakes your on-call tech for the real ones,
+    and books a morning slot for the rest. The demand case is the strongest we've scored in this family:
+    <strong>35% of plumbing calls are emergencies</strong>, <strong>91% of emergency jobs go to the first
+    contractor who answers</strong>, the industry misses <strong>58%</strong> of incoming calls, and
+    <strong>40% of emergency calls land after business hours</strong> — about 61 after-hours calls a month per
+    plumbing business, worth <strong>$17,500+/month</strong> in unanswered revenue (Waverly Research, September
+    2026, reported via ABNewswire 2026-09-10; PHCC National Association president quoted on record). HVAC runs
+    the same pattern: <strong>40% of service calls arrive after hours</strong>, a missed emergency call runs
+    <strong>$700–$1,050</strong>, and 80% of callers hang up without leaving a message (industry benchmarks
+    compiled 2025–2026). Invoca's research puts the average missed home-services call at <strong>$1,200</strong>,
+    and 1,200+ surveyed contractors lose <strong>$45,000–$120,000/year</strong> to unanswered calls
+    (instantbusinesspro.ai, October 2026). One plumbing company tracked for 30 days logged 47 missed calls —
+    "over $9,000 in potential revenue gone in a single month" (NexusCall AI press release, June 17, 2026). The
+    build is <strong>Synthflow</strong> (the live-answer AI voice agent — classification, escalation, morning-slot
+    booking) with <strong>ElevenLabs</strong> voices so a 2am caller hears your office, not a robot, and
+    <strong>Make</strong> as the dispatch engine behind it (on-call rotation routing, escalation chain,
+    CRM/dispatch-board sync, emergency-fee schedule logic). All stats above are third-party and dated —
+    direction, not a guarantee for your market.</p>
+  </div>
+
+  <h2 class="sec">Step 0 — Write your emergency rules before you automate anything</h2>
+  <div class="step">
+    <h2><span class="n">0</span>The triage definition your whole shop agrees on</h2>
+    <p>An AI can't triage what your shop never defined. Before any tool is bought, the owner writes the
+    <strong>emergency definition list</strong> — the actual calls that wake a human: gas smell, no heat below
+    freezing, active water leak, sewer backup, no AC with an elderly resident, sparking panel. Everything else is
+    next-day. This list is the playbook's brain; every downstream step references it. Then the <strong>escalation
+    SLA</strong>: who gets woken first, how long they have to answer (the honest bar is 3–5 minutes), who is
+    second, and what happens when nobody answers (the honest answer is a bonded overflow option or the morning
+    queue — write it down instead of discovering it at 2am). Shops that skip this step get an agent that
+    classifies "correctly" against nobody's rules — step 0 takes one whiteboard session and prevents every
+    argument the system will ever start.</p>
+    <p class="tools"><strong>Built with:</strong> a shared doc (the emergency definition list + rotation roster +
+    escalation SLA), stored where the whole shop can read it. No software yet — the list IS the product until
+    step 1.</p>
+  </div>
+
+  <h2 class="sec">Step 1 — The agent answers on the first ring</h2>
+  <div class="step">
+    <h2><span class="n">1</span>Live pickup, classification in one minute</h2>
+    <p>After hours, every inbound call routes to the voice agent instead of voicemail. It does four things in
+    roughly a minute: announces itself as your shop's after-hours line (recording announcement first, per the
+    gate above), asks what's happening, classifies against your step-0 list, and branches — emergency goes to
+    step 2, everything else goes to step 3. The classification script is deliberately narrow: it asks
+    <em>symptom</em> questions ("is water actively flowing right now?"), never diagnosis questions, and anything
+    ambiguous escalates up, not down — a false emergency costs a callback; a missed emergency costs a customer
+    and worse. Unanswered escalations (the on-call tech doesn't pick up) route per your step-0 SLA, and the
+    caller gets a concrete commitment ("our tech will call you back within 10 minutes") instead of a voicemail
+    box. One Central Florida shop running this pattern reports a <strong>2.8x increase in after-hours lead
+    capture</strong> with 80+ active customers (Anvoa, launched mid-2025), and 62% of their callers never realize
+    they're speaking with AI.</p>
+    <p class="tools"><strong>Built with:</strong> <strong>Synthflow</strong> (the voice agent — classification
+    script, branching, escalation triggers) + <strong>ElevenLabs</strong> (the voice: calm, unhurried, your shop's
+    tone at 2am — the voice is half the customer experience on an emergency call). Bench route:
+    <strong>n8n</strong> self-hosted if the shop wants the stack on its own infrastructure.</p>
+  </div>
+
+  <h2 class="sec">Step 2 — The emergency path: dispatch, not just notification</h2>
+  <div class="step">
+    <h2><span class="n">2</span>Wake the rotation, log everything</h2>
+    <p>This is the step that separates a triage playbook from an answering service: the emergency path
+    <strong>dispatches</strong>. When the agent classifies a real emergency, Make fires the rotation — call the
+    on-call tech, text if no answer in the SLA window, escalate to the second tech, log every attempt with
+    timestamps to the dispatch board. The caller gets a case reference and a callback commitment; the tech gets
+    the classified symptom summary, the address, and the callback number — not a raw voicemail to decode at
+    2:07am. Emergency-fee logic lives here too: the rotation knows which calls carry the after-hours rate, and
+    the fee is disclosed when the tech calls back, never promised by the agent. Honest note on the load: this
+    is the heaviest step in the playbook. Your rotation probably lives in a group text, your dispatch board in
+    ServiceTitan, Housecall Pro, or a whiteboard. Mapping rotation → automation is a day of real work before the
+    first 2am call arrives — budget it, don't hand-wave it.</p>
+    <p class="tools"><strong>Built with:</strong> <strong>Make</strong> (the dispatch engine: rotation routing,
+    SLA timers, escalation chain, dispatch-board sync, timestamped logging) reading the rotation from wherever
+    it actually lives (ServiceTitan dispatch, Housecall Pro, JobNimbus, or — to start — a shared sheet the office
+    updates). Ugly and shipped beats elegant and theoretical.</p>
+  </div>
+
+  <h2 class="sec">Step 3 — The routine path: morning slots, not missed calls</h2>
+  <div class="step">
+    <h2><span class="n">3</span>Book the morning, sync the board</h2>
+    <p>Non-emergency callers never hear "call back during business hours." The agent offers the next real
+    morning slots from your schedule, books one, texts a confirmation with the tech's arrival window, and syncs
+    the booking to your CRM/dispatch board so the morning crew sees a full board, not a voicemail pile. Every
+    booking, classification, and recording lands in a <strong>morning handoff queue</strong> the office reviews
+    at open: emergencies dispatched overnight (with the full timestamped log), morning bookings, and the
+    ambiguous calls that need a human listen. The handoff queue is also the quality loop — misclassifications
+    get corrected against the step-0 list, and the list gets sharper every month. Shops running the callback
+    pattern from our <a href="voice-agent-playbook-for-contractors.html">playbook #1</a> keep both: #1 catches
+    daytime misses, this playbook owns the night. That pairing — callback for the day, live answer for the
+    night — is the whole phone strategy on one page.</p>
+    <p class="tools"><strong>Built with:</strong> <strong>Synthflow</strong> (booking flow, confirmation texts) +
+    <strong>Make</strong> (CRM/dispatch-board sync, handoff-queue assembly). Calendar source is your real schedule
+    (Google Calendar, ServiceTitan, Housecall Pro) — the agent only offers slots that actually exist.</p>
+  </div>
+
+  <h2 class="sec">Build vs buy — the honest math</h2>
+  <table>
+    <tr><th>Route</th><th>What it costs</th><th>What you get</th><th class="src">Source</th></tr>
+    <tr><td>AI answering vendors (NexusCall-style)</td><td>$297–$1,497/mo (Essentials/Growth/Premium tiers)</td><td>Done-for-you answering, booking, CRM sync; you rent their stack</td><td class="src">NexusCall AI press release, 2026-06-17</td></tr>
+    <tr><td>This playbook (DIY, Synthflow + ElevenLabs + Make)</td><td>Tool subscriptions you control; per-minute voice costs at your volume</td><td>You own the stack, the classification rules, and the data; heavier setup</td><td class="src">Vendor pricing pages — verify current tiers before buying</td></tr>
+    <tr><td>Human answering service (Ruby-style)</td><td>Per-minute/per-call, typically $300+/mo at trade volumes</td><td>Humans, but no dispatch integration and no emergency classification depth</td><td class="src">Conventional market range, October 2026 — verify quotes</td></tr>
+  </table>
+  <p style="font-size:14px">The playbook's wedge: vendors rent you their agent; this builds <em>your</em> agent
+  around <em>your</em> emergency definitions and <em>your</em> rotation — and the stack doubles as your daytime
+  automation backbone (<a href="voice-agent-playbook-for-contractors.html">playbook #1</a>,
+  <a href="estimate-recovery-playbook-for-contractors.html">playbook #4</a>).</p>
+
+  <h2 class="sec">How this fits the family</h2>
+  <p style="font-size:14px">Playbook <a href="voice-agent-playbook-for-contractors.html">#1 (missed-call
+  recovery)</a> catches what slipped through — this playbook makes sure nothing slips through after hours: live
+  answer, triage, dispatch. Different trigger (a ringing phone at night vs a missed-call event), different skill
+  (emergency classification and dispatch escalation vs speed-to-callback), different automation (live-answer agent
+  plus on-call rotation vs callback webhook). The shop that runs both has no dead air on its phone line, day or
+  night. For the daytime estimate pipeline, see
+  <a href="estimate-recovery-playbook-for-contractors.html">playbook #4 (unsold-estimate recovery)</a>. For the
+  automation stack behind all of them, see
+  <a href="../index.html#sister-projects">AgencyStack — our agency-platform comparison, in staging</a>.</p>
+
+  <h2 class="sec">Try the tools this playbook runs on</h2>
+  <div class="cta">
+    <!-- AFFILIATE PLACEHOLDER: synthflow -->
+    <a href="#affiliate-synthflow-placeholder">Try Synthflow (live-answer voice agent)</a>
+    <!-- AFFILIATE PLACEHOLDER: elevenlabs -->
+    <a href="#affiliate-elevenlabs-placeholder">Try ElevenLabs (2am-calm voices)</a>
+    <!-- AFFILIATE PLACEHOLDER: make -->
+    <a href="#affiliate-make-placeholder">Try Make (dispatch engine)</a>
+  </div>
+  <div class="cta">
+    <a class="ghost" href="n8n-vs-make-workflow-automation.html">Compare n8n vs Make first</a>
+    <a class="ghost" href="voice-agent-playbook-for-contractors.html">Read playbook #1 (missed-call recovery)</a>
+    <a class="ghost" href="voice-agent-playbook-for-dental.html">Read playbook #2 (dental)</a>
+    <a class="ghost" href="speed-to-lead-playbook-for-real-estate.html">Read playbook #3 (real estate)</a>
+    <a class="ghost" href="estimate-recovery-playbook-for-contractors.html">Read playbook #4 (estimate recovery)</a>
+  </div>
+
+  <h2 class="sec">Common objections, answered honestly</h2>
+  <div class="faq">
+    <h3>We already have an answering service — why rebuild this?</h3>
+    <p>A human answering service takes a message; this system <em>dispatches</em>. The difference shows up at
+    2am: the service emails you "caller reports water in basement," and your tech wakes up to decode it. The
+    dispatch path classifies against your rules, wakes the right tech in the rotation, logs every attempt with
+    timestamps, and gives the caller a case reference and a callback commitment. If your current service already
+    does all of that, keep it — this playbook is for the shops still getting raw voicemails at open.</p>
+  </div>
+  <div class="faq">
+    <h3>Won't customers hang up when they realize it's AI?</h3>
+    <p>At 2am with water coming through the ceiling, customers care about one thing: someone picked up and help
+    is moving. One operator running this pattern reports 62% of callers never realize they're speaking with AI
+    (Anvoa, 2026). The realistic failure mode isn't "they detected AI" — it's a misclassification, which is why
+    ambiguous calls escalate UP and the morning handoff queue exists. Measure misclassifications monthly; that's
+    the quality metric, not caller sentiment.</p>
+  </div>
+  <div class="faq">
+    <h3>Our on-call rotation is a group text — does this still work?</h3>
+    <p>Yes — that's the honest starting point for most shops. The Make back end can read a shared sheet the
+    office updates when the rotation changes; ugly, but it ships. The integration mapping to ServiceTitan or
+    Housecall Pro dispatch is the upgrade path, not the entry requirement. What doesn't work is no rotation at
+    all — if "whoever hears their phone" is the current system, step 0 (writing the actual rotation down) is the
+    deliverable, and the automation comes second.</p>
+  </div>
+  <div class="faq">
+    <h3>Isn't this the same as your missed-call playbook (#1)?</h3>
+    <p>They're the two halves of one phone strategy. #1 is reactive: a call was missed, the system calls back
+    within 60 seconds. This playbook is preventive: after hours, no call ever misses — the agent answers live,
+    classifies, and dispatches. Different trigger (live ring vs missed-call event), different skill (emergency
+    classification and dispatch escalation vs speed-to-callback), different automation map. Run both and the phone
+    line has no dead air, day or night.</p>
+  </div>
+  <div class="faq">
+    <h3>What about liability on emergency calls?</h3>
+    <p>The real question, and the reason the hard-constraint box sits at the top of this page. The agent is
+    triage — it classifies and routes under your written rules; it never guarantees emergency coverage, never
+    promises response times on the call, and never quotes emergency fees (those go in the paperwork when the tech
+    calls back). Classification errors are the risk: ambiguous calls escalate up by design. Verify your state's
+    contractor-board rules, your liability coverage, and your call-recording obligations with counsel before going
+    live. This page is a playbook, not compliance advice.</p>
+  </div>
+</main>
+<footer class="note">
+  FlowBench playbook #5 (2026-10-02). Affiliate links are placeholders (no real URLs) until partner signups are
+  approved. Vendor pricing, program terms, and third-party case claims are reported from the named sources on the
+  named dates — nothing above is a live quote, and we never invent vendor terms.
+</footer>
+</body>
+</html>
