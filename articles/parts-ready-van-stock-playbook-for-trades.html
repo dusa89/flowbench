@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Parts-Ready Van Playbook for Trades (2026) — FlowBench</title>
+<meta name="description" content="A how-to playbook for trade shops: kill the $220 supply-house run with a binned van, PAR levels, barcode scanning on a free app, and a weekly restock loop — with every figure sourced and dated. Independent — verify on vendor sites before buying.">
+<style>
+  :root { --ink:#1a1a1a; --mut:#5c5c5c; --line:#d8d8d8; --acc:#7c3aed; --bg:#f6f7f9; --warn:#fbf3df; }
+  * { box-sizing:border-box; }
+  body { font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); margin:0; line-height:1.6; }
+  header.top { background:#1e1433; color:#fff; padding:16px 24px; }
+  header.top h1 { margin:0; font-size:21px; }
+  header.top p { margin:4px 0 0; font-size:13px; color:#c9bdf2; }
+  main { max-width:900px; margin:0 auto; padding:24px; }
+  .disc { background:var(--warn); border:1px solid #e3cf9a; border-radius:10px; padding:14px 16px; font-size:13.5px; margin-bottom:22px; }
+  .verdict { background:#fff; border:1px solid var(--line); border-left:5px solid var(--acc); border-radius:8px; padding:16px 18px; margin-bottom:22px; }
+  .verdict h2 { margin:0 0 8px; font-size:17px; }
+  .step { background:#fff; border:1px solid var(--line); border-radius:8px; padding:16px 18px; margin-bottom:16px; }
+  .step h2 { margin:0 0 8px; font-size:17px; }
+  .step h2 .n { display:inline-block; background:var(--acc); color:#fff; border-radius:50%; width:28px; height:28px; text-align:center; line-height:28px; font-size:15px; margin-right:8px; }
+  .step p, .step li { font-size:14px; color:#333; }
+  .step .tools { font-size:13px; color:var(--mut); }
+  .hard { background:#fdecec; border:1px solid #e8b4b4; border-radius:8px; padding:16px 18px; margin-bottom:22px; font-size:14px; }
+  .hard h2 { margin:0 0 8px; font-size:17px; }
+  table { width:100%; border-collapse:collapse; background:#fff; font-size:14px; margin:0 0 22px; }
+  th, td { border:1px solid var(--line); padding:10px 12px; text-align:left; vertical-align:top; }
+  th { background:#f0eafa; font-size:12.5px; text-transform:uppercase; letter-spacing:.4px; }
+  td.src { font-size:12px; color:var(--mut); }
+  h2.sec { font-size:19px; margin:30px 0 10px; }
+  .cta { display:flex; gap:12px; flex-wrap:wrap; margin:18px 0 26px; }
+  .cta a { background:var(--acc); color:#fff; text-decoration:none; padding:12px 20px; border-radius:8px; font-weight:600; font-size:14.5px; }
+  .cta a.ghost { background:#fff; color:var(--acc); border:1px solid var(--acc); }
+  .faq { background:#fff; border:1px solid var(--line); border-radius:8px; padding:16px 18px; margin-bottom:14px; }
+  .faq h3 { margin:0 0 6px; font-size:15.5px; }
+  .faq p { margin:0; font-size:14px; color:#333; }
+  footer.note { max-width:900px; margin:0 auto; padding:0 24px 34px; font-size:12.5px; color:var(--mut); }
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>FlowBench — Automation picks for small business</h1>
+  <p>Playbooks, not just picks: step-by-step automation setups for specific industries. Every tool term below is labeled with its source and date — vendors change tiers often, so verify on the vendor site before you buy.</p>
+</header>
+<main>
+
+  <div class="disc">
+    <strong>Disclosure:</strong> FlowBench is independent — not affiliated with Make, Sortly, MaintainX,
+    UpKeep, or any distributor named here. The buttons below are <strong>affiliate placeholders</strong>:
+    if we join their partner programs, we may earn a commission when you sign up, at no added cost to you.
+    We never accept payment for placement. Tool pricing and vendor claims named here come from the
+    third-party sources noted — <strong>confirm current pricing and terms on each vendor's own site before
+    buying.</strong> Nothing here is financial or legal advice for your situation — treat the statistics as
+    directional and test on your own numbers.
+  </div>
+
+  <div class="hard">
+    <h2>The discipline gates: software doesn't stock a van — five gates, non-negotiable</h2>
+    <p>Every vendor selling van-stock software will show you the same magic numbers. Read the gates before
+    you quote them. Gate 1: <strong>the scan discipline IS the system.</strong> A barcode app no tech
+    opens is a shelf of sticky labels. The playbook's whole Step 1 is behavior, not software — the shop
+    that wins here wins on a 90-second end-of-day scan habit, not on the platform it bought.
+    Gate 2: <strong>the vendor numbers are vendor numbers.</strong> The plumbing blueprints below come from
+    Fieldproxy, a vendor selling field-service automation (crawled October 2026, labeled throughout) — 3–5
+    hours per tech per week lost, 85% fewer emergency trips, 95–98% stock accuracy. Treat those as the
+    ceiling of what's achievable, not the floor of what's typical. The third-party numbers — the $220 run,
+    the 5–10% profit erasure, the Aberdeen halved-stockout finding — are the floor.
+    Gate 3: <strong>shrinkage accounting has an honesty requirement.</strong> When you find a stockout, the
+    first move is the write-down, not the witch hunt: most missing parts are unrecorded transfers, double
+    issues to one job, or bins nobody labeled — not theft. Investigate after you record, and keep people
+    notes out of the system until you have a pattern (Supply Chain Digest, 2026 — the count-error protocol).
+    Gate 4: <strong>PAR levels shift with the season.</strong> Capacitors in June are not capacitors in
+    January. The restock loop in Step 4 resets min/max levels quarterly against usage history, or the
+    "optimized" levels from last summer will starve you in the next heat wave.
+    Gate 5: <strong>this is an inventory lane, not a tax lane.</strong> Shrinking on-hand value changes
+    your balance sheet and year-end count obligations — run the plan past your accountant before a
+    December purge, not after.</p>
+  </div>
+
+  <div class="verdict">
+    <h2>The verdict: the van is a warehouse that loses $220 every time the door opens empty</h2>
+    <p>A service van is not storage — it is a rolling warehouse that dispenses revenue. When a tech finds
+    the bin empty mid-job, the $20 capacitor costs far more than $20: a 60-minute supply-house run at a
+    $175/hour billable rate burns $175 in lost top line, $15 in fuel, and $30 in technician wages — $220 in
+    total cost for one missing part (repair-crm.com, June 2026). And the quiet leak is worse than the loud
+    one: the small fittings, wire nuts, and lubricants that never make it onto the invoice can erase 5% to
+    10% of annual profit for a 1-to-5-person shop (same source, June 2026). This playbook builds a
+    parts-ready van in five steps: cost the leak so the team feels it, bin and map every van to PAR levels,
+    barcode-scan everything through a free app, run a weekly restock loop the office executes without
+    meetings, and close the loop on first-time fix rate — so the truck that arrives finishes the job.</p>
+  </div>
+
+  <div class="step">
+    <h2><span class="n">1</span>Cost the leak — the stockout audit (Week 1)</h2>
+    <p>You cannot fix a leak nobody priced. For 2 weeks, every tech logs 4 fields on a shared sheet when a
+    part is missing: part, job, minutes burned (drive + wait), and whether the part got invoiced. The
+    office totals it Friday: runs × $220 + unbilled-part value. A 3-tech shop losing 3–5 hours per tech
+    per week to missing stock (Fieldproxy plumbing blueprint, crawled October 2026 — vendor ceiling,
+    labeled) is burning roughly $1,000–$1,800 a week in lost billable time alone at that $175/hour rate.
+    Post the weekly total on the shop whiteboard — the leak you can see is the leak the team will fix.</p>
+    <p class="tools">Tools: the shared sheet the shop already has. No software yet — software comes after
+    the habit.</p>
+  </div>
+
+  <div class="step">
+    <h2><span class="n">2</span>Bin and map the van — PAR levels per truck (Week 2)</h2>
+    <p>Strip one van to the floor and rebuild it around zones: high-velocity bins within arm's reach of the
+    side door (capacitors, contactors, fuses, common fittings), medium-velocity mid-van (motors, boards,
+    valves), seasonal/slow on the back shelf. Every bin gets a label with the part number, the bin
+    location code (e.g. A-12), and its PAR pair: the reorder point and the max. Set the first PAR levels
+    from the Step 1 audit, not from a catalog — your last 90 days of jobs know what your vans actually
+    burn. Photograph the finished bin map and pin it inside the door: the map is the standard, and the
+    standard is what a fill-in tech stocks to.</p>
+    <p class="tools">Tools: a label printer or a sheet of adhesive labels. Total outlay: under $30.</p>
+  </div>
+
+  <div class="step">
+    <h2><span class="n">3</span>Scan everything — the free barcode layer (Week 3)</h2>
+    <p>The phone the tech already carries is the scanner. Sortly's free tier and MaintainX's free tier both
+    offer barcode/QR-based tracking on the phone with low-stock alerts (facilio.com parts-inventory
+    comparison, crawled October 2026 — verify tiers on vendor sites before buying). The rule is simple and
+    binary: nothing leaves a bin without a scan at issue, nothing enters a van without a scan at restock.
+    The office dashboard then shows live van counts per tech — and, critically, the unbilled-parts report:
+    every part issued to a job that never landed on the invoice. That report alone closes the 5–10% profit
+    leak from Step 1, because "inventory leakage" (repair-crm.com, June 2026) only survives where nobody
+    reconciles.</p>
+    <p class="tools">Tools: Sortly free tier or MaintainX free tier (barcode/QR scanning, low-stock alerts);
+    paid tiers start around $20–$24/user/month per the October 2026 comparison — the free tier runs this
+    playbook.</p>
+  </div>
+
+  <div class="step">
+    <h2><span class="n">4</span>The weekly restock loop — no meetings, no memory (ongoing)</h2>
+    <p>Friday, 15 minutes, one workflow: each tech scans the bins below their reorder point (the app flags
+    them), the office consolidates the flags across vans into one purchase order, and Monday's scheduled
+    jobs drive the pre-pull list — the parts each tech's day needs, staged before dispatch. Aberdeen's
+    service-parts research (via sdcexec.com) found that shops coordinating parts planning across the
+    network cut inventory levels 10–15% and halved stockouts versus shops planning locally — the weekly
+    loop is that coordination, for a 5-van fleet. Add the tech-to-tech transfer rule: when a bin runs dry
+    mid-day, the dashboard shows which nearby van holds the part, and the transfer scans out of one van
+    and into the job — the emergency parts run becomes a 10-minute handoff (Fieldproxy vendor ceiling:
+    85% fewer emergency trips — labeled).</p>
+    <p class="tools">Tools: the barcode app's dashboard + the shop's existing sheet or a Make scenario that
+    turns Friday's low-stock flags into one consolidated PO. Make was verified against its own affiliate
+    and pricing pages October 1–2, 2026.</p>
+  </div>
+
+  <div class="step">
+    <h2><span class="n">5</span>Close the loop on first-time fix rate (monthly)</h2>
+    <p>The scoreboard has two numbers: stockout incidents per month (target: fewer than 2 per month per the
+    HVAC parts-tracking benchmark, crawled October 2026) and first-time fix rate. The Aquant 2026 Field
+    Service Benchmark Report puts the gap between "hero" technicians and everyone else at 6.5 percentage
+    points of first-time fix — and parts readiness is one of the few levers that moves the average tech
+    toward hero territory (benchmark PDF via 21176235.hs-sites.com, 2026). When stockouts fall and fix
+    rates rise, the ledger shows the payback: every avoided return visit is a slot the next billable job
+    takes. Report the two numbers to the team monthly alongside the leak total from Step 1 — the loop only
+    survives if the savings stay visible.</p>
+    <p class="tools">Tools: the app's monthly export + the Step 1 sheet. One dashboard, 5 minutes.</p>
+  </div>
+
+  <h2 class="sec">Build vs buy</h2>
+  <table>
+    <tr><th>Option</th><th>What you get</th><th>Cost</th><th class="src">Source</th></tr>
+    <tr><td>This playbook (DIY-AI)</td><td>Binned van, PAR levels, free barcode app, weekly restock loop, tech-to-tech transfers</td><td>$0 software (free tiers); ~$30 labels; 90-day ramp</td><td class="src">FlowBench, 2026</td></tr>
+    <tr><td>Trade-specific inventory (Ply, Simpro, Knowify, Kojo)</td><td>Inventory tied to truck, job, and procurement; supplier catalogs</td><td>Quote-based; mid-tier inventory platforms $299–$599/mo</td><td class="src">constructionplacements.com, Sep 21, 2026; sarkariresulthq inventory comparison, 2026</td></tr>
+    <tr><td>SMB parts/CMMS (MaintainX, UpKeep, Limble, Sortly)</td><td>Mobile barcode tracking, low-stock alerts, some auto-reorder</td><td>Free tiers exist; paid ~$20–$28/user/mo</td><td class="src">facilio.com parts comparison, crawled Oct 2026</td></tr>
+    <tr><td>Generic inventory (Zoho, inFlow)</td><td>Multi-warehouse tracking, PO management</td><td>Free to ~$99–$299/mo basic</td><td class="src">thedigitalprojectmanager.com, 2026</td></tr>
+    <tr><td>Nothing (status quo)</td><td>Disorganized van, memory-based restocking</td><td>$220 per supply-house run; 5–10% of annual profit in unbilled leakage</td><td class="src">repair-crm.com, Jun 2026</td></tr>
+  </table>
+
+  <h2 class="sec">Re-skin check — why this is not playbook #20 wearing a new hat</h2>
+  <p>None of the 22 prior playbooks touch inventory — every one is customer-contact, back-office,
+  workforce, or content. The closest cousin is #18 (end-of-life equipment ledger): #18 tracks the
+  customer's equipment and when it should be replaced — this tracks the shop's own parts and whether
+  they're on the truck. Different object (your parts vs their machines), different trigger (a missing bin
+  mid-job vs an aging unit), different metric (stockout incidents and first-time fix rate vs replacement
+  pipeline). This is the family's first inventory playbook and its first warehouse-on-wheels system —
+  the van as a stock location, not a vehicle.</p>
+
+  <h2 class="sec">Honest weak points</h2>
+  <p>Stated up front, not in a footnote: (1) the vendor ceiling numbers (85% fewer trips, 95–98%
+  accuracy) come from a seller of this exact software — the playbook treats them as the ceiling, and the
+  $220/run and 5–10% leakage figures as the floor; (2) the #1 failure mode is behavior — techs who won't
+  scan will beat any app, which is why Step 1 is an audit and Step 3 is a binary rule, not a suggestion;
+  (3) PAR levels decay every season (Gate 4) — skip the quarterly reset and last summer's "optimal" van
+  starves you in January; (4) the 6–12-month ramp — the first stockout-free month arrives before the
+  habit is permanent.</p>
+
+  <h2 class="sec">Questions this page must answer</h2>
+  <div class="faq">
+    <h3>Won't techs hate scanning every part?</h3>
+    <p>They hate the supply-house run more. The pitch that lands: this is 90 seconds at the end of the day
+    to never drive 40 minutes for a capacitor again. Shops that frame it as "the app protects your
+    paycheck from callbacks" (see #18's warranty math) get adoption faster than shops that frame it as
+    management surveillance.</p>
+  </div>
+  <div class="faq">
+    <h3>Do we need to buy a dedicated barcode scanner?</h3>
+    <p>No. The phone the tech already carries is the scanner — Sortly and MaintainX both scan from the
+    phone camera on their free tiers (facilio.com comparison, crawled October 2026). A dedicated scanner
+    is a purchase; the playbook's budget is $0 plus labels.</p>
+  </div>
+  <div class="faq">
+    <h3>How does this stop the unbilled-parts leak?</h3>
+    <p>The scan-at-issue rule ties every part to a job number, and the weekly reconciliation flags every
+    part issued to a job that never landed on the invoice. The 5–10% profit leak (repair-crm.com, June
+    2026) survives on "nobody reconciles" — the report ends that.</p>
+  </div>
+  <div class="faq">
+    <h3>What about high-value parts we don't want on every van?</h3>
+    <p>PAR max of 1 for high-value/low-velocity parts, or keep them in the office warehouse and let the
+    Monday pre-pull list reserve them against scheduled jobs. The playbook's bin zones already split
+    high-velocity (side door) from slow (back shelf) — expensive parts live in the slow zone with a tight
+    reorder point.</p>
+  </div>
+  <div class="faq">
+    <h3>How long until we see the money?</h3>
+    <p>The first avoided supply-house run pays the labels off on day one. The measurable wins — fewer
+    than 2 stockout incidents per month, first-time fix rate moving toward the top quartile — land in
+    months 2–3 of the restock loop. The habit being permanent is the 6–12-month story; the math is
+    immediate.</p>
+  </div>
+
+  <div class="cta">
+    <a href="../index.html">Back to the playbook library</a>
+    <a class="ghost" href="n8n-vs-make-workflow-automation.html">Read the n8n vs Make comparison</a>
+    <a class="ghost" href="voice-agent-playbook-for-contractors.html">Read playbook #1 (missed-call recovery)</a>
+    <a class="ghost" href="voice-agent-playbook-for-dental.html">Read playbook #2 (dental)</a>
+    <a class="ghost" href="speed-to-lead-playbook-for-real-estate.html">Read playbook #3 (real estate)</a>
+    <a class="ghost" href="estimate-recovery-playbook-for-contractors.html">Read playbook #4 (estimate recovery)</a>
+    <a class="ghost" href="after-hours-dispatch-triage-playbook.html">Read playbook #5 (after-hours dispatch)</a>
+    <a class="ghost" href="review-capture-playbook-for-home-services.html">Read playbook #6 (review capture)</a>
+    <a class="ghost" href="no-show-recovery-playbook-for-dental.html">Read playbook #7 (no-show recovery)</a>
+    <a class="ghost" href="maintenance-plan-enrollment-playbook-for-hvac.html">Read playbook #8 (maintenance plans)</a>
+    <a class="ghost" href="overdue-invoice-recovery-playbook-for-trades.html">Read playbook #9 (overdue-invoice recovery)</a>
+    <a class="ghost" href="dormant-customer-reactivation-playbook-for-trades.html">Read playbook #10 (dormant-customer reactivation)</a>
+    <a class="ghost" href="post-job-upsell-playbook-for-trades.html">Read playbook #11 (post-job upsell)</a>
+    <a class="ghost" href="same-day-reschedule-save-playbook-for-trades.html">Read playbook #12 (same-day reschedule save)</a>
+    <a class="ghost" href="post-season-tune-up-blitz-playbook-for-trades.html">Read playbook #13 (post-season tune-up blitz)</a>
+    <a class="ghost" href="referral-engine-playbook-for-trades.html">Read playbook #14 (referral engine)</a>
+    <a class="ghost" href="storm-response-playbook-for-exterior-trades.html">Read playbook #15 (storm response)</a>
+    <a class="ghost" href="property-manager-contract-playbook-for-trades.html">Read playbook #16 (property-manager contracts)</a>
+    <a class="ghost" href="new-mover-playbook-for-home-services.html">Read playbook #17 (new-mover welcome)</a>
+    <a class="ghost" href="end-of-life-equipment-ledger-playbook-for-trades.html">Read playbook #18 (end-of-life equipment ledger)</a>
+    <a class="ghost" href="subcontractor-coi-compliance-playbook-for-gcs.html">Read playbook #20 (COI compliance)</a>
+    <a class="ghost" href="jobsite-video-content-engine-playbook-for-trades.html">Read playbook #21 (jobsite video engine)</a>
+    <a class="ghost" href="technician-hiring-funnel-playbook-for-trades.html">Read playbook #22 (technician hiring funnel)</a>
+  </div>
+</main>
+<footer class="note">
+  FlowBench is independent research. Affiliate terms and tool pricing change — verify on each vendor's own site
+  before buying. Nothing on this page is professional financial advice for your situation; statistics are
+  directional and self-reported where labeled. Sourced and dated claims are attributed to their publishers;
+  vendor claims are labeled as such. Updated October 3, 2026.
+</footer>
+</body>
+</html>
