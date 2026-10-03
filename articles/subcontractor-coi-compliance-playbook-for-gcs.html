@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Subcontractor COI Compliance Playbook for General Contractors (2026) — FlowBench</title>
+<meta name="description" content="A how-to playbook for general contractors: collect every subcontractor's insurance documents before day one, verify them against your broker's requirements with an automated intake, catch expirations and mid-policy cancellations with a radar, and hold payments on non-compliant subs — with every figure sourced and dated. Independent — verify on vendor sites before buying.">
+<style>
+  :root { --ink:#1a1a1a; --mut:#5c5c5c; --line:#d8d8d8; --acc:#7c3aed; --bg:#f6f7f9; --warn:#fbf3df; }
+  * { box-sizing:border-box; }
+  body { font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); margin:0; line-height:1.6; }
+  header.top { background:#1e1433; color:#fff; padding:16px 24px; }
+  header.top h1 { margin:0; font-size:21px; }
+  header.top p { margin:4px 0 0; font-size:13px; color:#c9bdf2; }
+  main { max-width:900px; margin:0 auto; padding:24px; }
+  .disc { background:var(--warn); border:1px solid #e3cf9a; border-radius:10px; padding:14px 16px; font-size:13.5px; margin-bottom:22px; }
+  .verdict { background:#fff; border:1px solid var(--line); border-left:5px solid var(--acc); border-radius:8px; padding:16px 18px; margin-bottom:22px; }
+  .verdict h2 { margin:0 0 8px; font-size:17px; }
+  .step { background:#fff; border:1px solid var(--line); border-radius:8px; padding:16px 18px; margin-bottom:16px; }
+  .step h2 { margin:0 0 8px; font-size:17px; }
+  .step h2 .n { display:inline-block; background:var(--acc); color:#fff; border-radius:50%; width:28px; height:28px; text-align:center; line-height:28px; font-size:15px; margin-right:8px; }
+  .step p, .step li { font-size:14px; color:#333; }
+  .step .tools { font-size:13px; color:var(--mut); }
+  .hard { background:#fdecec; border:1px solid #e8b4b4; border-radius:8px; padding:16px 18px; margin-bottom:22px; font-size:14px; }
+  .hard h2 { margin:0 0 8px; font-size:17px; }
+  table { width:100%; border-collapse:collapse; background:#fff; font-size:14px; margin:0 0 22px; }
+  th, td { border:1px solid var(--line); padding:10px 12px; text-align:left; vertical-align:top; }
+  th { background:#f0eafa; font-size:12.5px; text-transform:uppercase; letter-spacing:.4px; }
+  td.src { font-size:12px; color:var(--mut); }
+  h2.sec { font-size:19px; margin:30px 0 10px; }
+  .cta { display:flex; gap:12px; flex-wrap:wrap; margin:18px 0 26px; }
+  .cta a { background:var(--acc); color:#fff; text-decoration:none; padding:12px 20px; border-radius:8px; font-weight:600; font-size:14.5px; }
+  .cta a.ghost { background:#fff; color:var(--acc); border:1px solid var(--acc); }
+  .faq { background:#fff; border:1px solid var(--line); border-radius:8px; padding:16px 18px; margin-bottom:14px; }
+  .faq h3 { margin:0 0 6px; font-size:15.5px; }
+  .faq p { margin:0; font-size:14px; color:#333; }
+  footer.note { max-width:900px; margin:0 auto; padding:0 24px 34px; font-size:12.5px; color:var(--mut); }
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>FlowBench — Automation picks for small business</h1>
+  <p>Playbooks, not just picks: step-by-step automation setups for specific industries. Every tool term below is labeled with its source and date — vendors change tiers often, so verify on the vendor site before you buy.</p>
+</header>
+<main>
+
+  <div class="disc">
+    <strong>Disclosure:</strong> FlowBench is independent — not affiliated with Make, Synthflow, ElevenLabs, or n8n.
+    The buttons below are <strong>affiliate placeholders</strong>: if we join their partner programs,
+    we may earn a commission when you sign up, at no added cost to you. We never accept payment for
+    placement. Affiliate terms were checked against the vendors' own pages on <strong>October 1–2, 2026</strong>
+    (make.com/en/affiliate; n8n.io/affiliates; official Synthflow partner terms; elevenlabs.io/affiliates-terms).
+    Tool pricing and vendor claims named here come from the third-party sources noted — <strong>confirm current
+    pricing and terms on each vendor's own site before buying.</strong> Nothing here is legal or insurance
+    advice — review your insurance requirements with your broker or counsel, not this page.
+  </div>
+
+  <div class="hard">
+    <h2>The honesty gates: a document machine, never a compliance authority</h2>
+    <p>This playbook automates the paper chase around subcontractor insurance — it never replaces the people who
+    decide what the paperwork must say. Five gates, printed before the verdict, non-negotiable.
+    Gate 1: <strong>your broker drafts the requirements, not this page.</strong> Coverage types, limits,
+    additional-insured wording, and endorsement forms (CG 20 10, CG 20 37) come from your insurance broker or
+    counsel, per contract and per state — a playbook cannot write your risk profile.
+    Gate 2: <strong>a certificate of insurance is not coverage.</strong> The ACORD form proves a policy existed on
+    paper when it was issued; it does not grant coverage, guarantee the wording on endorsements, or survive a
+    mid-policy cancellation. Verification means reading the certificate against the requirements, not filing it.
+    Gate 3: <strong>collect from your own subs and partners only.</strong> This machine runs on the subcontractors
+    you signed — it never buys certificate data from brokers or lists, and it never hunts documents for
+    relationships that do not exist.
+    Gate 4: <strong>payment holds must live in the contract.</strong> You can only withhold payment on
+    non-compliant subs if your subcontract says so — a hold without a contract clause is a dispute waiting to
+    happen.
+    Gate 5: <strong>vendor numbers are vendor numbers.</strong> The error-rate and time-saving figures below come
+    from companies that sell COI software — they are labeled as vendor claims, not benchmarks, and they set the
+    ceiling, not the promise.</p>
+  </div>
+
+  <div class="verdict">
+    <h2>The verdict: every sub documented before day one, and stayed documented</h2>
+    <p>The most expensive line on a general contractor's insurance audit is the subcontractor you paid but cannot
+    prove was insured. An insurance auditor does not care that your sub "had insurance" — he cares whether you can
+    produce the certificate for every day that sub worked under your name. A sub who cannot prove he carried his own
+    valid coverage for every day on your job rolls into your payroll at your class rate — 12, 18, sometimes 25
+    percent of every dollar you paid him (Scott Fox insurance channel, Sep 2026). That is the machine this playbook
+    builds: a document intake that starts the day the sub signs, an automated verification against your broker's
+    requirements, an expiration radar that catches renewals and the quiet mid-policy cancellation, and a
+    payment-hold gate that enforces it all.</p>
+    <p>Why this works as a build: a 2026 pricing guide for COI-tracking software notes that automation works here
+    because every certificate follows the standardized ACORD 25 and ACORD 27 forms, which place coverage data in
+    consistent fields that software can extract reliably (vertikalrms.com, 2026). Standardized documents are the
+    ideal fuel for an automation — and the 23% of certificates that a COI vendor says contain errors or coverage
+    gaps when reviewed manually are exactly what automated checking catches (myCOI, vendor claim, crawled Sep
+    2026).</p>
+  </div>
+
+  <h2 class="sec">The money on the table (all figures sourced and dated)</h2>
+  <ul>
+    <li>A contractor insurance-audit explainer walks through the "$8,000 surprise bill" — the year-end audit that
+    reconciles your estimated numbers against what really happened, and the "$20,000 uninsured subcontractor
+    story": a single sub without a certificate of insurance on file blowing up the audit (Leal Insurance
+    Services, published ~Sep 14, 2026).</li>
+    <li>The cancelled-mid-year case: a sub handed over a clean certificate on day one, his workers' comp policy
+    quietly cancelled in March, and the GC's year-end audit bill was $5,000 — for a sub nobody knew was bare
+    (Scott Fox, published ~Sep 24, 2026).</li>
+    <li>A $100 million Atlanta high-rise was delayed 3 months by one subcontractor's insurance non-compliance —
+    $2.5 million in delay costs. A Midwest firm saw premiums rise 40% after a period of non-compliance. One New
+    Jersey firm owner faced personal bankruptcy over a $1.2 million uninsured claim (allenthomasgroup.com
+    compliance guide, crawled Oct 2026).</li>
+    <li>One COI vendor reports project managers spend about 10 hours weekly chasing certificates, and claims
+    automation cuts that time 80–90% (myCOI, vendor claims, crawled Sep 2026) — treat as the ceiling.</li>
+    <li>Buy-vs-build anchor: entry-level COI tracking platforms run $800–$2,000/yr for under 50 vendors;
+    professional platforms $2,500–$10,000/yr for 50–500 vendors (vertikalrms.com, 2026 pricing guide).</li>
+    <li>Industry context: construction has one of the lowest technology adoption rates of any sector surveyed — 47%
+    vs a 56% cross-sector average (constructionnews.co.uk, Sep 14, 2026). The shops still running this on a
+    spreadsheet are the majority, not the exception.</li>
+  </ul>
+
+  <h2 class="sec">Step 0 — the two rules</h2>
+  <div class="step">
+    <h2><span class="n">0</span>Requirements before collection, collection before site day</h2>
+    <p>Rule one: the broker writes the rulebook. Before you build anything, get the written insurance requirements
+    per contract type — coverage types, limits, additional-insured wording, endorsement forms, and the states the
+    sub works in. That document is the configuration this whole machine runs on; the machine never invents it.
+    Rule two: no sub sets foot on site until the packet is complete and verified. A GC interviewed by a COI vendor
+    put it plainly: "we won't let subcontractors on site until they have their insurance in place" and "we won't
+    release payments until an insurance certificate is compliant" — because coverage is a moving target and a sub
+    "may be compliant one week and not the next" (getjones.com, 2026).</p>
+  </div>
+
+  <h2 class="sec">Step 1 — the requirements pack</h2>
+  <div class="step">
+    <h2><span class="n">1</span>Turn the broker's rulebook into a checklist the machine can run</h2>
+    <p>Translate the broker's requirements into a machine-readable checklist: which coverage types (GL, workers'
+    comp, auto, umbrella), the minimum limits, the additional-insured wording, the endorsement forms, the policy
+    date window for the project, and which documents must arrive (certificate, endorsements, W-9). Store it as
+    structured data — one checklist per project type, not per sub. <span class="tools">Tooling: Make (the
+    scenario engine that everything below runs on). <!-- AFFILIATE PLACEHOLDER: Make.com — insert partner link
+    here when accepted. --></span></p>
+  </div>
+
+  <h2 class="sec">Step 2 — the intake lane</h2>
+  <div class="step">
+    <h2><span class="n">2</span>A frictionless upload lane for subs and their brokers</h2>
+    <p>The moment a sub signs, the machine sends the requirements pack and a single upload link — no accounts, no
+    logins. The friction lesson from the COI-software market: tools that force subcontractors to create accounts
+    measurably reduce compliance rates (getbcs.com comparison, crawled Oct 2026). The sub — or their broker, who is
+    usually faster — uploads the certificate and endorsements straight into the lane. Day 1 auto-reminder, Day 3
+    nudge, Day 7 firm note, all from the same sequence; nobody on your team chases a PDF. <span class="tools">
+    Tooling: Make (intake flow, reminders, storage). <!-- AFFILIATE PLACEHOLDER: Make.com — see Step 1. --></span></p>
+  </div>
+
+  <h2 class="sec">Step 3 — automated verification</h2>
+  <div class="step">
+    <h2><span class="n">3</span>Read every certificate against the checklist — instantly</h2>
+    <p>Each upload gets read against the Step-0 checklist: all required coverage types present, limits at or above
+    minimums, your company named as additional insured, policy dates covering the project window, business name
+    matching the contract. Because ACORD 25/27 forms put coverage data in consistent fields, this is a
+    pattern-matching job, not a reading job (vertikalrms.com, 2026). Pass = green, start date issued. Fail =
+    the sub gets a specific deficiency list ("GL per-occurrence limit shows $1M; contract requires $2M") instead
+    of a vague "insurance issue" — the specificity is what kills the back-and-forth that the Jones interview
+    describes as the core delay (getjones.com, 2026). Human override always available; the machine drafts,
+    your admin approves exceptions. <span class="tools">Tooling: Make (AI document-read modules).</span></p>
+  </div>
+
+  <h2 class="sec">Step 4 — the chase engine</h2>
+  <div class="step">
+    <h2><span class="n">4</span>Voice calls for the subs who ghost the reminders</h2>
+    <p>Email reminders die in busy seasons. The subs who go quiet after Day 7 get an AI voice call — it
+    self-identifies in the first sentence, names the exact missing document, and offers to text the upload link
+    live on the call. This is the family's voice-leg pattern applied to back-office paper, not customers: same
+    consent-aware machinery, different job. The call is logged to the sub's record; three failed chases escalate
+    to the PM with the sub's start date at risk. <span class="tools">Tooling: Synthflow (AI voice calls) +
+    ElevenLabs (voices). <!-- AFFILIATE PLACEHOLDER: Synthflow — insert partner link here when accepted. -->
+    <!-- AFFILIATE PLACEHOLDER: ElevenLabs — insert partner link here when accepted. --></span></p>
+  </div>
+
+  <h2 class="sec">Step 5 — the expiration radar</h2>
+  <div class="step">
+    <h2><span class="n">5</span>60/30/7-day radar plus the mid-policy cancellation catch</h2>
+    <p>Day-one verification is worthless without surveillance — policies lapse, renewals slip, and as the Scott Fox
+    case shows, a policy can die quietly in March while the sub keeps showing up. The radar runs three checks:
+    (1) 60/30/7-day renewal reminders before each policy expires, routed to the sub and the broker; (2) a monthly
+    re-verification sweep of active subs' coverage against the checklist — this is what catches the mid-policy
+    cancellation; (3) a status board your PMs can see at a glance, per project, so no non-compliant sub ever
+    dispatches. <span class="tools">Tooling: Make (scheduled scenarios, reminders, status board).</span></p>
+  </div>
+
+  <h2 class="sec">Step 6 — the payment-hold gate and the audit packet</h2>
+  <div class="step">
+    <h2><span class="n">6</span>Enforce compliance through the pay cycle, then hand the auditor a packet</h2>
+    <p>The enforcement lever that makes the whole machine credible: a sub whose compliance status is red cannot be
+    paid — the hold is written into the subcontract (Gate 4), and the machine checks compliance status before any
+    pay application clears. "We won't release payments until an insurance certificate is compliant"
+    (getjones.com, 2026) stops being a policy and starts being a system. Monthly, the machine compiles the
+    compliance ledger per project; at audit time, you hand the auditor a complete certificate packet — every sub,
+    every coverage day, every policy — instead of a spreadsheet and a prayer. <span class="tools">Tooling: Make
+    (pay-gate webhook + ledger reports).</span></p>
+  </div>
+
+  <h2 class="sec">Build vs buy (honest read)</h2>
+  <table>
+    <tr><th>Option</th><th>Cost shape</th><th>Best for</th></tr>
+    <tr><td>Billy (Procore-native compliance)</td><td>Quote-gated; built for ENR-scale GCs (billyforinsurance.com, crawled Oct 2026)</td><td class="src">GCs already on Procore with 100–300 subs</td></tr>
+    <tr><td>Jones / TrustLayer / myCOI / bcs</td><td>Entry $800–$2,000/yr; professional $2,500–$10,000/yr (vertikalrms.com, 2026)</td><td class="src">Shops that want compliance-as-a-service, no building</td></tr>
+    <tr><td>This playbook (Make + voice)</td><td>Tool subscriptions + build time; no per-insured fee</td><td class="src">GCs who own their stack and want the machine configurable to their contracts</td></tr>
+  </table>
+  <p>The honest read: buy wins on carrier-verification integrations and done-for-you chasing; build wins on
+  contract-specific configuration and no per-sub fees. If your broker's requirements are unusual, build fits
+  better; if you just need certificates collected and tracked, $800–$2,000/yr entry tools are hard to beat.</p>
+
+  <h2 class="sec">Family fit: why this is not a re-skin</h2>
+  <p>All 19 prior playbooks are customer-contact jobs — missed calls, quotes, reviews, no-shows, invoices,
+  renewals, referrals, storms. None touch back-office document compliance, and none serve the general
+  contractor. This is a document machine for a compliance risk: different trigger (sub signs), different
+  danger (premium audit + stop-work), different automation map (intake → AI verification → radar →
+  payment-hold gate). The closest cousin is playbook #5's dispatch triage — both prevent losses — but #5
+  answers live phones, this chases paperwork. Playbook #16 was the family's first B2B page (property
+  managers); this is its first compliance/back-office page.</p>
+
+  <h2 class="sec">Questions this page must answer</h2>
+  <div class="faq">
+    <h3>Is this legal or insurance advice?</h3>
+    <p>No. This is an automation playbook — it builds the machine that runs your broker's requirements, it never
+    writes them. Insurance requirements vary by state, contract, and carrier; your broker or counsel drafts the
+    checklist this machine enforces.</p>
+  </div>
+  <div class="faq">
+    <h3>Can AI actually read a certificate of insurance accurately?</h3>
+    <p>It reads the data fields well — ACORD 25/27 forms place coverage data in consistent fields, which is why a
+    2026 pricing guide says automation works here (vertikalrms.com, 2026). But a certificate is not coverage:
+    endorsement wording (CG 20 10, CG 20 37), additional-insured language, and exclusions still deserve a human
+    eye on the exceptions. The machine drafts; your admin approves.</p>
+  </div>
+  <div class="faq">
+    <h3>What about wrap-ups (OCIP/CCIP) where the owner provides coverage?</h3>
+    <p>Enrolled subs are covered by the project policy — the machine handles them as an exception track: proof
+    of enrollment instead of a certificate, with the same expiration radar for enrollment end dates. The checklist
+    from Step 0 must define the wrap rules before you build.</p>
+  </div>
+  <div class="faq">
+    <h3>What happens when a sub ghosts all the reminders?</h3>
+    <p>Day 7 the AI voice call runs; three failed chases escalate to the project manager with the sub's scheduled
+    start date attached. The machine's honest limit: it can make ignoring impossible, not compliance automatic.
+    The payment-hold gate is the enforcement that finishes the job.</p>
+  </div>
+  <div class="faq">
+    <h3>Does this help at insurance-audit time?</h3>
+    <p>That is the entire point. The auditor's question is always "produce the certificate for every day this sub
+    worked." Step 6's audit packet — every sub, every coverage day, every policy — is the machine's output
+    formatted for exactly that question, including the mid-policy lapses the radar caught.</p>
+  </div>
+
+  <div class="cta">
+    <a href="../index.html">Back to the playbook library</a>
+    <a class="ghost" href="n8n-vs-make-workflow-automation.html">Read the n8n vs Make comparison</a>
+    <a class="ghost" href="voice-agent-playbook-for-contractors.html">Read playbook #1 (missed-call recovery)</a>
+    <a class="ghost" href="voice-agent-playbook-for-dental.html">Read playbook #2 (dental)</a>
+    <a class="ghost" href="speed-to-lead-playbook-for-real-estate.html">Read playbook #3 (real estate)</a>
+    <a class="ghost" href="estimate-recovery-playbook-for-contractors.html">Read playbook #4 (estimate recovery)</a>
+    <a class="ghost" href="after-hours-dispatch-triage-playbook.html">Read playbook #5 (after-hours dispatch)</a>
+    <a class="ghost" href="review-capture-playbook-for-home-services.html">Read playbook #6 (review capture)</a>
+    <a class="ghost" href="no-show-recovery-playbook-for-dental.html">Read playbook #7 (no-show recovery)</a>
+    <a class="ghost" href="maintenance-plan-enrollment-playbook-for-hvac.html">Read playbook #8 (maintenance plans)</a>
+    <a class="ghost" href="overdue-invoice-recovery-playbook-for-trades.html">Read playbook #9 (overdue-invoice recovery)</a>
+    <a class="ghost" href="dormant-customer-reactivation-playbook-for-trades.html">Read playbook #10 (dormant-customer reactivation)</a>
+    <a class="ghost" href="post-job-upsell-playbook-for-trades.html">Read playbook #11 (post-job upsell)</a>
+    <a class="ghost" href="same-day-reschedule-save-playbook-for-trades.html">Read playbook #12 (same-day reschedule save)</a>
+    <a class="ghost" href="post-season-tune-up-blitz-playbook-for-trades.html">Read playbook #13 (post-season tune-up blitz)</a>
+    <a class="ghost" href="referral-engine-playbook-for-trades.html">Read playbook #14 (referral engine)</a>
+    <a class="ghost" href="storm-response-playbook-for-exterior-trades.html">Read playbook #15 (storm response)</a>
+    <a class="ghost" href="property-manager-contract-playbook-for-trades.html">Read playbook #16 (property-manager contracts)</a>
+    <a class="ghost" href="new-mover-playbook-for-home-services.html">Read playbook #17 (new-mover welcome)</a>
+    <a class="ghost" href="end-of-life-equipment-ledger-playbook-for-trades.html">Read playbook #18 (end-of-life equipment ledger)</a>
+  </div>
+</main>
+<footer class="note">
+  FlowBench is independent research. Affiliate terms and tool pricing change — verify on each vendor's own site
+  before buying. Nothing on this page is legal or insurance advice. Sourced and dated claims are attributed to
+  their publishers; vendor claims are labeled as such. Updated October 3, 2026.
+</footer>
+</body>
+</html>
