@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The End-of-Life Equipment Ledger Playbook for Home Services Trades (2026) — FlowBench</title>
+<meta name="description" content="A how-to playbook for HVAC, plumbing, electrical, and home-services shops: keep an aging ledger of every customer's equipment, flag units entering their last 3 years, and run planned pre-failure replacement conversations — with honesty gates stated first and every figure sourced and dated. Independent — verify on vendor sites before buying.">
+<style>
+  :root { --ink:#1a1a1a; --mut:#5c5c5c; --line:#d8d8d8; --acc:#7c3aed; --bg:#f6f7f9; --warn:#fbf3df; }
+  * { box-sizing:border-box; }
+  body { font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); margin:0; line-height:1.6; }
+  header.top { background:#1e1433; color:#fff; padding:16px 24px; }
+  header.top h1 { margin:0; font-size:21px; }
+  header.top p { margin:4px 0 0; font-size:13px; color:#c9bdf2; }
+  main { max-width:900px; margin:0 auto; padding:24px; }
+  .disc { background:var(--warn); border:1px solid #e3cf9a; border-radius:10px; padding:14px 16px; font-size:13.5px; margin-bottom:22px; }
+  .verdict { background:#fff; border:1px solid var(--line); border-left:5px solid var(--acc); border-radius:8px; padding:16px 18px; margin-bottom:22px; }
+  .verdict h2 { margin:0 0 8px; font-size:17px; }
+  .step { background:#fff; border:1px solid var(--line); border-radius:8px; padding:16px 18px; margin-bottom:16px; }
+  .step h2 { margin:0 0 8px; font-size:17px; }
+  .step h2 .n { display:inline-block; background:var(--acc); color:#fff; border-radius:50%; width:28px; height:28px; text-align:center; line-height:28px; font-size:15px; margin-right:8px; }
+  .step p, .step li { font-size:14px; color:#333; }
+  .step .tools { font-size:13px; color:var(--mut); }
+  .hard { background:#fdecec; border:1px solid #e8b4b4; border-radius:8px; padding:16px 18px; margin-bottom:22px; font-size:14px; }
+  .hard h2 { margin:0 0 8px; font-size:17px; }
+  table { width:100%; border-collapse:collapse; background:#fff; font-size:14px; margin:0 0 22px; }
+  th, td { border:1px solid var(--line); padding:10px 12px; text-align:left; vertical-align:top; }
+  th { background:#f0eafa; font-size:12.5px; text-transform:uppercase; letter-spacing:.4px; }
+  td.src { font-size:12px; color:var(--mut); }
+  h2.sec { font-size:19px; margin:30px 0 10px; }
+  .cta { display:flex; gap:12px; flex-wrap:wrap; margin:18px 0 26px; }
+  .cta a { background:var(--acc); color:#fff; text-decoration:none; padding:12px 20px; border-radius:8px; font-weight:600; font-size:14.5px; }
+  .cta a.ghost { background:#fff; color:var(--acc); border:1px solid var(--acc); }
+  .faq { background:#fff; border:1px solid var(--line); border-radius:8px; padding:16px 18px; margin-bottom:14px; }
+  .faq h3 { margin:0 0 6px; font-size:15.5px; }
+  .faq p { margin:0; font-size:14px; color:#333; }
+  footer.note { max-width:900px; margin:0 auto; padding:0 24px 34px; font-size:12.5px; color:var(--mut); }
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>FlowBench — Automation picks for small business</h1>
+  <p>Playbooks, not just picks: step-by-step automation setups for specific industries. Every tool term below is labeled with its source and date — vendors change tiers often, so verify on the vendor site before you buy.</p>
+</header>
+<main>
+
+  <div class="disc">
+    <strong>Disclosure:</strong> FlowBench is independent — not affiliated with Make, Synthflow, ElevenLabs, or n8n.
+    The buttons below are <strong>affiliate placeholders</strong>: if we join their partner programs,
+    we may earn a commission when you sign up, at no added cost to you. We never accept payment for
+    placement. Affiliate terms were checked against the vendors' own pages on <strong>October 1–2, 2026</strong>
+    (make.com/en/affiliate; n8n.io/affiliates; official Synthflow partner terms; elevenlabs.io/affiliates-terms).
+    Tool pricing and vendor claims named here come from the third-party sources noted — <strong>confirm current
+    pricing and terms on each vendor's own site before buying.</strong> Nothing here is legal or compliance
+    advice — review telemarketing, mail, and consumer-contact rules in your state with counsel before any
+    outreach.
+  </div>
+
+  <div class="hard">
+    <h2>The honesty gates: the ledger is a planning tool, never a scare machine</h2>
+    <p>This playbook runs on one dangerous piece of information — <em>we know your furnace is old</em> — and
+    that knowledge has to be handled like a loaded tool. Five gates, printed before the verdict, non-negotiable.
+    Gate 1: <strong>ages trigger conversations, never condemnations.</strong> A furnace's birthday does not make
+    it broken. Every replacement pitch in this machine needs condition evidence — photos, combustion numbers,
+    leak proof, the tech's eyes on the unit — not just the age column. Scaring a customer into a $12,000
+    replacement with "it could fail any day" when it's running fine is the fastest way to burn a customer book,
+    and this page will not arm it. Gate 2: <strong>never promise rebates or incentives as fact.</strong>
+    Utility and government programs shrink and change — a 2026 USA Today cost guide explicitly notes there are
+    fewer incentive programs in 2026 than there once were (usatoday.com, June 4, 2026). Verify eligibility
+    live, name the program, print the caveat in the proposal. Gate 3: <strong>financing is quoted as total
+    repayment plus term, never just the monthly number</strong> — the 2026 USA Today guide's honest read:
+    "a lower monthly payment can still result in a higher total project cost if the financing term is
+    extended" (same source). Gate 4: <strong>a ledger-flagged customer never pays emergency pricing.</strong>
+    If your own ledger saw this failure coming for 3 years, you quote the planned price even if the unit dies
+    mid-campaign — charging your tracked customer a crisis markup is the ethics failure this machine exists to
+    prevent. Gate 5: <strong>existing customers and consented contacts only</strong> — this is a CRM machine,
+    not a cold list. Every voice and text touch runs on consent captured at booking or service, per the TCPA
+    gates the family prints on every outbound page; equipment-age data on non-customers is never bought from
+    data brokers. This page is the honest version of replacement marketing: the shop calls with the number
+    while there's still time to choose — and the number is real.</p>
+  </div>
+
+  <div class="verdict">
+    <h2>The short version</h2>
+    <p>Every playbook in this family so far sells to a moment — the missed call, the dead quote, the quiet
+    month, the move-in. None of them owns the biggest transaction in home services: the <em>planned</em>
+    equipment replacement. The numbers are the biggest in the family. ENERGY STAR says homeowners should
+    consider furnace or boiler replacement past 15 years and AC or heat-pump replacement past 10 years
+    (ACCA/EPA repair-or-replace guidance via ENERGY STAR). Equipment reality: gas furnaces run 15–20 years,
+    central air conditioners 10–15, tank water heaters 8–12 years (gas tanks 8–10), tankless units 20+, and
+    three-tab asphalt roofs 15–25 (foxessellfaster.com lifespan guide, crawled October 2026). The ticket:
+    a full HVAC replacement runs about <strong>$5,000–$11,000 nationally in 2026</strong> including furnace
+    and AC (HomeGuide 2026 data, via contranoche.com, crawled October 2026); a 2026 Houston homeowner guide
+    puts a typical 2,000-square-foot full replacement at <strong>$7,500–$15,000</strong> (Valderrama,
+    September 2026); USA Today's 2026 cost calculator lands central AC at $7,000–$12,000, furnace at
+    $4,500–$10,000, heat pump at $7,000–$14,000 — and notes premium systems with ductwork can exceed
+    $20,000 (usatoday.com, June 4, 2026). And the timing tax: USA Today states it plainly — <strong>"don't
+    wait until an emergency happens,"</strong> because emergency failures mean emergency service fees and
+    replacements decided under pressure instead of repairs decided with time. Now the ledger math: a shop
+    with 2,000 customers and average equipment age above 12 years has <em>hundreds</em> of units already
+    inside their last-3-year window — a replacement pipeline sitting in the CRM today, selling itself to
+    nobody. This playbook is the machine that finds it: build the age ledger, flag the 3-year window, run
+    the 12-month planning conversation, and sell the replacement on the customer's schedule — never at 2am.
+    Scored <strong>8.7/10</strong>.</p>
+  </div>
+
+  <h2 class="sec">Step 0 — Write the two rules before you log anything</h2>
+  <div class="step">
+    <h2><span class="n">0</span>Rule one: the ledger is the asset — the campaign is the exhaust. Rule two: plan the funeral before the death.</h2>
+    <p>Tape both to the monitor. <strong>Rule one:</strong> every touch in this playbook (Steps 1–5) serves
+    ledger accuracy first and volume second. A campaign built on wrong install years is scare mail with a
+    spreadsheet — the #1 investment of this machine is getting the ages right: serial-number decodes on
+    service calls, install records going forward, deed age as a proxy where the book is thin. A 500-customer
+    ledger with verified ages beats a 5,000-customer list of guesses, every time. <strong>Rule two:</strong>
+    the conversation happens 6–12 months <em>before</em> end of life, not at it. By the time the furnace
+    dies, the quote is already signed and the install is scheduled in a shoulder week — that is the whole
+    product. A shop that calls at month 1 of the last year is a planner; a shop that calls at the breakdown
+    is an ambulance. This page builds planners.</p>
+  </div>
+
+  <h2 class="sec">Step 1 — Build the ledger: every unit, its birthday, its window</h2>
+  <div class="step">
+    <h2><span class="n">1</span>One row per piece of equipment: type, install year, age, lifespan, end-of-life window, condition flags</h2>
+    <p>The ledger schema is deliberately small: customer + address + equipment type + install year +
+    verified age + expected lifespan + end-of-life year + yellow flag (lifespan minus 3) + red flag
+    (lifespan minus 1) + last service date + condition notes + contact + consent status. Lifespan columns
+    come from the verdict's sources: furnace 15–20, central AC 10–15, tank water heater 8–12, tankless 20+,
+    three-tab roof 15–25, architectural 25–35, panel 25–40 (foxessellfaster.com, crawled October 2026).
+    Data sources, in order of reliability: <strong>(1) your own install records</strong> — going forward,
+    every install writes its year into the ledger on day one; <strong>(2) serial-number decodes</strong> —
+    most equipment serials encode the manufacture week/year, and the tech reads them on every service call;
+    <strong>(3) the free-check wedge</strong> — playbook #2/#17's free inspection is how you capture ages
+    from the equipment you never installed; <strong>(4) deed age as a prospect proxy</strong> — original
+    equipment in a 14-year-old development tract is entering the AC window whether or not the homeowner
+    knows it (Gate 5: homeowners this shop has served only — no brokered age data). The spreadsheet or CRM
+    holds the flags; nothing else runs until the flags are real.</p>
+    <p class="tools">Tools leg: CRM custom fields or one sheet; serial-decode reference (manufacturer
+    lookups, public). <a href="#">[Make affiliate placeholder]</a></p>
+  </div>
+
+  <h2 class="sec">Step 2 — The aging flags: yellow at 3 years out, red at 1 year out</h2>
+  <div class="step">
+    <h2><span class="n">2</span>A daily Make scenario re-ages every row and moves units into the yellow and red buckets — automatically</h2>
+    <p>Ages change every day; a ledger nobody re-reads is a ledger that lies. The Make scenario runs nightly:
+    age = today minus install year; if age reaches (lifespan − 3) the row goes <strong>yellow</strong> —
+    enters the planning conversation; if it reaches (lifespan − 1) the row goes <strong>red</strong> — the
+    replacement window is now and the planning visit in Step 3 is urgent. Rows also move on condition: a tech
+    flag (cracked heat exchanger, leaking coil, rusted tank) overrides the age math and goes red immediately
+    — Gate 1 says condition evidence outranks birthdays. Two ledger hygeine rules: every service call ends
+    with the tech confirming or correcting the age field (the 10-second habit that keeps the ledger honest),
+    and every install resets the row to year zero with the new equipment's lifespan (the compound in Step 5).
+    The daily flag run builds the call list for Steps 3–4 without anyone opening the spreadsheet.</p>
+    <p class="tools">Tools leg: Make (nightly flag scenario, call-list routing, tech flag capture) + CRM.
+    <a href="#">[Make affiliate placeholder]</a></p>
+  </div>
+
+  <h2 class="sec">Step 3 — The planning visit: a consult, not a sales call</h2>
+  <div class="step">
+    <h2><span class="n">3</span>Yellow-flag customers get the 12-month planning conversation: condition assessment, honest remaining-life estimate, two options, their deadline</h2>
+    <p>The touch is a letter first (equipment ages and $10,000 decisions deserve paper, not a text), then the
+    AI voice agent or the dispatcher books the <strong>planning visit</strong> — framed exactly that way, a
+    30-minute consult, not a sales call. On-site, the tech does the Gate-1 work: condition assessment with
+    photos, an honest remaining-life estimate ("2–4 years, not months"), then the two real options with
+    numbers: the repair band if a repair buys real time, and the replacement with the honest math —
+    installed cost, rebate eligibility checked live (Gate 2), financing quoted as total repayment and term
+    (Gate 3), and efficiency savings stated as estimates with the source named. The close is the customer's
+    deadline, not yours: "this unit gives you 2–4 years; the best install months for price are the shoulder
+    weeks — do you want the plan on file, or do you want to re-check in 12 months?" Outcomes route three
+    ways: <strong>plan signed</strong> (Step 4), <strong>re-check in 12 months</strong> (ledger re-flags, no
+    pressure), <strong>declined</strong> (noted, no drip — Gate 1 protects the book). The AI voice leg books
+    these visits and runs the 12-month re-check reminders; it self-identifies and runs on consent per Gate 5.</p>
+    <p class="tools">Tools leg: Synthflow + ElevenLabs voice agent (visit booking, 12-month re-checks,
+    consented customers only); Make (visit routing, outcome logging). <a href="#">[Synthflow affiliate
+    placeholder]</a> <a href="#">[ElevenLabs affiliate placeholder]</a></p>
+  </div>
+
+  <h2 class="sec">Step 4 — The replacement window: planned install, Gate-4 pricing</h2>
+  <div class="step">
+    <h2><span class="n">4</span>Red-flag and plan-signed units get the planned install — shoulder-season scheduling, the quote honored, the old unit retired properly</h2>
+    <p>When the window opens, the install is scheduled like the plan said: shoulder weeks (best crew
+    availability, best manufacturer-promotion months), the quote honored exactly as written — and if the unit
+    dies mid-campaign before the scheduled install, Gate 4 fires: the planned price stands, no emergency
+    markup on a customer your own ledger was tracking. That single rule is the marketing: customers learn
+    the ledger protects them, not the shop. The visit runs the family pattern: post-install plan enrollment
+    (playbook #8 — the maintenance plan that protects the <em>new</em> equipment and extends its life), the
+    review capture (playbook #6 — the $10,000 replacement job is the happiest-review moment a shop ever
+    gets), and the referral ask (playbook #14). The old unit's retirement is part of the story: recycling,
+    refrigerant recovery, the permit pulled and closed — the permit record feeds Step 5's prospecting.</p>
+    <p class="tools">Tools leg: Make (install scheduling, plan-enrollment routing, review-capture trigger).
+    <a href="#">[Make affiliate placeholder]</a></p>
+  </div>
+
+  <h2 class="sec">Step 5 — The ledger compound: every install resets the clock</h2>
+  <div class="step">
+    <h2><span class="n">5</span>The new unit's install year becomes the next campaign date — and the permit becomes the neighbor's introduction</h2>
+    <p>Every completed install writes one row back into the ledger: install year + expected lifespan = the
+    yellow flag date, 15–20 years out. That is the compound: the shop never re-builds this machine — it
+    compounds it, one install at a time, forever. Then the acquisition leg: equipment replacement is the
+    most visible job in home services (trucks, permits, a week of work at one address), and neighbors
+    notice. The post-install week runs the honest version of the truck-sign playbook: the neighbor door
+    knock ("we just replaced the furnace at 3 houses on this street — yours is the same age band, want the
+    free 10-minute age check?") — a Gate-1-safe offer of information, never a scare visit — plus permit
+    data, which is public record, as the prospecting map for same-age-band streets (Gate 5: public permits,
+    consented contact, nothing brokered). The ledger that fed this install now feeds the next one.</p>
+  </div>
+
+  <h2 class="sec">Build vs buy</h2>
+  <table>
+    <tr><th>Path</th><th>Cost shape</th><th>Ledger control</th><th>Honest read</th></tr>
+    <tr><td>Zero-build: sheet + nightly eyeball</td><td>$0</td><td class="src">Manual age entry, flags by sort, calls from the list</td><td class="src">Run this under ~500 ledger rows. The gates are the same — the automation is convenience, not the strategy. This is the honest floor.</td></tr>
+    <tr><td>DIY: Make + CRM + voice legs</td><td>Make tier + Synthflow/ElevenLabs usage</td><td class="src">Nightly re-aging, yellow/red buckets auto-built, planning-visit booking and 12-month re-checks automated (all flows stated on-page)</td><td class="src">The full playbook. The Make scenario exists to keep flags honest at scale — the ledger's value is accuracy, and nightly automation is how accuracy survives 5,000 rows.</td></tr>
+    <tr><td>Buy: equipment-ledger / end-of-life marketing platforms</td><td>Per-location SaaS</td><td class="src">Vendors publish lifecycle-mail and replacement-pipeline claims (their own self-reported claims — none independently verified here)</td><td class="src">You pay for the flag machine plus the creative. Audit the age data they actually run on — if it is purchased broker data, Gate 5 kills it; verify against your own service history first.</td></tr>
+    <tr><td>Going it alone</td><td>$0</td><td class="src">None — the pipeline stays invisible</td><td class="src">Not doing it. The pipeline is already in the CRM; without the ledger, every one of those replacements becomes a competitor's emergency install. This is the most expensive option in the table.</td></tr>
+  </table>
+
+  <div class="cta">
+    <a href="#">[Make affiliate placeholder]</a>
+    <a href="#">[Synthflow affiliate placeholder]</a>
+    <a href="#">[ElevenLabs affiliate placeholder]</a>
+    <a class="ghost" href="n8n-vs-make-workflow-automation.html">Read the n8n vs Make comparison</a>
+    <a class="ghost" href="voice-agent-playbook-for-contractors.html">Read playbook #1 (missed-call recovery)</a>
+    <a class="ghost" href="voice-agent-playbook-for-dental.html">Read playbook #2 (dental)</a>
+    <a class="ghost" href="speed-to-lead-playbook-for-real-estate.html">Read playbook #3 (real estate)</a>
+    <a class="ghost" href="estimate-recovery-playbook-for-contractors.html">Read playbook #4 (estimate recovery)</a>
+    <a class="ghost" href="after-hours-dispatch-triage-playbook.html">Read playbook #5 (after-hours dispatch)</a>
+    <a class="ghost" href="review-capture-playbook-for-home-services.html">Read playbook #6 (review capture)</a>
+    <a class="ghost" href="no-show-recovery-playbook-for-dental.html">Read playbook #7 (no-show recovery)</a>
+    <a class="ghost" href="maintenance-plan-enrollment-playbook-for-hvac.html">Read playbook #8 (maintenance plans)</a>
+    <a class="ghost" href="overdue-invoice-recovery-playbook-for-trades.html">Read playbook #9 (overdue-invoice recovery)</a>
+    <a class="ghost" href="dormant-customer-reactivation-playbook-for-trades.html">Read playbook #10 (dormant-customer reactivation)</a>
+    <a class="ghost" href="post-job-upsell-playbook-for-trades.html">Read playbook #11 (post-job upsell)</a>
+    <a class="ghost" href="same-day-reschedule-save-playbook-for-trades.html">Read playbook #12 (same-day reschedule save)</a>
+    <a class="ghost" href="post-season-tune-up-blitz-playbook-for-trades.html">Read playbook #13 (post-season tune-up blitz)</a>
+    <a class="ghost" href="referral-engine-playbook-for-trades.html">Read playbook #14 (referral engine)</a>
+    <a class="ghost" href="storm-response-playbook-for-exterior-trades.html">Read playbook #15 (storm response)</a>
+    <a class="ghost" href="property-manager-contract-playbook-for-trades.html">Read playbook #16 (property-manager contracts)</a>
+    <a class="ghost" href="new-mover-playbook-for-home-services.html">Read playbook #17 (new-mover welcome)</a>
+  </div>
+
+  <h2 class="sec">The re-skin check — why this is its own playbook</h2>
+  <div class="step">
+    <p><strong>#8 enrolls the plan that extends equipment life; #18 harvests the end of it. #17 logs equipment
+    ages at move-in; #18 acts on ages across the whole book. #13 sells a seasonal blitz; #18 sells a
+    replacement years before any season matters. #4 chases quotes the shop already wrote; #18 writes quotes
+    the customer doesn't know are coming.</strong> Four clean boundaries. #8's trigger is an in-home visit
+    and its output is a plan member — the plan <em>delays</em> this page's ledger entry; #18's trigger is the
+    age flag and its output is a replacement pipeline. The two run in sequence (plan protects the unit, the
+    ledger outlives the plan), never in competition. #17's equipment log is an input, not a twin: #17 records
+    ages to win the household, then hands the ages to this page's ledger — one page captures, one page acts.
+    #13's clock is the calendar; this page's clock is the unit's birthday — a blitz markets tune-ups to
+    everyone, the ledger talks replacement to flagged units only. And it passes the killed pool:
+    warranty-expiration marketing was killed as subsumed reminder-marketing, but this page never sends a
+    warranty reminder — it runs a 12-month planning consult with condition evidence and financing math, the
+    opposite mechanic (pipeline vs reminder). The hooks are clean: #8's plan is the post-install sequel;
+    #6's review capture is the happiest-review moment; #14's referral engine is the neighbor knock. This
+    page ends at the new unit's ledger row. A page that tried to sell maintenance plans or blitzes inside it
+    would swallow two siblings.</p>
+  </div>
+
+  <h2 class="sec">Frequently asked questions</h2>
+  <div class="faq">
+    <h3>I'm a two-truck shop. I don't have install years for 1,000 customers. Where do I start?</h3>
+    <p>Start where the techs already are. The fastest ledger bootstrap is the serial-number read: on every
+    service call for the next 90 days, the tech photographs the serial plate and the office decodes the
+    manufacture year — most manufacturers encode week and year in the serial. That is 2–4 minutes per call
+    and it builds the verified core of the ledger on the units you touch most. Layer two: every future
+    install writes its year into the ledger on day one (the compound). Layer three: the free-check wedge
+    (playbooks #2 and #17) captures ages from equipment you never installed. What you do NOT do is guess —
+    Gate 1 means a guessed age is worse than no age. Start with 200 verified rows; the flags work at any
+    size. The 90-day bootstrap is the two-truck honest read, and it is in the build-vs-buy table as the
+    zero-build path.</p>
+  </div>
+  <div class="faq">
+    <h3>Isn't this just scare marketing — "your furnace is old, buy a new one"?</h3>
+    <p>That is exactly what Gate 1 exists to kill, and it is the honest objection on the page. The difference
+    between this playbook and scare marketing is two things: condition evidence and the customer's deadline.
+    The planning visit assesses the actual unit — photos, readings, the tech's eyes — and the output is an
+    honest remaining-life estimate ("2–4 years"), not a countdown clock. And the close is the customer's
+    choice of deadline, including "re-check in 12 months." Scare marketing manufactures urgency; this machine
+    manufactures <em>time</em> — 6 to 12 months of it — so the customer can plan instead of panic. A shop
+    that runs this playbook and pressures a declined customer has broken the gates and should stop using the
+    page.</p>
+  </div>
+  <div class="faq">
+    <h3>How is this different from the warranty-expiration emails the industry already sends?</h3>
+    <p>Warranty-expiration marketing was killed in the family pass precisely because it is reminder marketing:
+    a date arrives, a nudge goes out, nothing changes hands. This page is a pipeline, not a reminder. A
+    warranty email says "your coverage expires" — this playbook books a 30-minute planning consult with
+    condition evidence, two options with real numbers, live rebate verification, and financing math quoted as
+    total repayment. The warranty email is one touch; this is 5 steps ending in a signed install. Different
+    job, different machine — which is why one died in the killed pool and this one cleared the bar at
+    8.7/10.</p>
+  </div>
+  <div class="faq">
+    <h3>How long until the first replacement from this machine?</h3>
+    <p>Honest: the first planning visits can book within 30–60 days of the ledger going live, because most
+    shops already have units sitting in the yellow band they never noticed — that is the whole premise. But
+    the planning visit is a 12-month consult, not a same-week sale: expect the first signed installs at
+    60–180 days, and the real compounding when the ledger's red flags start firing on schedule. This is not
+    the fastest first-dollar playbook in the family — #1's missed-call recovery wins that — but it is the
+    biggest ticket: a $5,000–$11,000 full replacement (HomeGuide 2026) pays for a lot of planning visits.
+    What you measure at 90 days is verified rows, yellow flags, and planning visits booked — not installs.
+    The installs are the ledger at month 6.</p>
+  </div>
+  <div class="faq">
+    <h3>What stops a competitor from undercutting my planned quote at the last minute?</h3>
+    <p>Two things, and they are the reason the planning consult beats the emergency quote. First: timing. The
+    consult happens 6–12 months before the breakdown, so the customer is comparing planned quotes, not
+    begging at 2am — you are the first real number they hear, and the first real number anchors the whole
+    decision. Second: Gate 4. Your own ledger means you honor the planned price even if the unit dies
+    mid-campaign — the customer learns the ledger protects them, which is a trust asset no last-minute
+    undercutter can match. The competitor who shows up at the breakdown is selling urgency; you are selling
+    the plan. That said, price honestly from the start — USA Today's 2026 figures ($7,500–$15,000 typical
+    full replacements) are the market, and a padded consult quote is a competitor's opening.</p>
+  </div>
+</main>
+<footer class="note">
+  FlowBench is an independent review project. Tool terms and vendor claims were checked October 1–2, 2026; pricing and tiers change often — verify on each vendor's site before buying. Nothing here is legal or compliance advice. Playbook #18 of the FlowBench field series.
+</footer>
+</body>
+</html>
