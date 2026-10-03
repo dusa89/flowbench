@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Overdue-Invoice Recovery Playbook for Home Services &amp; Trades (2026) — FlowBench</title>
+<meta name="description" content="A how-to playbook for contractors, HVAC, plumbing, and electrical shops whose completed jobs sit unpaid: the AR aging trigger, the Day-1-to-45 reminder ladder, the firm-but-fair AI collection call, and the prevention loop — with collection-law and consent gates stated first and every figure sourced and dated. Independent — verify on vendor sites before buying.">
+<style>
+  :root { --ink:#1a1a1a; --mut:#5c5c5c; --line:#d8d8d8; --acc:#7c3aed; --bg:#f6f7f9; --warn:#fbf3df; }
+  * { box-sizing:border-box; }
+  body { font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); margin:0; line-height:1.6; }
+  header.top { background:#1e1433; color:#fff; padding:16px 24px; }
+  header.top h1 { margin:0; font-size:21px; }
+  header.top p { margin:4px 0 0; font-size:13px; color:#c9bdf2; }
+  main { max-width:900px; margin:0 auto; padding:24px; }
+  .disc { background:var(--warn); border:1px solid #e3cf9a; border-radius:10px; padding:14px 16px; font-size:13.5px; margin-bottom:22px; }
+  .verdict { background:#fff; border:1px solid var(--line); border-left:5px solid var(--acc); border-radius:8px; padding:16px 18px; margin-bottom:22px; }
+  .verdict h2 { margin:0 0 8px; font-size:17px; }
+  .step { background:#fff; border:1px solid var(--line); border-radius:8px; padding:16px 18px; margin-bottom:16px; }
+  .step h2 { margin:0 0 8px; font-size:17px; }
+  .step h2 .n { display:inline-block; background:var(--acc); color:#fff; border-radius:50%; width:28px; height:28px; text-align:center; line-height:28px; font-size:15px; margin-right:8px; }
+  .step p, .step li { font-size:14px; color:#333; }
+  .step .tools { font-size:13px; color:var(--mut); }
+  .hard { background:#fdecec; border:1px solid #e8b4b4; border-radius:8px; padding:16px 18px; margin-bottom:22px; font-size:14px; }
+  .hard h2 { margin:0 0 8px; font-size:17px; }
+  table { width:100%; border-collapse:collapse; background:#fff; font-size:14px; margin:0 0 22px; }
+  th, td { border:1px solid var(--line); padding:10px 12px; text-align:left; vertical-align:top; }
+  th { background:#f0eafa; font-size:12.5px; text-transform:uppercase; letter-spacing:.4px; }
+  td.src { font-size:12px; color:var(--mut); }
+  h2.sec { font-size:19px; margin:30px 0 10px; }
+  .cta { display:flex; gap:12px; flex-wrap:wrap; margin:18px 0 26px; }
+  .cta a { background:var(--acc); color:#fff; text-decoration:none; padding:12px 20px; border-radius:8px; font-weight:600; font-size:14.5px; }
+  .cta a.ghost { background:#fff; color:var(--acc); border:1px solid var(--acc); }
+  .faq { background:#fff; border:1px solid var(--line); border-radius:8px; padding:16px 18px; margin-bottom:14px; }
+  .faq h3 { margin:0 0 6px; font-size:15.5px; }
+  .faq p { margin:0; font-size:14px; color:#333; }
+  footer.note { max-width:900px; margin:0 auto; padding:0 24px 34px; font-size:12.5px; color:var(--mut); }
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>FlowBench — Automation picks for small business</h1>
+  <p>Playbooks, not just picks: step-by-step automation setups for specific industries. Every tool term below is labeled with its source and date — vendors change tiers often, so verify on the vendor site before you buy.</p>
+</header>
+<main>
+
+  <div class="disc">
+    <strong>Disclosure:</strong> FlowBench is independent — not affiliated with Make, Synthflow, ElevenLabs, or n8n.
+    The buttons below are <strong>affiliate placeholders</strong>: if we join their partner programs,
+    we may earn a commission when you sign up, at no added cost to you. We never accept payment for
+    placement. Affiliate terms were checked against the vendors' own pages on <strong>October 1–2, 2026</strong>
+    (make.com/en/affiliate; n8n.io/affiliates; official Synthflow partner terms; elevenlabs.io/affiliates-terms).
+    Tool pricing and vendor claims named here come from the third-party sources noted — <strong>confirm current
+    pricing and terms on each vendor's own site before buying.</strong> Nothing here is legal or compliance
+    advice — review collection law and lien rules in your state with counsel before automating any payment outreach.
+  </div>
+
+  <div class="hard">
+    <h2>The constraints: you are the creditor, not a collector — and the law cares about tone</h2>
+    <p>Three hard gates, and they sit before step 0 because a reminder that breaks collection rules is a
+    liability, not a cash-flow tool. <strong>Gate 1 — say only true things:</strong> this playbook is
+    first-party outreach — you chasing your own invoice — which is how most small shops operate. Never imply
+    a lawsuit, a lien filing, or a credit report that you do not intend to file. A threat you don't carry out
+    is the fastest way to lose the customer and, in some states, to break the law. <strong>Gate 2 — late fees
+    live in the agreement, not in the reminder:</strong> any late fee or interest you apply must be disclosed
+    in your payment terms <em>before</em> the job starts, and the rate must comply with your state's rules
+    (contractors' late-fee guides note that low usury-cap states warrant a conversation with a local attorney
+    before a rate is set). <strong>Gate 3 — consent and identity:</strong> reminder texts and calls need
+    consent captured at the job (on the signed work order) with a working opt-out on every message, and any AI
+    voice agent identifies itself in the first sentence as calling on behalf of your company — it never
+    impersonates a human, a lawyer, or a collections agency. For trades, mechanics-lien rights are the real
+    leverage behind a final notice — but lien rules, deadlines, and preliminary-notice requirements are
+    state-specific, so the lien step goes through your attorney, not an automation. This page is a playbook,
+    not compliance advice — run your terms and your lien process past counsel for your state.</p>
+  </div>
+
+  <div class="verdict">
+    <h2>The short version</h2>
+    <p>Our quote-chase playbook (#4) recovers the estimates you lost before the sale — this playbook
+    <strong>collects the invoices customers owe after the work is done</strong>. It's a different job with a
+    different trigger: #4 starts with silence and a dollar amount on a quote; this starts with a signed
+    invoice for work already delivered, now sitting past its terms. The sequence is the AR aging ladder:
+    invoice crosses terms → gentle reminders (Day 1–14) → a firm-but-fair AI collection call (Day 21–30) →
+    final written notice with the disclosed late fee (Day 45) → owner decision on lien or collections. The
+    demand case is brutally simple: a <strong>2026 QuickBooks survey</strong> found <strong>59% of US small
+    businesses had invoices more than 30 days overdue</strong>, and businesses with unpaid invoices were owed
+    <strong>$17,700 on average</strong> (via Joist's plumbing-contractor invoicing guide, crawled October 2026).
+    Sage's June 2026 SME Performance Pulse: <strong>49% of small-business invoices were overdue</strong>,
+    with payment arriving an <strong>average 27 days beyond agreed terms</strong>. The Federation of Small
+    Businesses estimates <strong>~50,000 UK businesses close each year</strong> from late-payment cash-flow
+    problems (reported by Business Money, September 2026). In construction specifically, ChaserHQ's 2026 AR
+    statistics show the sector has the <strong>worst payment timing of any industry</strong>, with
+    <strong>55% of construction businesses waiting 31 or more days</strong> past the due date. And the fix is
+    embarrassingly mechanical: a $4M civil subcontractor sat on <strong>$287,000 in receivables averaging 52
+    days outstanding</strong> — "the GC is slow because no one is pushing; a systematic collection call on
+    Monday morning changes that within two weeks" (constructioncfo.net, August 2026). One AR consultant
+    reports <strong>$2.1M+ in client AR recovered since 2023</strong> with process, not loans (same source).
+    For solo shops the stakes are personal: solo practitioners lose an estimated <strong>~$10,000+/year</strong>
+    to unpaid invoices because, unlike large firms, they have no dedicated AR staff — overdue accounts just
+    sit (Medium, March 2026). The build is <strong>Make</strong> (the aging-bucket triggers, the reminder
+    ladder, the QuickBooks/CRM sync), <strong>Synthflow</strong> (the firm Day-21–30 collection call),
+    <strong>ElevenLabs</strong> voices so the call sounds like your office, and your accounting software's AR
+    aging report as the source of truth. All stats above are third-party and dated — direction, not a guarantee
+    for your market.</p>
+  </div>
+
+  <h2 class="sec">Step 0 — Write the two rules before you automate anything</h2>
+  <div class="step">
+    <h2><span class="n">0</span>The tone rule and the paper rule, on the office wall</h2>
+    <p><strong>Rule 1 — reminders are service, never threats.</strong> Every message in this sequence could be
+    read aloud in front of a judge without embarrassing you: polite, factual, and true. The sequence collects
+    <em>faster</em> because it is consistent, not because it is scary — most late payers simply forgot, and the
+    shop that asks first gets paid first. <strong>Rule 2 — the invoice goes out the same day, with real
+    terms.</strong> Joist's contractor invoicing guide (October 2026) puts same-day invoicing as the single
+    biggest lever: send it before you leave the property, with an actual term on it — due on receipt, Net 7,
+    or Net 15 — not "net 30" by default when the customer assumed pay-on-completion. Late fees and terms go in
+    the signed work order, not in a surprise on the reminder. A customer can't pay a term they never agreed to.
+    Both rules get printed and taped to the office wall — the sequence below never fires without them.</p>
+  </div>
+
+  <h2 class="sec">Step 1 — The aging trigger</h2>
+  <div class="step">
+    <h2><span class="n">1</span>Invoice crosses terms → lands in its aging bucket</h2>
+    <p>The trigger is the AR aging report, not a calendar date someone remembers. Invoices bucket into
+    <strong>current / 30 / 60 / 90+ days</strong>, and the bucket decides the message. A healthy AR book has
+    most balances in current and 30 — a growing 90+ bucket is the collection process failing early, when it
+    was still cheap to fix (constructioncfo.net, August 2026). Pair the buckets with DSO (days sales
+    outstanding): DSO gives you the direction of travel, the buckets tell you which invoices are driving it —
+    read both together every month. Make watches the accounting system for an invoice crossing its due date and
+    opens the sequence with the invoice's facts attached: amount, age, whether a late fee was disclosed, and
+    whether the customer is a repeat slow-payer. This is the "nobody forgets to ask" layer — the shop no longer
+    discovers a 90-day invoice by accident.</p>
+    <p class="tools">Runs on: your accounting software's AR aging report (QuickBooks/Xero/FreshBooks-style aging) + Make for the bucket-and-route logic.</p>
+  </div>
+
+  <h2 class="sec">Step 2 — The gentle ladder (Day 1–14)</h2>
+  <div class="step">
+    <h2><span class="n">2</span>Three reminders, each a little less ignorable</h2>
+    <p>Day 1 past terms: a friendly email + SMS — "Invoice #___ for $___ was due [date]; attaching a copy and a
+    pay link." Day 7: a second notice, still friendly — "Checking in — did the invoice land OK?" Day 14: the
+    "anything disputed?" message — this one exists to surface the hidden problem: work-quality disputes and
+    billing confusion hide inside polite silence, and finding them at Day 14 is weeks cheaper than at Day 60.
+    Any reply, any dispute flag, any payment promise routes to the owner immediately — the sequence stops and a
+    human takes over. The tone stays service-framed the whole way: the shop that helps you pay is not the shop
+    you're annoyed at when the bill arrives.</p>
+    <p class="tools">Runs on: Make (the Day-1/7/14 sequence, reply/dispute routing, pay-link generation) + your accounting software.</p>
+  </div>
+
+  <h2 class="sec">Step 3 — The firm call (Day 21–30)</h2>
+  <div class="step">
+    <h2><span class="n">3</span>An AI voice call that is firm, kind, and specific</h2>
+    <p>Day 21–30: the AI voice agent calls — firm but warm, identifying itself in the first sentence as calling
+    on behalf of your company. The script does four things: (1) names the exact invoice, amount, and due date;
+    (2) asks for payment on the call via the pay link; (3) offers the two legitimate off-ramps — a split
+    payment with dates, or a dispute review with the owner; (4) records whatever the customer says verbatim in
+    the CRM. No threats, no invented deadlines, no legal language — just presence. This call exists because a
+    surprising share of late payment is avoidance, and a real voice at Day 25 moves more accounts than six more
+    emails. The agent is trained on the tone rule from step 0: it never impersonates, never bluffs, and hands
+    any heat to the owner within the same call.</p>
+    <p class="tools">Runs on: Synthflow (the Day-21–30 collection call) + ElevenLabs (voice quality for call realism) + Make (scheduling off the aging bucket, logging outcomes to the CRM).</p>
+  </div>
+
+  <h2 class="sec">Step 4 — The final notice and the owner decision (Day 45)</h2>
+  <div class="step">
+    <h2><span class="n">4</span>Final written notice → owner picks the escalation</h2>
+    <p>Day 45: a final written notice goes out — the invoice, the disclosed late fee applied per your terms, and
+    a hard pay-by date. This is where the automation stops pretending and the owner decides. The decision tree
+    has three branches: (a) keep collecting personally for accounts worth the relationship; (b) file the
+    mechanics lien for trades where the work and deadlines qualify — <strong>through your attorney, never
+    through an automation</strong>, because preliminary-notice deadlines vary by state and a blown deadline is
+    the lien's most common failure mode; (c) hand the account to a collections service (Medium, March 2026:
+    handing off an account takes about 10 minutes — the friction was never the handoff, it was knowing when).
+    Repeat slow-payers get flagged for the prevention loop in step 5: the shop that fires bad payers politely
+    is the shop whose AR stays clean.</p>
+    <p class="tools">Runs on: Make (the Day-45 notice, the flag to the owner with the account's full history) + your attorney for any lien step.</p>
+  </div>
+
+  <h2 class="sec">Step 5 — The prevention loop</h2>
+  <div class="step">
+    <h2><span class="n">5</span>Make slow payers extinct instead of just managed</h2>
+    <p>The sequence collects cash; the loop fixes the faucet. Same-day invoicing becomes non-negotiable
+    (Joist's guide again: before you leave the property). Jobs above your threshold take a deposit. Repeat
+    customers move to a saved card on file. And once a quarter, the owner reviews the slow-payer list — the
+    customers who paid late twice are told politely that future work needs payment on completion. This is the
+    step vendors never sell because it doesn't need software: the contractor who only works for people who pay
+    on time doesn't have an AR problem. Run the ladder for everyone else; run the loop so next year's AR book
+    is boring.</p>
+    <p class="tools">Runs on: your accounting software (payment terms, deposits, saved billing) + a quarterly owner review — no automation required.</p>
+  </div>
+
+  <h2 class="sec">Build vs buy, honestly</h2>
+  <table>
+    <tr><th>Route</th><th>What you get</th><th>The honest read</th></tr>
+    <tr><td><strong>Build</strong> (Make + Synthflow + ElevenLabs)</td><td class="src">The full ladder: aging-bucket triggers, the Day-1–45 reminder sequence, the AI firm call, owner-decision flags, and your own written rules baked into every message. You own the SLA.</td><td>Wins on the firm call and on control — the Day-25 voice touch is what dedicated AR software can't do. You map the accounting-system integration yourself (that's the real load).</td></tr>
+    <tr><td><strong>Buy</strong> (dedicated AR-chasing software)</td><td class="src">Prebuilt QuickBooks/Xero sync, templated reminder sequences, and payment-link plumbing out of the box. No integration mapping; quote-gated pricing on most vendors, so run the math per seat.</td><td>Wins on setup speed and proven templates — if you just need reminders, this is the buy. It won't make the firm call for you, and its tone is fixed, not yours.</td></tr>
+  </table>
+
+  <h2 class="sec">Where this fits in the family</h2>
+  <div class="step">
+    <p><strong>Re-skin check, stated on-page:</strong> playbook #4 (unsold-estimate recovery) chases the quotes
+    you lost — pre-sale, outbound, over 30 days, ending in objection handling. This collects the invoices
+    customers owe — post-sale, post-delivery, over 45 days, ending in an owner decision. #4 starts with silence
+    and a dollar amount on a quote; this starts with a signed invoice for work already done. Different trigger,
+    different skill (collection etiquette vs objection handling), different escalation (lien vs re-quote),
+    different automation map (AR aging buckets vs estimate-sent sequences). Pair them as the two halves of the
+    money cycle: #4 turns quotes into jobs, this turns jobs into cash.</p>
+    <p>The natural cross-links: #1 (missed-call recovery — the shop that answers its phone invoices faster, and
+    same-day invoicing is the top of this playbook's prevention loop); #5 (after-hours dispatch — emergencies
+    have the worst invoicing discipline because nobody's in the office, which is exactly why the prevention loop
+    matters); #8 (maintenance plans — a member on auto-renewal never lands in the 45-day bucket at all).</p>
+  </div>
+
+  <h2 class="sec">Common questions</h2>
+  <div class="faq">
+    <h3>Won't reminder messages anger good customers?</h3>
+    <p>The opposite, usually. The Day-1 message is framed as service — "did the invoice land OK?" — and most
+    late payers simply forgot; the shop that asks first gets paid first. The tone rule from step 0 is the
+    whole guardrail: nothing in this sequence would embarrass you read aloud. What angers customers is being
+    surprised at Day 90, not reminded at Day 7.</p>
+  </div>
+  <div class="faq">
+    <h3>What if the customer disputes the work?</h3>
+    <p>Then the sequence did its job. The Day-14 "anything disputed?" message is a dispute-detector — finding
+    the dispute at Day 14 is weeks cheaper than discovering it when the account lands at Day 90. Any dispute
+    stops the automation and routes to the owner immediately; a disputed invoice never gets a firm call.</p>
+  </div>
+  <div class="faq">
+    <h3>Is an AI collection call legal?</h3>
+    <p>This page is not legal advice — but the design follows the conservative pattern: the agent identifies
+    itself as calling on behalf of your company in the first sentence, makes no threats it doesn't intend to
+    carry out, and consent for the outreach was captured on the signed work order with a working opt-out.
+    First-party outreach (you chasing your own invoice) operates under different rules than third-party debt
+    collectors. Run your script and terms past counsel for your state before going live.</p>
+  </div>
+  <div class="faq">
+    <h3>Should I charge late fees?</h3>
+    <p>Contractors' late-fee guides make the honest point: a late fee's real job isn't the money it collects —
+    it's making on-time payment the easier, cheaper option for the client. At a typical 1.5%/month, a $5,000
+    invoice accrues $150 over two months — small enough that most clients would rather just pay on time
+    (Joist late-fee guide, crawled October 2026). The catch: the fee must be in your terms <em>before</em> the
+    job, and the rate must comply with your state's rules — talk to a local attorney in low-usury-cap states
+    before setting one.</p>
+  </div>
+  <div class="faq">
+    <h3>I only do residential work. Do I need the full 45-day ladder?</h3>
+    <p>Residential invoices are usually smaller and simpler — but the ladder still applies, just compressed.
+    Most residential late payment resolves at Day 1 or Day 7 (forgotten invoice, lost email). The two-truck
+    shop's honest read: steps 1–2 plus the prevention loop recover the bulk of the money; steps 3–4 exist for
+    the stubborn 5–10% and for commercial/property-management customers on longer terms. Don't skip step 5
+    either way — deposits and saved cards on file are what make residential AR boring.</p>
+  </div>
+
+  <div class="cta">
+    <a href="../index.html">Back to all playbooks</a>
+    <a class="ghost" href="n8n-vs-make-workflow-automation.html">Compare n8n vs Make first</a>
+    <a class="ghost" href="voice-agent-playbook-for-contractors.html">Read playbook #1 (missed-call recovery)</a>
+    <a class="ghost" href="voice-agent-playbook-for-dental.html">Read playbook #2 (dental)</a>
+    <a class="ghost" href="speed-to-lead-playbook-for-real-estate.html">Read playbook #3 (real estate)</a>
+    <a class="ghost" href="estimate-recovery-playbook-for-contractors.html">Read playbook #4 (estimate recovery)</a>
+    <a class="ghost" href="after-hours-dispatch-triage-playbook.html">Read playbook #5 (after-hours dispatch)</a>
+    <a class="ghost" href="review-capture-playbook-for-home-services.html">Read playbook #6 (review capture)</a>
+    <a class="ghost" href="no-show-recovery-playbook-for-dental.html">Read playbook #7 (no-show recovery)</a>
+    <a class="ghost" href="maintenance-plan-enrollment-playbook-for-hvac.html">Read playbook #8 (maintenance plans)</a>
+  </div>
+
+  <p style="font-size:13px;color:var(--mut)">Affiliate placeholders in this family: Make, Synthflow, ElevenLabs — terms checked on their own pages October 1–2, 2026. n8n is the self-hosted bench option. Every figure on this page is third-party and dated; confirm current terms and pricing on each vendor's own site before buying.</p>
+
+</main>
+<footer class="note">
+  FlowBench — independent automation playbooks for small business. Stats are third-party and dated, not guarantees. Verify terms on vendor sites before buying.
+</footer>
+</body>
+</html>
