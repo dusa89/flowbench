@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Same-Day Reschedule Save Playbook for Home Services &amp; Trades (2026) — FlowBench</title>
+<meta name="description" content="A how-to playbook for HVAC, plumbing, and electrical shops losing same-day jobs to reschedule requests: the 60-second two-option save, live-availability offers, the rebook-lock reminder loop, the true-cancel branch, and the rebook-conversion ledger — with the terms-first and no-guilt gates stated first and every figure sourced and dated. Independent — verify on vendor sites before buying.">
+<style>
+  :root { --ink:#1a1a1a; --mut:#5c5c5c; --line:#d8d8d8; --acc:#7c3aed; --bg:#f6f7f9; --warn:#fbf3df; }
+  * { box-sizing:border-box; }
+  body { font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); margin:0; line-height:1.6; }
+  header.top { background:#1e1433; color:#fff; padding:16px 24px; }
+  header.top h1 { margin:0; font-size:21px; }
+  header.top p { margin:4px 0 0; font-size:13px; color:#c9bdf2; }
+  main { max-width:900px; margin:0 auto; padding:24px; }
+  .disc { background:var(--warn); border:1px solid #e3cf9a; border-radius:10px; padding:14px 16px; font-size:13.5px; margin-bottom:22px; }
+  .verdict { background:#fff; border:1px solid var(--line); border-left:5px solid var(--acc); border-radius:8px; padding:16px 18px; margin-bottom:22px; }
+  .verdict h2 { margin:0 0 8px; font-size:17px; }
+  .step { background:#fff; border:1px solid var(--line); border-radius:8px; padding:16px 18px; margin-bottom:16px; }
+  .step h2 { margin:0 0 8px; font-size:17px; }
+  .step h2 .n { display:inline-block; background:var(--acc); color:#fff; border-radius:50%; width:28px; height:28px; text-align:center; line-height:28px; font-size:15px; margin-right:8px; }
+  .step p, .step li { font-size:14px; color:#333; }
+  .step .tools { font-size:13px; color:var(--mut); }
+  .hard { background:#fdecec; border:1px solid #e8b4b4; border-radius:8px; padding:16px 18px; margin-bottom:22px; font-size:14px; }
+  .hard h2 { margin:0 0 8px; font-size:17px; }
+  table { width:100%; border-collapse:collapse; background:#fff; font-size:14px; margin:0 0 22px; }
+  th, td { border:1px solid var(--line); padding:10px 12px; text-align:left; vertical-align:top; }
+  th { background:#f0eafa; font-size:12.5px; text-transform:uppercase; letter-spacing:.4px; }
+  td.src { font-size:12px; color:var(--mut); }
+  h2.sec { font-size:19px; margin:30px 0 10px; }
+  .cta { display:flex; gap:12px; flex-wrap:wrap; margin:18px 0 26px; }
+  .cta a { background:var(--acc); color:#fff; text-decoration:none; padding:12px 20px; border-radius:8px; font-weight:600; font-size:14.5px; }
+  .cta a.ghost { background:#fff; color:var(--acc); border:1px solid var(--acc); }
+  .faq { background:#fff; border:1px solid var(--line); border-radius:8px; padding:16px 18px; margin-bottom:14px; }
+  .faq h3 { margin:0 0 6px; font-size:15.5px; }
+  .faq p { margin:0; font-size:14px; color:#333; }
+  footer.note { max-width:900px; margin:0 auto; padding:0 24px 34px; font-size:12.5px; color:var(--mut); }
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>FlowBench — Automation picks for small business</h1>
+  <p>Playbooks, not just picks: step-by-step automation setups for specific industries. Every tool term below is labeled with its source and date — vendors change tiers often, so verify on the vendor site before you buy.</p>
+</header>
+<main>
+
+  <div class="disc">
+    <strong>Disclosure:</strong> FlowBench is independent — not affiliated with Make, Synthflow, ElevenLabs, or n8n.
+    The buttons below are <strong>affiliate placeholders</strong>: if we join their partner programs,
+    we may earn a commission when you sign up, at no added cost to you. We never accept payment for
+    placement. Affiliate terms were checked against the vendors' own pages on <strong>October 1–2, 2026</strong>
+    (make.com/en/affiliate; n8n.io/affiliates; official Synthflow partner terms; elevenlabs.io/affiliates-terms).
+    Tool pricing and vendor claims named here come from the third-party sources noted — <strong>confirm current
+    pricing and terms on each vendor's own site before buying.</strong> Nothing here is legal or compliance
+    advice — review telemarketing and robocall rules in your state with counsel before automating any outreach.
+  </div>
+
+  <h2 class="sec" style="margin-top:6px">Playbook #12: The Same-Day Reschedule Save Playbook for Home Services &amp; Trades (2026)</h2>
+
+  <div class="hard">
+    <h2>The terms-first and no-guilt gates: this system saves the rebook, it never ambushes the customer</h2>
+    <p>Three hard gates, and they sit before step 0 because a reschedule flow that punishes the customer for
+    communicating is worse than no flow at all:</p>
+    <ol>
+      <li><strong>Policies live in the booking terms, not the reschedule moment.</strong> Any cancellation window,
+      trip charge, or restocking rule is disclosed in writing when the appointment is booked — before the customer
+      ever needs it. Springing a fee in the save sequence destroys trust and invites the chargeback you were trying
+      to avoid.</li>
+      <li><strong>No guilt, no lectures, no "are you sure."</strong> A customer asking to move is a customer telling
+      you what they need — reward the communication with two real options, not a guilt trip. The save works because
+      it's helpful, not because it's hard to refuse.</li>
+      <li><strong>Consent + identity on every channel.</strong> Reschedule texts go only to numbers with work-order
+      consent and a standing opt-out; the AI identifies itself as automated in the first sentence, never
+      impersonates a dispatcher, and hands off to a human the moment the customer asks for one.</li>
+    </ol>
+  </div>
+
+  <div class="verdict">
+    <h2>The short version</h2>
+    <p>A reschedule request is the opposite of a no-show: the customer is handing you the chance to keep the job.
+    The shops that answer within 60 seconds with two real alternates pulled from live availability rebook most of
+    them; the shops that phone-tag for a day lose the rebook to whoever picks up first. The honest demand picture:
+    home-service no-show rates are cited in a 5–30% range with one trades-specific figure at 18% (instantsalesfunnels
+    no-show cost calculator, crawled October 2026 — the methodology behind the 18% isn't disclosed, so treat it as
+    directional), Contractor Magazine's service-operation benchmarks hold that cancellations before dispatch should
+    sit under 2% and roughly 98% of booked calls should be dispatched, and one scheduling analysis puts total profit
+    lost to no-shows at up to 30% (selectedfirms.co, crawled October 2026). A vendor-published recurring-scheduling
+    blueprint claims multi-touchpoint reminders with one-click rescheduling cut last-minute cancellations from 9.2%
+    to 3.2% (Fieldproxy.ai, crawled October 2026 — vendor-published, treat as ceiling, not promise). The independent
+    pattern that holds up: two-way messaging that captures confirm/cancel/reschedule replies automatically instead of
+    one-way reminder blasts (Advalorem no-show recovery analysis, September 2026). This playbook turns that pattern
+    into a sequence: detect the reschedule intent in real time, offer two live alternates in one conversation, lock
+    the rebook with a tighter reminder loop, hand any slot you can't save to the waitlist system, and track
+    rebook-conversion by tech so you know which leaks are real.</p>
+  </div>
+
+  <h2 class="sec">Step 0 — Write the two rules before you automate anything</h2>
+  <div class="step">
+    <h2><span class="n">0</span>Terms at booking; gratitude at reschedule</h2>
+    <p>Rule one: the reschedule policy (window, any trip charge, how to move the appointment) is a checkbox in the
+    booking flow and a line in the confirmation text — never a surprise. Rule two: every reschedule response opens
+    with thanks, not friction — "Thanks for letting us know" — then two options. Post both rules where dispatchers
+    see them and bake them into the AI script. A customer who gets guilt-tripped once books with the competitor the
+    next time, and no rebook rate survives that.</p>
+    <p class="tools">Runs on: your booking confirmation template + a printed copy on the dispatcher's monitor.</p>
+  </div>
+
+  <h2 class="sec">Step 1 — Detect the reschedule intent in real time</h2>
+  <div class="step">
+    <h2><span class="n">1</span>Catch the request inside 60 seconds, on whatever channel it arrives</h2>
+    <p>The save only works if the customer doesn't wait. Wire every inbound channel to one intent trigger: two-way
+    SMS keyword detection ("move," "reschedule," "can't make it," "need to cancel"), a missed-call instant callback
+    (sibling <a href="voice-agent-playbook-for-contractors.html">#1</a>'s job) whose script asks "are you trying to
+    reschedule?", and an AI voice agent that classifies reschedule intent from live speech and pulls the customer's
+    appointment before the human dispatcher is even paged. The trigger must know <em>which</em> appointment — the
+    phone number must resolve to a job in the schedule, not start a from-scratch lookup conversation.</p>
+    <p class="tools">Runs on: Make (SMS/voice triggers, schedule lookup) + Synthflow (live intent call) +
+    ElevenLabs (dispatch-warm voice). n8n bench leg.</p>
+  </div>
+
+  <h2 class="sec">Step 2 — The 60-second save: two live alternates, one conversation</h2>
+  <div class="step">
+    <h2><span class="n">2</span>Never ask "when works for you" — offer two windows from real availability</h2>
+    <p>"When works for you?" restarts the whole scheduling conversation and costs you the impulse. Instead the agent
+    reads live availability and offers the two closest equivalent windows: "I can move you to Thursday 9–11 with
+    Marcus, or Friday 1–3 with Priya — which one keeps you?" Same tech when possible (trust continuity), next day
+    when the customer is urgent, equivalent slot type always. The customer replies "Thursday," the agent rebooks in
+    the schedule immediately and confirms in the same message. If the two windows don't fit, only then offer the
+    self-service booking link — as the fallback, not the opener.</p>
+    <p class="tools">Runs on: Make (live schedule query, write-back) + Synthflow (the negotiation call) +
+    ElevenLabs (voice). Requires real calendar access — no invented slots, ever.</p>
+  </div>
+
+  <h2 class="sec">Step 3 — Lock the rebook so it doesn't reschedule twice</h2>
+  <div class="step">
+    <h2><span class="n">3</span>A rebooked customer gets the tightest reminder loop in the shop</h2>
+    <p>A customer who already moved once is statistically the most likely to move again, so the rebook confirmation
+    carries the full lock: tech name, arrival window, and the one-line prep list ("clear 3 ft around the furnace"),
+    followed by a 24-hour confirmation text that requires a reply and a 2-hour "tech is en route" update. The
+    confirmation reply is two-way — a "no longer works" reply drops straight back into step 2's save, not into
+    voicemail. One reschedule is logistics; two is a pattern you want to see, which is what step 5 is for.</p>
+    <p class="tools">Runs on: Make (reminder sequence, reply routing) + your field-service CRM for tech assignment.</p>
+  </div>
+
+  <h2 class="sec">Step 4 — The true-cancel branch: fee per terms, slot to the waitlist</h2>
+  <div class="step">
+    <h2><span class="n">4</span>When they won't rebook, end clean and fill the slot — this page does not do the filling</h2>
+    <p>Some reschedules are real cancellations. Confirm it once ("So we're canceling Thursday's visit — is that
+    right?"), apply only what the booking terms disclosed, thank them, and stop. The freed same-day slot then
+    belongs to the waitlist system — sibling
+    <a href="no-show-recovery-playbook-for-dental.html">#7 (no-show recovery)</a>'s ranked waitlist and 10-minute
+    fill call — not to this page. The boundary is deliberate: <strong>#12 saves the rebook; #7 fills the slot a save
+    couldn't keep.</strong> A page that tries to do both becomes neither.</p>
+    <p class="tools">Runs on: your terms sheet + the #7 waitlist system, invoked on confirmed cancel.</p>
+  </div>
+
+  <h2 class="sec">Step 5 — The ledger: rebook conversion, saved-slot value, repeat flags</h2>
+  <div class="step">
+    <h2><span class="n">5</span>Track the save rate by tech and trigger — the patterns pay for the system</h2>
+    <p>Log every reschedule request: channel, hour, tech, save vs true cancel, and the new slot. The metrics that
+    matter: reschedule-to-rebook conversion (the save rate), saved-slot revenue (rebooked ticket value kept in the
+    week), and the repeat-rescheduler flag — customers who move three times earn a deposit-before-booking rule
+    instead of a fourth free move. Review monthly with dispatch: if one tech's customers reschedule twice as often,
+    the leak is the arrival experience, not the reminder sequence.</p>
+    <p class="tools">Runs on: Make (event logging) + a weekly report to the owner's inbox; flag rules per terms.</p>
+  </div>
+
+  <h2 class="sec">Build vs buy</h2>
+  <table>
+    <tr><th>Route</th><th>What it costs you</th><th>Honest read</th></tr>
+    <tr>
+      <td>Make + Synthflow + ElevenLabs DIY (this page)</td>
+      <td>Time to wire the schedule query, intent triggers, and two-option script; ongoing per-run usage on the automation platforms.</td>
+      <td>Full control of the save script and the two-option logic; lives on the stack the rest of this family uses. The build work is real — budget a working week with someone technical, not an afternoon.</td>
+    </tr>
+    <tr>
+      <td>Field-service CRM with native online rescheduling (e.g. Housecall Pro, Jobber self-service booking)</td>
+      <td>The CRM's own plan cost; customer does the moving themselves.</td>
+      <td>Zero build, but the save never happens — the customer picks a new slot unassisted and you learn nothing from the ledger. Fine for shops where same-day saves are rare; wrong for shops bleeding same-day jobs.</td>
+    </tr>
+    <tr>
+      <td>Vendor-published rescheduling blueprints (e.g. Fieldproxy)</td>
+      <td>Platform seat costs.</td>
+      <td>Their claim of 9.2%-to-3.2% cancellation reduction via multi-touchpoint reminders with one-click rescheduling is the ceiling case for their own vertical (recurring window cleaning, crawled October 2026). Directionally useful; verify against your own save rate before believing their arithmetic.</td>
+    </tr>
+  </table>
+  <p class="tools src">Source note: n8n bench leg — a publicly shared n8n + Google Sheets + Twilio workflow auto-offers canceled slots to a waitlist (YouTube walkthrough, September 2026) covers the #7 half of the boundary: if you build DIY, keep the reschedule save and the waitlist fill as two separate scenarios, not one.</p>
+
+  <h2 class="sec">The re-skin check — why this is its own playbook</h2>
+  <div class="step">
+    <p><strong>#1 recovers the call you missed; #7 fills the slot that emptied; #12 saves the rebook from a customer
+    who asked to move.</strong> Three different jobs: #1's trigger is silence on the phone line (contact recovery),
+    #7's trigger is an absent customer (slot refill), and this page's trigger is the customer's own words — "I need
+    to reschedule." Different trigger means different skill: this is live alternate-offer negotiation in one
+    conversation, not a callback and not a waitlist fill. Different automation map (real-time schedule read +
+    two-option close vs. schedule-triggered waitlist vs. speed-to-answer callback). Different metric (rebook
+    conversion, not refill rate). And the boundary is stated in the page itself: a freed slot this system can't save
+    goes to #7's waitlist — this page ends at the save.</p>
+  </div>
+
+  <h2 class="sec">Frequently asked questions</h2>
+  <div class="faq">
+    <h3>I'm a two-truck shop. Is this overkill?</h3>
+    <p>The honest read: for a two-truck shop, steps 1 and 2 are a phone habit, not a build — answer the reschedule
+    text within a minute and offer the two alternates from the truck's schedule on the wall. Automate step 3's
+    reminder loop first (it's the cheapest to run and the easiest to forget by hand), and add the AI save only when
+    the volume of same-day moves exceeds what dispatch can answer in 60 seconds.</p>
+  </div>
+  <div class="faq">
+    <h3>Won't instant automated texts annoy the customer?</h3>
+    <p>An instant helpful text annoys nobody; a slow bureaucratic one annoys everyone. The customer asked you a
+    question — answering it in a minute with two real options reads as service, not spam. The annoyance cases are
+    all gate violations: texting without consent, guilt-tripping, or chasing a "no" three more times.</p>
+  </div>
+  <div class="faq">
+    <h3>Can I charge a same-day cancellation fee?</h3>
+    <p>Only what your booking terms disclosed before the appointment — see the terms-first gate at the top. Fee
+    schedules, notice windows, and exemptions live in the terms the customer accepted, not in this playbook. State
+    consumer-protection rules vary; run your terms past counsel once and reuse them everywhere. This is not legal
+    advice.</p>
+  </div>
+  <div class="faq">
+    <h3>What about the customer who reschedules every visit?</h3>
+    <p>That's what step 5's repeat flag is for. Three moves and the fourth booking requires a deposit under the
+    terms — a business rule, not a punishment. The save sequence keeps offering; the terms keep the pattern from
+    becoming a schedule hole.</p>
+  </div>
+  <div class="faq">
+    <h3>How is this different from playbook #7 (no-show recovery)?</h3>
+    <p>#7 is triggered by the customer's absence — the slot is already empty, so the job is refilling it fast with a
+    ranked waitlist. #12 is triggered by the customer's request — the slot isn't empty yet, so the job is keeping the
+    job on the schedule in a new slot. Same schedule, opposite ends of the problem.</p>
+  </div>
+
+  <div class="cta">
+    <!-- AFFILIATE PLACEHOLDER: synthflow -->
+    <a href="#affiliate-synthflow-placeholder">Try Synthflow (the save call)</a>
+    <!-- AFFILIATE PLACEHOLDER: elevenlabs -->
+    <a href="#affiliate-elevenlabs-placeholder">Try ElevenLabs (dispatch-warm voices)</a>
+    <!-- AFFILIATE PLACEHOLDER: make -->
+    <a href="#affiliate-make-placeholder">Try Make (triggers + schedule sync)</a>
+  </div>
+  <div class="cta">
+    <a class="ghost" href="n8n-vs-make-workflow-automation.html">Compare n8n vs Make first</a>
+    <a class="ghost" href="voice-agent-playbook-for-contractors.html">Read playbook #1 (missed-call recovery)</a>
+    <a class="ghost" href="voice-agent-playbook-for-dental.html">Read playbook #2 (dental)</a>
+    <a class="ghost" href="speed-to-lead-playbook-for-real-estate.html">Read playbook #3 (real estate)</a>
+    <a class="ghost" href="estimate-recovery-playbook-for-contractors.html">Read playbook #4 (estimate recovery)</a>
+    <a class="ghost" href="after-hours-dispatch-triage-playbook.html">Read playbook #5 (after-hours dispatch)</a>
+    <a class="ghost" href="review-capture-playbook-for-home-services.html">Read playbook #6 (review capture)</a>
+    <a class="ghost" href="no-show-recovery-playbook-for-dental.html">Read playbook #7 (no-show recovery)</a>
+    <a class="ghost" href="maintenance-plan-enrollment-playbook-for-hvac.html">Read playbook #8 (maintenance-plan enrollment)</a>
+    <a class="ghost" href="overdue-invoice-recovery-playbook-for-trades.html">Read playbook #9 (overdue-invoice recovery)</a>
+    <a class="ghost" href="dormant-customer-reactivation-playbook-for-trades.html">Read playbook #10 (dormant-customer reactivation)</a>
+    <a class="ghost" href="post-job-upsell-playbook-for-trades.html">Read playbook #11 (post-job upsell)</a>
+  </div>
+</main>
+<footer class="note">
+  FlowBench is an independent review project. Tool terms and vendor claims were checked October 1–2, 2026; pricing and tiers change often — verify on each vendor's site before buying. Nothing here is legal or compliance advice. Playbook #12 of the FlowBench field series.
+</footer>
+</body>
+</html>
