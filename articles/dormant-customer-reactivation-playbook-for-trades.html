@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Dormant-Customer Reactivation Playbook for Home Services &amp; Trades (2026) — FlowBench</title>
+<meta name="description" content="A how-to playbook for HVAC, plumbing, and electrical shops whose past customers went quiet: the CRM dormancy trigger, the 90/180/365-day segments, the 21-day multi-channel win-back sequence, the AI check-in call, and the prevention loop — with consent and quiet-hour gates stated first and every figure sourced and dated. Independent — verify on vendor sites before buying.">
+<style>
+  :root { --ink:#1a1a1a; --mut:#5c5c5c; --line:#d8d8d8; --acc:#7c3aed; --bg:#f6f7f9; --warn:#fbf3df; }
+  * { box-sizing:border-box; }
+  body { font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); margin:0; line-height:1.6; }
+  header.top { background:#1e1433; color:#fff; padding:16px 24px; }
+  header.top h1 { margin:0; font-size:21px; }
+  header.top p { margin:4px 0 0; font-size:13px; color:#c9bdf2; }
+  main { max-width:900px; margin:0 auto; padding:24px; }
+  .disc { background:var(--warn); border:1px solid #e3cf9a; border-radius:10px; padding:14px 16px; font-size:13.5px; margin-bottom:22px; }
+  .verdict { background:#fff; border:1px solid var(--line); border-left:5px solid var(--acc); border-radius:8px; padding:16px 18px; margin-bottom:22px; }
+  .verdict h2 { margin:0 0 8px; font-size:17px; }
+  .step { background:#fff; border:1px solid var(--line); border-radius:8px; padding:16px 18px; margin-bottom:16px; }
+  .step h2 { margin:0 0 8px; font-size:17px; }
+  .step h2 .n { display:inline-block; background:var(--acc); color:#fff; border-radius:50%; width:28px; height:28px; text-align:center; line-height:28px; font-size:15px; margin-right:8px; }
+  .step p, .step li { font-size:14px; color:#333; }
+  .step .tools { font-size:13px; color:var(--mut); }
+  .hard { background:#fdecec; border:1px solid #e8b4b4; border-radius:8px; padding:16px 18px; margin-bottom:22px; font-size:14px; }
+  .hard h2 { margin:0 0 8px; font-size:17px; }
+  table { width:100%; border-collapse:collapse; background:#fff; font-size:14px; margin:0 0 22px; }
+  th, td { border:1px solid var(--line); padding:10px 12px; text-align:left; vertical-align:top; }
+  th { background:#f0eafa; font-size:12.5px; text-transform:uppercase; letter-spacing:.4px; }
+  td.src { font-size:12px; color:var(--mut); }
+  h2.sec { font-size:19px; margin:30px 0 10px; }
+  .cta { display:flex; gap:12px; flex-wrap:wrap; margin:18px 0 26px; }
+  .cta a { background:var(--acc); color:#fff; text-decoration:none; padding:12px 20px; border-radius:8px; font-weight:600; font-size:14.5px; }
+  .cta a.ghost { background:#fff; color:var(--acc); border:1px solid var(--acc); }
+  .faq { background:#fff; border:1px solid var(--line); border-radius:8px; padding:16px 18px; margin-bottom:14px; }
+  .faq h3 { margin:0 0 6px; font-size:15.5px; }
+  .faq p { margin:0; font-size:14px; color:#333; }
+  footer.note { max-width:900px; margin:0 auto; padding:0 24px 34px; font-size:12.5px; color:var(--mut); }
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>FlowBench — Automation picks for small business</h1>
+  <p>Playbooks, not just picks: step-by-step automation setups for specific industries. Every tool term below is labeled with its source and date — vendors change tiers often, so verify on the vendor site before you buy.</p>
+</header>
+<main>
+
+  <div class="disc">
+    <strong>Disclosure:</strong> FlowBench is independent — not affiliated with Make, Synthflow, ElevenLabs, or n8n.
+    The buttons below are <strong>affiliate placeholders</strong>: if we join their partner programs,
+    we may earn a commission when you sign up, at no added cost to you. We never accept payment for
+    placement. Affiliate terms were checked against the vendors' own pages on <strong>October 1–2, 2026</strong>
+    (make.com/en/affiliate; n8n.io/affiliates; official Synthflow partner terms; elevenlabs.io/affiliates-terms).
+    Tool pricing and vendor claims named here come from the third-party sources noted — <strong>confirm current
+    pricing and terms on each vendor's own site before buying.</strong> Nothing here is legal or compliance
+    advice — review telemarketing and robocall rules in your state with counsel before automating any outreach.
+  </div>
+
+  <div class="hard">
+    <h2>The consent gates: you are texting people who did not ask for this one message</h2>
+    <p>Three hard gates, and they sit before step 0 because a win-back text that breaks outreach rules is a
+    liability, not a revenue play. <strong>Gate 1 — consent on file, opt-out in every message:</strong> SMS
+    outreach needs consent captured at the job — on the signed work order, in plain language — and every text
+    carries a working opt-out (reply STOP). One opt-out kills the <em>whole sequence</em> for that contact,
+    not just one channel; a contact who opted out of texts never gets the follow-up email or the call either.
+    <strong>Gate 2 — quiet hours and the do-not-contact list:</strong> no automated texts or calls before 8am
+    or after 9pm in the contact's local time, ever — and you scrub every send against your own do-not-contact
+    list before it fires. The sequence below is gated on these checks: a message that can't pass them doesn't
+    go out. <strong>Gate 3 — the AI voice agent identifies itself:</strong> any AI call opens by saying it is
+    calling on behalf of your company — it never impersonates a human employee, never bluffs a deadline, and
+    hands any heat to a human in the same call. Every message also says who you are: the shop they paid two
+    years ago, not a stranger with a discount. This page is a playbook, not compliance advice — run your
+    consent language and your scripts past counsel for your state.</p>
+  </div>
+
+  <div class="verdict">
+    <h2>The short version</h2>
+    <p>Our post-job review playbook (#6) works the jobs you just finished — this works the customers who
+    <strong>went quiet months ago</strong>. And our maintenance-plan playbook (#8) enrolls completed-visit
+    customers into plans and wins back lapsed <em>plan members</em> — this works the other 70–80% of the list:
+    one-time-job customers, never-enrolled households, the people who paid you once and then drifted to whoever
+    showed up first in their next Google search. The sequence is the dormancy ladder: a monthly CRM scan sorts
+    quiet customers into warm / cooling / deep segments → a 21-day multi-channel win-back sequence (SMS, then
+    email, then an AI check-in call, then a human call for high-value accounts) → bookings land straight on
+    dispatch → the prevention loop makes sure next year's list doesn't go dormant the same way. The demand
+    case is the cheapest math in the business: Harvard Business Review's widely cited finding puts acquiring a
+    new customer at <strong>5–25× more expensive than retaining an existing one</strong> (via Extu's loyalty
+    statistics roundup, September 21, 2026), and Harvard Business School's retention research says a <strong>5%
+    increase in customer retention increases profits 25–95%</strong> (same source). The close rates follow:
+    the probability of selling to an existing customer runs <strong>60–70%</strong>, versus <strong>5–20%</strong>
+    for a new prospect (CEO Today Magazine, February 2026). In the trades specifically: a contractor database
+    reactivation campaign run by Relentless Digital (case study, October 2026) reached <strong>3,076</strong>
+    past customers, got <strong>135 replies (4.4%)</strong>, and booked <strong>39 confirmed jobs for $43,182
+    in attributed revenue</strong> with <strong>$0 in new ad spend</strong> — one contractor's result, not a
+    guarantee. Contractor marketer Joshua Crouch's webinar (September/October 2026) describes a <strong>$49
+    AC tune-up text sent to ~5,000 past customers</strong> that booked <strong>300+ tune-ups</strong> at roughly
+    a <strong>5.5–6% booking rate</strong>, selling <strong>$300,000+</strong> in work; his electrical campaign
+    to ~3,000 contacts booked <strong>40–45 appointments for ~$50,000</strong>. And the leak this fixes is
+    real: industry analysis holds that only <strong>20–30% of first-time home service customers ever call
+    again</strong>, and that a one-time $350 furnace repair becomes an <strong>$8,000–$15,000</strong>
+    household when retained for 7 years across tune-ups, a water heater, and an eventual system replacement
+    (JobOS Pro customer-retention brief, 2026). Enterprise DNA (September 2026) estimates trades businesses
+    doing $1–25M leak <strong>$50,000–$200,000 a year</strong> from missed calls, unworked estimates, dormant
+    lists, and underused capacity. Automation vendors' own blueprints claim the upside plainly — Fieldproxy's
+    HVAC win-back blueprint (October 2026) claims a <strong>38–42% reactivation rate</strong> and <strong>$850
+    in average recovered revenue per customer</strong>; its plumbing blueprint claims <strong>$12 cost per
+    reactivation</strong> against <strong>$150–$300 new-lead acquisition costs</strong> (vendor claims —
+    verify before believing). The build is <strong>Make</strong> (the monthly dormancy scan, the segment engine,
+    the CRM sync), <strong>Synthflow</strong> (the Day-10 AI check-in call),
+    <strong>ElevenLabs</strong> voices so the call sounds like your office, and your field-service CRM's
+    "days since last invoice" as the source of truth. All stats above are third-party and dated — direction,
+    not a guarantee for your market.</p>
+  </div>
+
+  <h2 class="sec">Step 0 — Write the two rules before you automate anything</h2>
+  <div class="step">
+    <h2><span class="n">0</span>The database is an asset, and specific beats generic</h2>
+    <p><strong>Rule 1 — clean the list before you touch it.</strong> A campaign fired at 30% dead numbers and
+    bouncing emails doesn't just underperform — it torches your sender reputation and your SMS delivery.
+    Scrub dead contacts, duplicates, and anyone on the do-not-contact list first. The sequence below assumes a
+    clean list; hygiene is the price of admission, not step 6. <strong>Rule 2 — specific offers beat generic
+    discounts.</strong> A text that says "your 2019 Goodman is coming up on its fall tune-up — $49, two
+    spots this Thursday" books; "20% OFF ALL SERVICES!!!" gets deleted. Contractor campaigns that work all
+    share this: the offer is tied to something already documented about the customer — their equipment, their
+    last job, the season. Generic repair discounts, Crouch notes, get ignored because they feel like spam;
+    specific ones feel like service. Both rules get printed and taped to the office wall — the sequence below
+    never fires without them.</p>
+  </div>
+
+  <h2 class="sec">Step 1 — The dormancy trigger</h2>
+  <div class="step">
+    <h2><span class="n">1</span>A monthly scan sorts the quiet into three buckets</h2>
+    <p>The trigger is "days since last invoice," scanned monthly — not a gut feeling that "we should send
+    something out." Contacts land in three segments: <strong>Warm (90–180 days quiet)</strong> — they're just
+    busy, a nudge usually works; <strong>Cooling (180–365 days)</strong> — needs a real reason, a seasonal
+    offer tied to their equipment; <strong>Deep (365+ days)</strong> — a re-introduction, with the strongest
+    offer reserved for non-responders. The exclusion list matters as much as the segments: open disputes,
+    one-star reviews, active maintenance-plan members (they have their own engine in playbook #8), recent
+    estimates (that's playbook #4's job), and anyone who ever opted out. Deep-segment contacts get one full
+    sequence a year — dormancy campaigns that never stop become the spam they were designed to replace. Make
+    watches the CRM for contacts crossing the day thresholds and moves them into segments automatically, so the
+    scan never depends on someone remembering to run it.</p>
+    <p class="tools">Runs on: your field-service CRM's "days since last invoice" + Make for the scan-and-segment logic.</p>
+  </div>
+
+  <h2 class="sec">Step 2 — The 21-day win-back sequence</h2>
+  <div class="step">
+    <h2><span class="n">2</span>SMS opens, email explains, a voice closes</h2>
+    <p><strong>Day 0 — SMS.</strong> Short, specific, signed with your shop's name: "Hi Maria, it's Tom's HVAC
+    — it's been 8 months since your AC tune-up. $49 fall tune-up spots this Thursday and Friday — reply YES
+    and I'll hold one." Texts open at 90%+ for service businesses; email lands in promotions — the sequence
+    opens with the channel that gets read. <strong>Day 4 — email.</strong> The longer version: their
+    equipment, what the season demands of it, one clear booking link. <strong>Day 10 — the AI check-in call</strong>
+    (step 3). <strong>Day 16 — second SMS, escalated offer</strong> — reserved for non-responders only; the
+    offer starts conservative and increases only for people who didn't bite, which cuts discount expense
+    versus flat-rate offers. <strong>Day 21 — human call for high-value accounts:</strong> commercial accounts
+    and top-20% residential customers get a personal CSR call; everyone else cycles back into the seasonal
+    queue. Stop rules are absolute: any booking → the sequence dies and the job lands on dispatch; any
+    opt-out → the whole sequence dies across all channels; any complaint → a human takes over within the
+    hour. And keep the first send capped — your office has to handle the reply volume, and callbacks inside
+    the hour are what turn replies into booked jobs.</p>
+    <p class="tools">Runs on: Make (the 21-day sequence, segment timing, stop rules, dispatch handoff) + your CRM (service history personalization).</p>
+  </div>
+
+  <h2 class="sec">Step 3 — The AI check-in call</h2>
+  <div class="step">
+    <h2><span class="n">3</span>Service, not a sales pitch — with the identity up front</h2>
+    <p>The Day-10 call does five things in under two minutes: (1) <strong>identifies itself in the first
+    sentence</strong> as calling on behalf of your company — never impersonating a human; (2) names the
+    specific last job ("your water heater install last March"); (3) states one concrete seasonal offer tied
+    to that history; (4) books on the call or texts the booking link while they're still on the line; (5)
+    logs the outcome verbatim in the CRM — booked, call-back, not interested, do-not-contact. The script is
+    trained on the tone from step 0: warm, specific, zero pressure, and it hands any heat to the owner in the
+    same call. This call exists because a surprising share of dormancy is just drift — the customer liked you
+    fine and simply forgot you exist. A real voice at Day 10 moves more of them than six more emails.</p>
+    <p class="tools">Runs on: Synthflow (the Day-10 check-in call) + ElevenLabs (voice quality for call realism) + Make (scheduling off the cooling/deep segments, logging outcomes to the CRM).</p>
+  </div>
+
+  <h2 class="sec">Step 4 — Measure booked jobs, not opens</h2>
+  <div class="step">
+    <h2><span class="n">4</span>Tag every reply; the only metric is revenue</h2>
+    <p>Every reply gets tagged back to the campaign, and every booked job gets its revenue attributed — that's
+    the number that pays the bills, not opens or clicks. Report by segment: warm should convert best, cooling
+    next, deep last. Expect the honest decay: reactivation response runs <strong>15–25% for contacts dormant
+    under six months</strong> and <strong>5–10% for older ones</strong> in industry benchmarks (via MAXED AI's
+    reactivation research, October 2026). The kill/keep rules are simple: if the warm segment books under 2%,
+    the offer or the list hygiene is broken — fix those before touching the deep segment. If warm books 4%+
+    like the Relentless Digital case study, scale the sends and add the cooling segment. And once a year, run
+    the reactivation math for the whole database: contacts × booking rate × average job value, minus campaign
+    cost — that's the number you take to the bank, and it's the number that justifies doing this every month
+    instead of every spring.</p>
+    <p class="tools">Runs on: your CRM (reply tagging, revenue attribution) + a monthly owner review of segment booking rates.</p>
+  </div>
+
+  <h2 class="sec">Step 5 — The prevention loop</h2>
+  <div class="step">
+    <h2><span class="n">5</span>Stop manufacturing dormancy instead of just mining it</h2>
+    <p>The sequence recovers revenue; the loop fixes the faucet. Three habits, all from elsewhere in this
+    family: (1) the <strong>48-hour post-job check-in text</strong> — "Hi Maria, it's Tom's HVAC, just making
+    sure the AC is keeping up after yesterday's repair. Reply here if anything seems off." It's not a survey,
+    it's a human-sounding check-in that opens a text thread you now own — a direct channel for every future
+    offer. (2) <strong>Review capture</strong> (playbook #6) keeps the relationship warm while the job is
+    fresh. (3) <strong>Maintenance-plan enrollment</strong> (playbook #8) is the structural fix — a member on
+    auto-renewal never goes dormant at all. The honest hierarchy: the shop that runs #6 and #8 rarely needs
+    #10. This playbook is the rescue net for the customers you already lost — run it monthly to recover them,
+    run the loop so next year's rescue net catches less.</p>
+    <p class="tools">Runs on: Make (the 48-hour check-in, review-capture handoff) + playbook #8's enrollment engine for the structural fix.</p>
+  </div>
+
+  <h2 class="sec">Build vs buy, honestly</h2>
+  <table>
+    <tr><th>Route</th><th>What you get</th><th>The honest read</th></tr>
+    <tr><td><strong>Build</strong> (Make + CRM + Synthflow + ElevenLabs)</td><td class="src">The full engine: monthly dormancy scan, the 90/180/365-day segment rules, the 21-day multi-channel sequence, the Day-10 AI check-in call, stop rules, revenue attribution — in your tone, on your data. You own the list, the scripts, and the SLA.</td><td>Wins on the call and on control — the Day-10 voice touch is what prebuilt win-back modules can't do, and your offer ladder is tuned to your market, not a template's. You map the CRM integration yourself (that's the real load) and you own list hygiene.</td></tr>
+    <tr><td><strong>Buy</strong> (field-service CRM win-back modules / vendor reactivation tools)</td><td class="src">Prebuilt reactivation sequences and vendor blueprints (Fieldproxy-style) with vendor-claimed 38–42% reactivation rates, often with per-seat or quote-gated pricing. Faster to first campaign; no integration mapping.</td><td>Wins on first-campaign speed — if your list is clean and you want a campaign live this month, this is the buy. The tone is the vendor's, not yours; the claimed rates are vendor claims, not your market; and it still won't make the Day-10 call for you.</td></tr>
+  </table>
+
+  <h2 class="sec">Where this fits in the family</h2>
+  <div class="step">
+    <p><strong>Re-skin check, stated on-page:</strong> playbook #8 (maintenance-plan enrollment) works the
+    customers you already won — and its win-back sequence covers <em>only lapsed plan members</em>, alumni of
+    the plan. This playbook works the other 70–80% of the database: one-time-job customers, never-enrolled
+    households, the people #8 never touched. Different trigger (a monthly CRM inactivity scan vs a plan-lapse
+    event), different population (the whole customer list vs plan alumni), different goal (a re-booked service
+    visit vs plan re-enrollment), different metric (reactivation rate + revenue per reactivated vs members
+    added + recurring share of revenue), different automation map (scheduled scan + 21-day multi-channel drip
+    vs a renewal/lapse event engine). It's also not #6: <a href="review-capture-playbook-for-home-services.html">#6
+    (review capture)</a> harvests the jobs you just finished — this works the customers who went quiet months
+    ago. And it's not <a href="estimate-recovery-playbook-for-contractors.html">#4 (estimate recovery)</a>:
+    #4 chases quotes from people who never bought — every contact here already paid you once, which is exactly
+    why they're cheaper to win back. Pair them as the full customer lifecycle: #6 and #8 keep customers from
+    drifting, this recovers the ones that drifted anyway, #4 recovers the ones that never bought at all.
+    Seasonal-reminder campaigns are not their own playbook — they're step 2 inside this one, a message type,
+    not a system.</p>
+    <p>The natural cross-links: #1 (missed-call recovery — every reactivated customer who calls back needs to
+    reach a human, or the whole sequence was a setup for a voicemail); #5 (after-hours dispatch — win-back
+    calls and texts land at odd hours, and the triage engine decides what's urgent); #6 (review capture —
+    the prevention loop's warm-up act); #8 (maintenance plans — the structural fix that makes dormancy
+    rare); #9 (invoice recovery — a reactivated customer with an old unpaid invoice routes to #9's ladder
+    first, because the sequence collects cash and you don't book new work on top of a 90-day balance).</p>
+  </div>
+
+  <h2 class="sec">Common questions</h2>
+  <div class="faq">
+    <h3>Won't win-back texts annoy my customers?</h3>
+    <p>The opposite, usually — when they're specific. A text that names your shop, references their actual
+    equipment, and offers one useful seasonal service reads as service, not spam. What annoys people is the
+    fourth generic "20% OFF EVERYTHING" blast from a number they don't recognize. The consent gates up top
+    are the whole guardrail: consent on the work order, opt-out in every message, one opt-out kills the entire
+    sequence, quiet hours respected. Most homeowners welcome the reminder — they forgot you, not the other way
+    around.</p>
+  </div>
+  <div class="faq">
+    <h3>My list is old and messy. Is this still worth doing?</h3>
+    <p>Worth doing <em>after</em> the hygiene pass, not before. Scrub dead numbers and bouncing emails first —
+    a campaign to a dirty list torches deliverability and poisons the metrics. Then run the warm segment
+    (90–180 days) first: it's the cheapest to win back and it proves the offer. Scale to cooling and deep only
+    when the warm numbers say the offer works. And cap the first send so your office can handle the replies —
+    a reply that waits two days for a callback is a customer you've now annoyed twice.</p>
+  </div>
+  <div class="faq">
+    <h3>Email or SMS — which one actually books?</h3>
+    <p>Both, in that order. SMS opens at 90%+ for service businesses while service email lands in promotions —
+    so the sequence opens with the text and uses email for the longer, equipment-specific version. That's the
+    whole Day-0/Day-4 structure. The voice call at Day 10 is what converts the people who read both and still
+    didn't act.</p>
+  </div>
+  <div class="faq">
+    <h3>Is the AI check-in call legal?</h3>
+    <p>This page is not legal advice — but the design follows the conservative pattern: the agent identifies
+    itself as calling on behalf of your company in the first sentence, it never impersonates a human, it never
+    bluffs a deadline, consent for the outreach was captured on the signed work order with a working opt-out,
+    and calls and texts respect quiet hours. Run your consent language and your scripts past counsel for your
+    state before going live.</p>
+  </div>
+  <div class="faq">
+    <h3>What about customers who left angry — bad reviews, disputes?</h3>
+    <p>Excluded from every segment, automatically, in step 1. Reactivation is for drifted customers, not
+    damaged ones. A win-back text to someone in an open dispute isn't marketing — it's a liability with a
+    reply button. Keep that list separate, handle it by hand, and never let it near the sequence.</p>
+  </div>
+
+  <div class="cta">
+    <!-- AFFILIATE PLACEHOLDER: make -->
+    <a href="#affiliate-make-placeholder">Try Make (dormancy scan + sequence engine)</a>
+    <!-- AFFILIATE PLACEHOLDER: synthflow -->
+    <a href="#affiliate-synthflow-placeholder">Try Synthflow (Day-10 check-in calls)</a>
+    <!-- AFFILIATE PLACEHOLDER: elevenlabs -->
+    <a href="#affiliate-elevenlabs-placeholder">Try ElevenLabs (office-warm voices)</a>
+  </div>
+  <div class="cta">
+    <a href="../index.html">Back to all playbooks</a>
+    <a class="ghost" href="n8n-vs-make-workflow-automation.html">Compare n8n vs Make first</a>
+    <a class="ghost" href="voice-agent-playbook-for-contractors.html">Read playbook #1 (missed-call recovery)</a>
+    <a class="ghost" href="voice-agent-playbook-for-dental.html">Read playbook #2 (dental)</a>
+    <a class="ghost" href="speed-to-lead-playbook-for-real-estate.html">Read playbook #3 (real estate)</a>
+    <a class="ghost" href="estimate-recovery-playbook-for-contractors.html">Read playbook #4 (estimate recovery)</a>
+    <a class="ghost" href="after-hours-dispatch-triage-playbook.html">Read playbook #5 (after-hours dispatch)</a>
+    <a class="ghost" href="review-capture-playbook-for-home-services.html">Read playbook #6 (review capture)</a>
+    <a class="ghost" href="no-show-recovery-playbook-for-dental.html">Read playbook #7 (no-show recovery)</a>
+    <a class="ghost" href="maintenance-plan-enrollment-playbook-for-hvac.html">Read playbook #8 (maintenance plans)</a>
+    <a class="ghost" href="overdue-invoice-recovery-playbook-for-trades.html">Read playbook #9 (overdue invoices)</a>
+  </div>
+
+  <p style="font-size:13px;color:var(--mut)">Affiliate placeholders in this family: Make, Synthflow, ElevenLabs — terms checked on their own pages October 1–2, 2026. n8n is the self-hosted bench option. Every figure on this page is third-party and dated; confirm current terms and pricing on each vendor's own site before buying.</p>
+
+</main>
+<footer class="note">
+  FlowBench — independent automation playbooks for small business. Stats are third-party and dated, not guarantees. Verify terms on vendor sites before buying.
+</footer>
+</body>
+</html>
