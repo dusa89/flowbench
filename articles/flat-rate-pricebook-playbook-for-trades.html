@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Flat-Rate Pricebook Playbook for Trades (2026) — FlowBench</title>
+<meta name="description" content="A how-to playbook for trade shops: build your loaded labor rate, kill the margin-vs-markup error, flat-rate the top 20 tasks, run the annual reset, and hold the book with a price-confidence script — with every figure sourced and dated. Independent — verify on vendor sites before buying.">
+<style>
+  :root { --ink:#1a1a1a; --mut:#5c5c5c; --line:#d8d8d8; --acc:#7c3aed; --bg:#f6f7f9; --warn:#fbf3df; }
+  * { box-sizing:border-box; }
+  body { font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); margin:0; line-height:1.6; }
+  header.top { background:#1e1433; color:#fff; padding:16px 24px; }
+  header.top h1 { margin:0; font-size:21px; }
+  header.top p { margin:4px 0 0; font-size:13px; color:#c9bdf2; }
+  main { max-width:900px; margin:0 auto; padding:24px; }
+  .disc { background:var(--warn); border:1px solid #e3cf9a; border-radius:10px; padding:14px 16px; font-size:13.5px; margin-bottom:22px; }
+  .verdict { background:#fff; border:1px solid var(--line); border-left:5px solid var(--acc); border-radius:8px; padding:16px 18px; margin-bottom:22px; }
+  .verdict h2 { margin:0 0 8px; font-size:17px; }
+  .step { background:#fff; border:1px solid var(--line); border-radius:8px; padding:16px 18px; margin-bottom:16px; }
+  .step h2 { margin:0 0 8px; font-size:17px; }
+  .step h2 .n { display:inline-block; background:var(--acc); color:#fff; border-radius:50%; width:28px; height:28px; text-align:center; line-height:28px; font-size:15px; margin-right:8px; }
+  .step p, .step li { font-size:14px; color:#333; }
+  .step .tools { font-size:13px; color:var(--mut); }
+  .hard { background:#fdecec; border:1px solid #e8b4b4; border-radius:8px; padding:16px 18px; margin-bottom:22px; font-size:14px; }
+  .hard h2 { margin:0 0 8px; font-size:17px; }
+  table { width:100%; border-collapse:collapse; background:#fff; font-size:14px; margin:0 0 22px; }
+  th, td { border:1px solid var(--line); padding:10px 12px; text-align:left; vertical-align:top; }
+  th { background:#f0eafa; font-size:12.5px; text-transform:uppercase; letter-spacing:.4px; }
+  td.src { font-size:12px; color:var(--mut); }
+  h2.sec { font-size:19px; margin:30px 0 10px; }
+  .cta { display:flex; gap:12px; flex-wrap:wrap; margin:18px 0 26px; }
+  .cta a { background:var(--acc); color:#fff; text-decoration:none; padding:12px 20px; border-radius:8px; font-weight:600; font-size:14.5px; }
+  .cta a.ghost { background:#fff; color:var(--acc); border:1px solid var(--acc); }
+  .faq { background:#fff; border:1px solid var(--line); border-radius:8px; padding:16px 18px; margin-bottom:14px; }
+  .faq h3 { margin:0 0 6px; font-size:15.5px; }
+  .faq p { margin:0; font-size:14px; color:#333; }
+  footer.note { max-width:900px; margin:0 auto; padding:0 24px 34px; font-size:12.5px; color:var(--mut); }
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>FlowBench — Automation picks for small business</h1>
+  <p>Playbooks, not just picks: step-by-step automation setups for specific industries. Every tool term below is labeled with its source and date — vendors change tiers often, so verify on the vendor site before you buy.</p>
+</header>
+<main>
+
+  <div class="disc">
+    <strong>Disclosure:</strong> FlowBench is independent — not affiliated with Make, The New Flat Rate,
+    Nexstar, ServiceTitan, or any consultant named here. The buttons below are <strong>affiliate
+    placeholders</strong>: if we join their partner programs, we may earn a commission when you sign up,
+    at no added cost to you. We never accept payment for placement. Tool pricing and vendor claims named
+    here come from the third-party sources noted — <strong>confirm current pricing and terms on each
+    vendor's own site before buying.</strong> Nothing here is financial or legal advice for your
+    situation — treat the statistics as directional and test on your own numbers with your accountant.
+  </div>
+
+  <div class="hard">
+    <h2>The discipline gates: a pricebook is a loaded cost + a margin target — five gates, non-negotiable</h2>
+    <p>Every pricing consultant in the trade sells the same cure in a different wrapper. Read the gates
+    before you price a single task. Gate 1: <strong>flat rate done wrong loses more than time and
+    materials.</strong> A pricebook built on an unloaded labor rate is a machine for losing exactly the
+    same amount on every job — faster and more consistently than before. This playbook has a fork: shops
+    still on time-and-materials complete Step 1 (the loaded rate) before anything else, because a flat
+    rate multiplied by a wrong rate is the most expensive mistake in the book.
+    Gate 2: <strong>the "90% lose money" figure is consultant consensus, not a study.</strong> HVAC
+    consultant Bill Ligon wrote (Contracting Business, evergreen) that in his experience nearly 90% of
+    contractors lose money in their service departments — and that every consultant he has spoken with
+    shares the observation. It is a repeated industry observation, not measured data. The measured data —
+    3% to 8% net margins, 7% vs 4% flat-rate vs other — is the floor.
+    Gate 3: <strong>The New Flat Rate is a vendor selling this.</strong> Their published pricing ($595 for
+    one section or $995 for three, plus $75/month per user with updates and app, per Contracting Business
+    coverage) is a buy-option benchmark, not a neutral recommendation — it appears in the build-vs-buy
+    table below as the vendor option, labeled.
+    Gate 4: <strong>margin is not markup, and the confusion is the industry's canonical math error.</strong>
+    A 30% margin requires a 42.9% markup on cost — pricing a $100-cost task at $130 delivers a 23% margin,
+    not 30% (ProBuilder, 2024, margin-vs-markup). Every price in this book is checked margin-up, not
+    markup-down, and the dispatcher never "marks up 30%" as a substitute for pricing to a 30% margin.
+    Gate 5: <strong>this is a pricing lane, not an accounting lane.</strong> The loaded-rate build in Step
+    1 changes how jobs are quoted but not how revenue is recognized — run the finished numbers past your
+    accountant once, the first time, before the annual reset becomes habit.</p>
+  </div>
+
+  <div class="verdict">
+    <h2>The verdict: the pricebook is the shop's profit engine — and most are running last decade's numbers</h2>
+    <p>Contractors using flat-rate pricing reported an average net profit of 7%, compared with 4% among
+    those using other methods (Contracting Business, reporting the ACCA Contractor of the Future study,
+    December 2025). That 3-point gap is the whole game in an industry where most HVAC contractors operate
+    on 3% to 8% net margins (neuron.expert, September 2026). The gap opens at the labor rate: a technician
+    paid $30 an hour actually costs $42 to $48 an hour once payroll taxes, workers' comp, and benefits
+    land — a 40% to 60% increase over base wage (same source). Price the job at $30 and the clock is
+    running against you from the first minute: a $25-per-hour underbilling gap across a tech's 1,500
+    billable hours a year is $37,500 in lost profit per tech, per year (neuron.expert, September 2026).
+    This playbook builds the pricebook in five steps: cost your real loaded labor rate, install the
+    margin-vs-markup discipline, flat-rate the 20 tasks that carry 80% of revenue, run the annual reset
+    ritual so last year's costs stop pricing this year's jobs, and hold the book at the door with a
+    price-confidence script — because a pricebook nobody defends is a suggestion.</p>
+  </div>
+
+  <div class="step">
+    <h2><span class="n">1</span>Build your loaded labor rate — the audit (Week 1)</h2>
+    <p>Pull 3 numbers and do the arithmetic once. (a) The true hourly cost per tech: base wage × 1.4 to
+    1.6 for payroll taxes, workers' comp, and benefits (the 40–60% burden, neuron.expert, September
+    2026). A $30 wage becomes $42 to $48 before the van ever moves. (b) Overhead per billable hour: total
+    annual overhead (rent, office, insurance, software, vehicle fixed costs) divided by total annual
+    billable hours — not total hours, billable hours. (c) The target net margin: CFMA's Construction
+    Financial Benchmarker put specialty trades at 22.4% gross and 7.7% net before tax for fiscal 2024,
+    with the best firms at 14.2% and firms under $10 million in revenue worst at 6.5% (via Simpro,
+    September 2026) — price toward the top quartile, not the average. Add (a) + (b), then divide by (1 −
+    target margin) — never multiply by (1 + margin), per Gate 4. The output is one number per tech
+    level. Post it where estimates are written. Time-and-materials shops: this number IS the conversion
+    — multiply it into every quoted hour before any flat-rate task price exists.</p>
+    <p class="tools">Tools: the shop's existing sheet. One page, 3 inputs, 1 number. No software to buy —
+    the gap this closes (up to $37,500/year per tech) is arithmetic, not tooling.</p>
+  </div>
+
+  <div class="step">
+    <h2><span class="n">2</span>Install the margin-vs-markup discipline (Week 1)</h2>
+    <p>Margin is profit as a share of price; markup is profit as a share of cost — and mixing them is the
+    mistake that quietly shaves points off every ticket (ProBuilder, 2024). The rule is a posted cheat
+    sheet, not a lecture: to land a 30% margin, multiply cost by 1.429; for 40%, multiply by 1.667; for
+    50%, multiply by 2.0. The second rule kills the discount pricebook: never let a discount live in the
+    book itself. The pricebook prices to the target margin; any discount is a one-line, one-time entry on
+    the invoice with a reason code — because a permanent 10% discount in the book is a permanent margin
+    surrender, and the fractional-CFO case is that the best-run HVAC, plumbing, and electrical shops hold
+    20% net while most keep 5% to 12% (Profitability Partners via Service Business Mastery, 2026). Teach
+    the cheat sheet to dispatchers and techs, not just the owner — the person quoting the job is the
+    person who needs the math.</p>
+    <p class="tools">Tools: a laminated card at the dispatch desk. Cost: $0.</p>
+  </div>
+
+  <div class="step">
+    <h2><span class="n">3</span>Flat-rate the top 20 tasks — 80% of revenue (Weeks 2–3)</h2>
+    <p>Run last year's completed jobs through a sort: the 20 most-performed tasks carry the bulk of
+    revenue — capacitor swaps, drain cleanings, tune-ups, faucet installs, the median-ticket work like
+    the $269 AC capacitor and $299 drain cleaning medians (Home Therapist Tampa invoice study,
+    globenewswire, July 2026). Each task gets one price: loaded labor hours (Step 1's rate × timed task
+    hours, not estimated) + parts at current cost + overhead allocation + target margin. Time the tasks
+    from actual job history, not memory — memory quotes the fast day. Offer tiers where the work has
+    them (repair vs rebuild vs replace menus — the "section selection" pattern vendors sell at
+    $595/section, per Contracting Business): tiers raise the average ticket while removing selling
+    pressure from the tech, because the customer picks the level, not the price. Flat-rate converts
+    against the stopwatch problem too — techs perform better when they are not racing a clock while a
+    customer watches (Contractor Magazine, evergreen), which feeds the upsell attaches in #11's playbook.</p>
+    <p class="tools">Tools: the sorted job export + the sheet from Step 1. A Make scenario that turns the
+    sheet into the field-ready price menu is the optional automation layer (Make verified against its own
+    affiliate and pricing pages October 1–2, 2026).</p>
+  </div>
+
+  <div class="step">
+    <h2><span class="n">4</span>The annual reset ritual — every January, never ad hoc (ongoing)</h2>
+    <p>A pricebook decays at the speed of input costs. The Associated General Contractors found
+    nonresidential input costs climbed 7.1% year over year in June 2026 while bid prices rose only 3.5%
+    (via Simpro, September 2026) — that 3.6-point gap is exactly what a stale pricebook absorbs silently.
+    The ritual, 4 hours every January: (1) update parts costs against the last 90 days of purchase
+    history (#23's van-stock sheet is the source); (2) update loaded labor rates against current wages and
+    benefit costs; (3) add the year's training investment back in — Nexstar's rule is that pricing must be
+    adjusted periodically to compensate for training time that could have been sold on the jobsite
+    (Contractor Magazine); (4) re-run the margin-vs-markup check on the top 20 tasks; (5) retire tasks
+    nobody performed. Never reprice ad hoc mid-year except on a parts-cost spike — constant tinkering
+    teaches techs the book is negotiable, and a negotiable book is a suggestion (see Step 5).</p>
+    <p class="tools">Tools: the same sheet, one calendar invite in January. The buy alternative is a
+    vendor-maintained book with updates (The New Flat Rate at $75/month per user — vendor price, labeled).</p>
+  </div>
+
+  <div class="step">
+    <h2><span class="n">5</span>Hold the book at the door — the price-confidence script (ongoing)</h2>
+    <p>The best pricebook in the trade fails at the kitchen table if the price comes out as a question.
+    The script has 4 beats: (1) name the price once, flatly, with the task scope attached — "the capacitor
+    replacement is $269, parts and labor, guaranteed"; (2) present the tier, not the discount — "there's
+    also the rebuild option at $X if you'd rather"; (3) on pushback, defend the book, not the number —
+    "that's our book price for this repair, same for every customer"; (4) never improvise a discount on
+    the spot — any exception goes through the owner with a reason code (Step 2's rule). Pember Research's
+    2026 finding is the tailwind: flat-rate providers receive fewer negative reviews citing unexpected
+    charges (September 2026) — the book is a trust instrument, not just a margin one. Track the quote
+    close rate weekly: when it dips, the fix is the script and the tiers, not the prices — because the
+    #4 estimate-recovery playbook can only win back quotes that were worth winning, and the pricebook
+    decides that.</p>
+    <p class="tools">Tools: the 4-beat card on every tech's phone. Role-play it once, monthly.</p>
+  </div>
+
+  <h2 class="sec">Build vs buy</h2>
+  <table>
+    <tr><th>Option</th><th>What you get</th><th>Cost</th><th class="src">Source</th></tr>
+    <tr><td>This playbook (DIY)</td><td>Loaded-rate build, margin cheat sheet, 20-task flat-rate book, annual reset ritual, price-confidence script</td><td>$0; one sheet + 4 hours every January</td><td class="src">FlowBench, 2026</td></tr>
+    <tr><td>Vendor menu-pricing (The New Flat Rate)</td><td>Section-based menu pricing system, app that sells in the field, price updates, 24/7 support</td><td>$595 per section or $995 for 3, + $75/mo per user (vendor price, labeled)</td><td class="src">Contracting Business; vendor pricing per coverage</td></tr>
+    <tr><td>Coaching networks (Nexstar, SGI-style)</td><td>Pricing methodology + training-time compensation rules + peer benchmarks, inside a membership</td><td>Membership/coaching model — verify current terms on vendor sites</td><td class="src">Contractor Magazine; trade press</td></tr>
+    <tr><td>Nothing (status quo)</td><td>Time-and-materials or an aging book; 4% net vs 7% flat-rate; underbilling compounded per tech</td><td>$25/hr gap × 1,500 billable hrs = $37,500/yr per tech lost</td><td class="src">Contracting Business (Dec 2025); neuron.expert (Sep 2026)</td></tr>
+  </table>
+
+  <h2 class="sec">Re-skin check — why this is not playbook #4 wearing a new hat</h2>
+  <p>None of the 23 prior playbooks touch pricing — every one is customer-contact, back-office, workforce,
+  inventory, or content. The closest cousin is #4 (estimate recovery): #4 chases the quotes that went
+  cold — this sets the numbers the quotes are built from. Different object (the quote follow-up vs the
+  price itself), different trigger (a silent prospect vs a stale book), different metric (recovered-quote
+  revenue vs per-task margin). Quotes recover jobs; the pricebook decides whether the jobs are worth
+  winning. This is the family's first pricing playbook — the math layer everything from #4's estimates to
+  #11's upsell menu to #23's parts costs is priced on top of.</p>
+
+  <h2 class="sec">Honest weak points</h2>
+  <p>Stated up front, not in a footnote: (1) the legs are thinner than the family's best — this is a
+  spreadsheet, a laminated card, and a January ritual, not a tool workflow; the Make automation in Step
+  3 is an optional layer, and no pricebook vendor carries a publisher affiliate worth anchoring on, so
+  this page monetizes through family cross-links, not tool commissions; (2) the 90% service-department
+  figure is consultant consensus (Gate 2) — the measured floor is the 7%-vs-4% ACCA study and the 3–8%
+  margin band; (3) for time-and-materials shops the conversion itself is the project — Step 1 is the
+  mandatory fork, and the annual reset only matters once the book exists; (4) flat-rate mis-set (an
+  unloaded rate in a flat book) loses faster than T&M ever did — Gate 1 exists because the cure
+  misapplied is worse than the disease.</p>
+
+  <h2 class="sec">Questions this page must answer</h2>
+  <div class="faq">
+    <h3>We're still on time-and-materials. Can we use this?</h3>
+    <p>Yes — start at Step 1 and stop there until the loaded rate is posted. The loaded labor rate is the
+    conversion: multiply it into every quoted hour and your T&M pricing is already margin-aware. Build
+    the 20-task flat-rate book (Step 3) as the second project, once quoting at the loaded rate is habit.</p>
+  </div>
+  <div class="faq">
+    <h3>What's the difference between margin and markup, really?</h3>
+    <p>Margin is profit divided by price; markup is profit divided by cost. A $130 price on $100 of cost
+    is a 30% markup but only a 23% margin — to hold a 30% margin on $100 of cost you need $142.86 (a 42.9%
+    markup). The posted cheat sheet in Step 2 keeps the whole team on the margin side (ProBuilder, 2024).</p>
+  </div>
+  <div class="faq">
+    <h3>How often should we actually update the book?</h3>
+    <p>Once a year, every January — parts, wages, training time, overhead — with one exception: a parts
+    cost spike gets a mid-year adjustment on that task line only. Input costs rose 7.1% year over year in
+    June 2026 while bid prices rose 3.5% (AGC via Simpro, September 2026); shops that skip the ritual eat
+    that gap silently.</p>
+  </div>
+  <div class="faq">
+    <h3>Should we buy a vendor menu-pricing system instead?</h3>
+    <p>Buy the system when the DIY book is already running and you want field app automation — not as the
+    way to learn the math. The vendor's published pricing is $595 for one section or $995 for three,
+    plus $75/month per user with updates and support (Contracting Business coverage — verify current
+    pricing on the vendor's site). The discipline in Steps 1, 2, and 5 is identical either way.</p>
+  </div>
+  <div class="faq">
+    <h3>What if customers push back on the flat price?</h3>
+    <p>Flat-rate providers receive fewer negative reviews citing unexpected charges (Pember Research,
+    September 2026) — the certainty is the product. On pushback, Step 5's script defends the book ("our
+    book price, same for every customer") and offers the tier, not a discount. Discounts live on the
+    invoice with a reason code, never in the book.</p>
+  </div>
+
+  <div class="cta">
+    <a href="../index.html">Back to the playbook library</a>
+    <a class="ghost" href="n8n-vs-make-workflow-automation.html">Read the n8n vs Make comparison</a>
+    <a class="ghost" href="voice-agent-playbook-for-contractors.html">Read playbook #1 (missed-call recovery)</a>
+    <a class="ghost" href="voice-agent-playbook-for-dental.html">Read playbook #2 (dental)</a>
+    <a class="ghost" href="speed-to-lead-playbook-for-real-estate.html">Read playbook #3 (real estate)</a>
+    <a class="ghost" href="estimate-recovery-playbook-for-contractors.html">Read playbook #4 (estimate recovery)</a>
+    <a class="ghost" href="after-hours-dispatch-triage-playbook.html">Read playbook #5 (after-hours dispatch)</a>
+    <a class="ghost" href="review-capture-playbook-for-home-services.html">Read playbook #6 (review capture)</a>
+    <a class="ghost" href="no-show-recovery-playbook-for-dental.html">Read playbook #7 (no-show recovery)</a>
+    <a class="ghost" href="maintenance-plan-enrollment-playbook-for-hvac.html">Read playbook #8 (maintenance plans)</a>
+    <a class="ghost" href="overdue-invoice-recovery-playbook-for-trades.html">Read playbook #9 (overdue-invoice recovery)</a>
+    <a class="ghost" href="dormant-customer-reactivation-playbook-for-trades.html">Read playbook #10 (dormant-customer reactivation)</a>
+    <a class="ghost" href="post-job-upsell-playbook-for-trades.html">Read playbook #11 (post-job upsell)</a>
+    <a class="ghost" href="same-day-reschedule-save-playbook-for-trades.html">Read playbook #12 (same-day reschedule save)</a>
+    <a class="ghost" href="post-season-tune-up-blitz-playbook-for-trades.html">Read playbook #13 (post-season tune-up blitz)</a>
+    <a class="ghost" href="referral-engine-playbook-for-trades.html">Read playbook #14 (referral engine)</a>
+    <a class="ghost" href="storm-response-playbook-for-exterior-trades.html">Read playbook #15 (storm response)</a>
+    <a class="ghost" href="property-manager-contract-playbook-for-trades.html">Read playbook #16 (property-manager contracts)</a>
+    <a class="ghost" href="new-mover-playbook-for-home-services.html">Read playbook #17 (new-mover welcome)</a>
+    <a class="ghost" href="end-of-life-equipment-ledger-playbook-for-trades.html">Read playbook #18 (end-of-life equipment ledger)</a>
+    <a class="ghost" href="subcontractor-coi-compliance-playbook-for-gcs.html">Read playbook #20 (COI compliance)</a>
+    <a class="ghost" href="jobsite-video-content-engine-playbook-for-trades.html">Read playbook #21 (jobsite video engine)</a>
+    <a class="ghost" href="technician-hiring-funnel-playbook-for-trades.html">Read playbook #22 (technician hiring funnel)</a>
+    <a class="ghost" href="parts-ready-van-stock-playbook-for-trades.html">Read playbook #23 (parts-ready van stock)</a>
+  </div>
+</main>
+<footer class="note">
+  FlowBench is independent research. Affiliate terms and tool pricing change — verify on each vendor's own site
+  before buying. Nothing on this page is professional financial advice for your situation; statistics are
+  directional and self-reported where labeled. Sourced and dated claims are attributed to their publishers;
+  vendor claims are labeled as such. Updated October 3, 2026.
+</footer>
+</body>
+</html>
