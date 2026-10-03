@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Change-Order Capture Playbook for Trades (2026) — FlowBench</title>
+<meta name="description" content="A how-to playbook for trade shops: define what counts as a change, capture it in the field in 3 minutes, price it from the book, chase written approval in 48 hours, and post the monthly bad-debt scoreboard — with every figure sourced and dated. Independent — verify on vendor sites before buying.">
+<style>
+  :root { --ink:#1a1a1a; --mut:#5c5c5c; --line:#d8d8d8; --acc:#7c3aed; --bg:#f6f7f9; --warn:#fbf3df; }
+  * { box-sizing:border-box; }
+  body { font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); margin:0; line-height:1.6; }
+  header.top { background:#1e1433; color:#fff; padding:16px 24px; }
+  header.top h1 { margin:0; font-size:21px; }
+  header.top p { margin:4px 0 0; font-size:13px; color:#c9bdf2; }
+  main { max-width:900px; margin:0 auto; padding:24px; }
+  .disc { background:var(--warn); border:1px solid #e3cf9a; border-radius:10px; padding:14px 16px; font-size:13.5px; margin-bottom:22px; }
+  .verdict { background:#fff; border:1px solid var(--line); border-left:5px solid var(--acc); border-radius:8px; padding:16px 18px; margin-bottom:22px; }
+  .verdict h2 { margin:0 0 8px; font-size:17px; }
+  .step { background:#fff; border:1px solid var(--line); border-radius:8px; padding:16px 18px; margin-bottom:16px; }
+  .step h2 { margin:0 0 8px; font-size:17px; }
+  .step h2 .n { display:inline-block; background:var(--acc); color:#fff; border-radius:50%; width:28px; height:28px; text-align:center; line-height:28px; font-size:15px; margin-right:8px; }
+  .step p, .step li { font-size:14px; color:#333; }
+  .step .tools { font-size:13px; color:var(--mut); }
+  .hard { background:#fdecec; border:1px solid #e8b4b4; border-radius:8px; padding:16px 18px; margin-bottom:22px; font-size:14px; }
+  .hard h2 { margin:0 0 8px; font-size:17px; }
+  table { width:100%; border-collapse:collapse; background:#fff; font-size:14px; margin:0 0 22px; }
+  th, td { border:1px solid var(--line); padding:10px 12px; text-align:left; vertical-align:top; }
+  th { background:#f0eafa; font-size:12.5px; text-transform:uppercase; letter-spacing:.4px; }
+  td.src { font-size:12px; color:var(--mut); }
+  h2.sec { font-size:19px; margin:30px 0 10px; }
+  .cta { display:flex; gap:12px; flex-wrap:wrap; margin:18px 0 26px; }
+  .cta a { background:var(--acc); color:#fff; text-decoration:none; padding:12px 20px; border-radius:8px; font-weight:600; font-size:14.5px; }
+  .cta a.ghost { background:#fff; color:var(--acc); border:1px solid var(--acc); }
+  .faq { background:#fff; border:1px solid var(--line); border-radius:8px; padding:16px 18px; margin-bottom:14px; }
+  .faq h3 { margin:0 0 6px; font-size:15.5px; }
+  .faq p { margin:0; font-size:14px; color:#333; }
+  footer.note { max-width:900px; margin:0 auto; padding:0 24px 34px; font-size:12.5px; color:var(--mut); }
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>FlowBench — Automation picks for small business</h1>
+  <p>Playbooks, not just picks: step-by-step automation setups for specific industries. Every tool term below is labeled with its source and date — vendors change tiers often, so verify on the vendor site before you buy.</p>
+</header>
+<main>
+
+  <div class="disc">
+    <strong>Disclosure:</strong> FlowBench is independent — not affiliated with Dodge Construction Network,
+    Clearstory, Buildertrend, or any consultant named here. The buttons below are <strong>affiliate
+    placeholders</strong>: if we join their partner programs, we may earn a commission when you sign up,
+    at no added cost to you. We never accept payment for placement. Tool pricing and vendor claims named
+    here come from the third-party sources noted — <strong>confirm current pricing and terms on each
+    vendor's own site before buying.</strong> Nothing here is legal or financial advice for your
+    situation — treat the statistics as directional and test on your own numbers with your accountant and
+    a construction attorney.
+  </div>
+
+  <div class="hard">
+    <h2>The discipline gates: a change order is unbilled scope wearing a disguise — three gates, non-negotiable</h2>
+    <p>Read the gates before you capture a single change. Gate 1: <strong>the signature-before-work rule is
+    the whole playbook.</strong> 97% of trade contractors start work on some change orders before they are
+    approved, and that is exactly the leak (Dodge Construction Network + Clearstory, June 2026). The one
+    exception: emergency health-and-safety work gets done first and documented within 24 hours — that is a
+    documented exception, not the default. Gate 2: <strong>mechanics lien rights vary by state.</strong>
+    A signed change order is your best defense when payment goes sideways, but preliminary-notice rules and
+    lien deadlines are state law — run your form past a construction attorney before it becomes the shop
+    standard. Gate 3: <strong>the headline research is commercial construction, vendor-sponsored.</strong>
+    The Dodge + Clearstory study is a nationwide survey of GCs and specialty trade contractors, and
+    Clearstory sells change-order software — the commercial focus and the sponsor are disclosed here, and
+    this page re-scopes the discipline for residential service trades, where the change is a $180 extra
+    valve, not a $180,000 structural revision.</p>
+  </div>
+
+  <div class="verdict">
+    <h2>The verdict</h2>
+    <p><strong>Change orders are the family's first post-sale leak the customer causes and the shop absorbs.</strong>
+    Playbook #4 chases quotes that went silent; #9 collects invoices that went unpaid; #24 sets the numbers the
+    bid is built on. None of them touch the work done outside the bid. The Dodge + Clearstory research says 77%
+    of trades write off unapproved change orders as bad debt and the average approval cycle is nearly 7 weeks —
+    this playbook is the five-step capture system that turns unbilled scope into signed, collectible change
+    orders. Re-skin check, passed and stated: #24 sets task prices (annual ritual); this prices mid-job scope
+    changes (daily trigger). #4's object is the cold quote; this one's object is the changed scope. #9's trigger
+    is the unpaid invoice; this one's trigger is the unsigned change order — the invoice's birth certificate.
+    Scored 8.5/10 vs the 8.4 family bar: Demand 9.0 (the Dodge survey is the strongest third-party evidence
+    any playbook in the family has shipped with) / Legs 7.0 (honest dock: spreadsheet + ritual + laminated card —
+    monetizes through family cross-links, not a publisher affiliate) / Filters 9.0 ($0 start, passive once the
+    ritual is habit, legal — the lien disclaimer is on-page) / Differentiation 8.5 (no family page touches
+    mid-job scope changes; the DIY capture ritual is unowned — vendors sell software, consultants gate the
+    method) / Compound 9.0 (#24 prices the change from the book; #9 collects the CO invoice; #4's quotes get
+    cleaner as the scope leaks close; #23's parts feed the change cost).</p>
+  </div>
+
+  <h2 class="sec">The demand evidence (every figure sourced and dated)</h2>
+  <table>
+    <tr><th>Figure</th><th>Source and date</th></tr>
+    <tr><td>Only about 1 in 3 GCs and specialty trade contractors say their change-order process functions very well</td><td class="src">Dodge Construction Network + Clearstory, "Optimizing the Change Order Process" SmartMarket Insight, published June 23, 2026 — nationwide US survey of GCs and specialty trades; vendor-sponsored (Clearstory sells change-order software), disclosed</td></tr>
+    <tr><td>77% of trade contractors are forced to write off unapproved or downward-negotiated change orders as bad debt</td><td class="src">Same Dodge + Clearstory study, June 2026</td></tr>
+    <tr><td>97% of trades begin work on some change orders before they are approved</td><td class="src">Same Dodge + Clearstory study, June 2026</td></tr>
+    <tr><td>The full cycle from work performed to authorized change order averages nearly 7 weeks for trade contractors</td><td class="src">Same Dodge + Clearstory study, June 2026</td></tr>
+    <tr><td>83% of trades say the change-order process negatively impacts their cash flow; 91% of GCs sometimes don't pay full change-order amounts, most often from disputed pricing and incomplete documentation</td><td class="src">Same Dodge + Clearstory study, June 2026</td></tr>
+    <tr><td>Top-tier trades are more than twice as likely to actively track change-order KPIs (55% vs 26%) — and only 18% of trades are in that top tier</td><td class="src">Same Dodge + Clearstory study, June 2026</td></tr>
+    <tr><td>Nearly 25% of builders failed to generate a net profit in 2025; among firms over $6M in revenue, unprofitable companies averaged a $100,000 loss — the gap comes down to the quality of the numbers in the bid</td><td class="src">Buildertrend State of Residential Construction Report, via MarketMinute, September 21, 2026</td></tr>
+    <tr><td>Change-order rates cited at a 20–32% industry range (one shop reports 2.1% by fully defining scope before construction)</td><td class="src">Phoenix Home Remodeling press release, August 31, 2026 — company-cited range, labeled as such</td></tr>
+  </table>
+
+  <h2 class="sec">The five steps</h2>
+
+  <div class="step">
+    <h2><span class="n">1</span>The trigger list: define "a change" in writing</h2>
+    <p>Unbilled scope starts as a disagreement about what was included. End the disagreement on paper, once.
+    Write the shop's change-order trigger list and laminate it for every crew: (a) any customer request not in
+    the signed scope; (b) hidden conditions the walkthrough couldn't see; (c) plan-to-field or code conflicts;
+    (d) extra trips the original schedule didn't include; (e) the "while you're here" add-on. The rule the crew
+    memorizes: <strong>if it is not in the signed scope, it is a change.</strong> Post the list in the van and
+    read it at the quote — customers who hear the rule up front almost never fight the form later.</p>
+    <p class="tools">Cost: one printed page. The trigger list is the cheapest document in this playbook and it
+    does the most work.</p>
+  </div>
+
+  <div class="step">
+    <h2><span class="n">2</span>The field capture ritual: 3 minutes, on the spot</h2>
+    <p>The moment a trigger fires, the tech runs the capture ritual before the work continues: (1) two photos
+    of the condition; (2) a one-paragraph scope note on the phone — what changed, why, what it will take;
+    (3) a price estimate on the spot. For sub-two-hour work, a time-and-materials ticket is the capture form.
+    Nothing leaves the jobsite undocumented — the 7-week average approval cycle starts the day the tech fails
+    to write it down, not the day the office submits it. The ritual is under 3 minutes; the write-off it
+    prevents is the month's margin.</p>
+    <p class="tools">Cost: the phones the crew already carries. The shared change-order log can start as a
+    spreadsheet — one row per change, owner, amount, signature status, date sent.</p>
+  </div>
+
+  <div class="step">
+    <h2><span class="n">3</span>Price it from the book — never at a discount</h2>
+    <p>Every change order pulls its price from the flat-rate pricebook (playbook #24): loaded labor plus parts
+    plus the trip fee, no haggling math in the driveway. Changes are never discounted — the customer asked for
+    more, not less, and discounting the change teaches the customer that the scope has no price. If the shop
+    doesn't have a pricebook yet, #24's loaded-labor audit is the prerequisite; pricing changes off gut feel
+    repeats the exact error the Dodge study found in 91% of disputed GC payments — disputed pricing from thin
+    documentation.</p>
+    <p class="tools">Compound: this step is where playbook #24 pays off twice — the book that prices the bid
+    also prices the change, which is why the book gets built first.</p>
+  </div>
+
+  <div class="step">
+    <h2><span class="n">4</span>The 48-hour written-approval chase</h2>
+    <p>The captured change becomes a one-page change-order form — scope, price, signature line — texted or
+    emailed to the customer the same day. The chase: follow up at 24 hours and 48 hours, then stop asking and
+    start deciding. While unsigned, the base job continues and <strong>the changed work stops.</strong> The
+    97%-start-before-approval figure is the habit this step kills. Every form, signed or not, lands in the
+    shared log so the owner sees the unsigned pile every Monday morning. Automation note: Make or your existing
+    CRM can move a captured change into the log and fire the 24/48-hour reminders automatically — the tool is
+    optional, the chase is not.</p>
+    <p class="tools">Free path: spreadsheet log + phone reminders. Automation path: Make sequence from the
+    capture note to the log to the reminders (verified legs from the family bench — no new program needed).</p>
+  </div>
+
+  <div class="step">
+    <h2><span class="n">5</span>The monthly bad-debt scoreboard</h2>
+    <p>Top-tier trades track change-order KPIs at more than twice the rate of the rest (55% vs 26%), and that
+    tracking is the habit this step installs. Once a month, the owner posts four numbers: change orders issued,
+    signed, paid, and written off. The write-off rate gets posted next to the dollar total it represents —
+    that number is the leak, in dollars, on one page. The 90-day target: write-offs under 5% of issued change
+    revenue. Whatever is still unsigned at 30 days gets one of three decisions: collect it as a T&amp;M invoice
+    (feeds playbook #9's recovery ladder), negotiate it down with a signed settlement, or write it off with the
+    reason recorded so the trigger list in Step 1 gets smarter next month.</p>
+    <p class="tools">This is the step that compounds: every write-off with a recorded reason is a trigger-list
+    improvement, and every improvement shrinks next month's pile.</p>
+  </div>
+
+  <h2 class="sec">Build vs buy</h2>
+  <table>
+    <tr><th>Path</th><th>What it costs</th><th>Verdict</th></tr>
+    <tr><td>DIY: trigger list + phone capture + spreadsheet log + pricebook pricing</td><td class="src">$0</td><td>This page's recommendation for residential service trades — the whole system runs on tools the shop already owns</td></tr>
+    <tr><td>Change-order software (Clearstory, commercial-focused)</td><td class="src">Quote-gated; commercial GC/sub workflows — source: clearstory.build, checked October 2026</td><td class="src">Built for commercial GCs and subs, not 3-truck residential shops — benchmark only; no verified publisher affiliate program exists (never claimed as fact)</td></tr>
+    <tr><td>Generic CRM add-on with custom fields</td><td class="src">Varies by CRM</td><td class="src">Worth it only after the spreadsheet version is running — software never installs the discipline the gates require</td></tr>
+  </table>
+  <h2 class="sec">Honest weak points (stated, not buried)</h2>
+  <p style="font-size:14px;color:#333">1. <strong>Legs are the dock.</strong> No verified publisher affiliate anchors this page — it monetizes through family cross-links, same as #24's 7.5. 2. <strong>The study is commercial, vendor-sponsored.</strong> Dodge is a legitimate research house, but Clearstory sells change-order software to commercial GCs — the re-scope to residential service trades is this page's work, disclosed in the gates. 3. <strong>GC vs sub framing.</strong> The 91%-don't-pay-full figure is the GC seat; subs live the 77% write-off — the playbook speaks to the sub because that is who bleeds. 4. <strong>The discipline is the product.</strong> A shop that won't stop work on unsigned changes keeps the leak with a prettier log — Step 4's "changed work stops" is the real gate. 5. <strong>Residential scale.</strong> The residential change is a $180 valve, not a $180,000 revision — FAQ #5 says so plainly.</p>
+
+  <h2 class="sec">Questions the shop will actually ask</h2>
+  <div class="faq">
+    <h3>What if the customer refuses to sign?</h3>
+    <p>Then you have learned something worth more than the change: the unsigned form goes in the log, the changed work stops, and the base job continues. Refusals are almost always a Step 1 failure — the trigger list was never read at the quote. Log the reason; the list gets smarter.</p>
+  </div>
+  <div class="faq">
+    <h3>Is a text-message approval enough?</h3>
+    <p>Better than nothing, and in many disputes it is evidence — but the playbook wants the signed form, because "he texted OK" argues worse than a signature. Keep both: the text is the timestamp, the form is the agreement.</p>
+  </div>
+  <div class="faq">
+    <h3>What about emergency work at night?</h3>
+    <p>Gate 1's documented exception: do the work, document within 24 hours, bill it on the emergency rate from the pricebook. Emergencies are why the exception exists — they are not why the rule gets skipped the other 29 days of the month.</p>
+  </div>
+  <div class="faq">
+    <h3>Won't this slow the crew down?</h3>
+    <p>The capture ritual is under 3 minutes. The 7-week average approval cycle and the 77% write-off rate are the actual drag on the shop — 3 minutes of documentation is the fastest labor the tech performs all week.</p>
+  </div>
+  <div class="faq">
+    <h3>We only do small service jobs — do change orders apply to us?</h3>
+    <p>Yes — the residential version of the change order is the $180 extra valve, the second trip, the "while you're here" add-on. The amounts are smaller and the volume is higher, which is exactly why the capture ritual matters: ten unbilled $180 changes a month is a tech's salary.</p>
+  </div>
+
+  <div class="cta">
+    <a href="../index.html">Back to the playbook library</a>
+    <a class="ghost" href="n8n-vs-make-workflow-automation.html">Read the n8n vs Make comparison</a>
+    <a class="ghost" href="voice-agent-playbook-for-contractors.html">Read playbook #1 (missed-call recovery)</a>
+    <a class="ghost" href="voice-agent-playbook-for-dental.html">Read playbook #2 (dental)</a>
+    <a class="ghost" href="speed-to-lead-playbook-for-real-estate.html">Read playbook #3 (real estate)</a>
+    <a class="ghost" href="estimate-recovery-playbook-for-contractors.html">Read playbook #4 (estimate recovery)</a>
+    <a class="ghost" href="after-hours-dispatch-triage-playbook.html">Read playbook #5 (after-hours dispatch)</a>
+    <a class="ghost" href="review-capture-playbook-for-home-services.html">Read playbook #6 (review capture)</a>
+    <a class="ghost" href="no-show-recovery-playbook-for-dental.html">Read playbook #7 (no-show recovery)</a>
+    <a class="ghost" href="maintenance-plan-enrollment-playbook-for-hvac.html">Read playbook #8 (maintenance plans)</a>
+    <a class="ghost" href="overdue-invoice-recovery-playbook-for-trades.html">Read playbook #9 (overdue-invoice recovery)</a>
+    <a class="ghost" href="dormant-customer-reactivation-playbook-for-trades.html">Read playbook #10 (dormant-customer reactivation)</a>
+    <a class="ghost" href="post-job-upsell-playbook-for-trades.html">Read playbook #11 (post-job upsell)</a>
+    <a class="ghost" href="same-day-reschedule-save-playbook-for-trades.html">Read playbook #12 (same-day reschedule save)</a>
+    <a class="ghost" href="post-season-tune-up-blitz-playbook-for-trades.html">Read playbook #13 (post-season tune-up blitz)</a>
+    <a class="ghost" href="referral-engine-playbook-for-trades.html">Read playbook #14 (referral engine)</a>
+    <a class="ghost" href="storm-response-playbook-for-exterior-trades.html">Read playbook #15 (storm response)</a>
+    <a class="ghost" href="property-manager-contract-playbook-for-trades.html">Read playbook #16 (property-manager contracts)</a>
+    <a class="ghost" href="new-mover-playbook-for-home-services.html">Read playbook #17 (new-mover welcome)</a>
+    <a class="ghost" href="end-of-life-equipment-ledger-playbook-for-trades.html">Read playbook #18 (end-of-life equipment ledger)</a>
+    <a class="ghost" href="subcontractor-coi-compliance-playbook-for-gcs.html">Read playbook #20 (COI compliance)</a>
+    <a class="ghost" href="jobsite-video-content-engine-playbook-for-trades.html">Read playbook #21 (jobsite video engine)</a>
+    <a class="ghost" href="technician-hiring-funnel-playbook-for-trades.html">Read playbook #22 (technician hiring funnel)</a>
+    <a class="ghost" href="parts-ready-van-stock-playbook-for-trades.html">Read playbook #23 (parts-ready van stock)</a>
+    <a class="ghost" href="flat-rate-pricebook-playbook-for-trades.html">Read playbook #24 (flat-rate pricebook)</a>
+  </div>
+</main>
+<footer class="note">
+  FlowBench is independent research. Affiliate terms and tool pricing change — verify on each vendor's own site
+  before buying. Nothing on this page is professional legal or financial advice for your situation; statistics are
+  directional and self-reported where labeled. Sourced and dated claims are attributed to their publishers;
+  vendor claims are labeled as such. Updated October 3, 2026.
+</footer>
+</body>
+</html>
