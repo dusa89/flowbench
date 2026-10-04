@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Job-Cost Truth Playbook for Trades (2026) — FlowBench</title>
+<meta name="description" content="A how-to playbook for trade shops that don't know which jobs make money: the job budget before mobilization, labor coded to the job daily, materials and subs tied to the job, the Friday job-cost flash, the post-job review, and the estimate-feedback loop — with every figure sourced and dated. Independent — verify on vendor sites before buying.">
+<style>
+  :root { --ink:#1a1a1a; --mut:#5c5c5c; --line:#d8d8d8; --acc:#7c3aed; --bg:#f6f7f9; --warn:#fbf3df; }
+  * { box-sizing:border-box; }
+  body { font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); margin:0; line-height:1.6; }
+  header.top { background:#1e1433; color:#fff; padding:16px 24px; }
+  header.top h1 { margin:0; font-size:21px; }
+  header.top p { margin:4px 0 0; font-size:13px; color:#c9bdf2; }
+  main { max-width:900px; margin:0 auto; padding:24px; }
+  .disc { background:var(--warn); border:1px solid #e3cf9a; border-radius:10px; padding:14px 16px; font-size:13.5px; margin-bottom:22px; }
+  .verdict { background:#fff; border:1px solid var(--line); border-left:5px solid var(--acc); border-radius:8px; padding:16px 18px; margin-bottom:22px; }
+  .verdict h2 { margin:0 0 8px; font-size:17px; }
+  .step { background:#fff; border:1px solid var(--line); border-radius:8px; padding:16px 18px; margin-bottom:16px; }
+  .step h2 { margin:0 0 8px; font-size:17px; }
+  .step h2 .n { display:inline-block; background:var(--acc); color:#fff; border-radius:50%; width:28px; height:28px; text-align:center; line-height:28px; font-size:15px; margin-right:8px; }
+  .step p, .step li { font-size:14px; color:#333; }
+  .step .tools { font-size:13px; color:var(--mut); }
+  .hard { background:#fdecec; border:1px solid #e8b4b4; border-radius:8px; padding:16px 18px; margin-bottom:22px; font-size:14px; }
+  .hard h2 { margin:0 0 8px; font-size:17px; }
+  table { width:100%; border-collapse:collapse; background:#fff; font-size:14px; margin:0 0 22px; }
+  th, td { border:1px solid var(--line); padding:10px 12px; text-align:left; vertical-align:top; }
+  th { background:#f0eafa; font-size:12.5px; text-transform:uppercase; letter-spacing:.4px; }
+  td.src { font-size:12px; color:var(--mut); }
+  h2.sec { font-size:19px; margin:30px 0 10px; }
+  .cta { display:flex; gap:12px; flex-wrap:wrap; margin:18px 0 26px; }
+  .cta a { background:var(--acc); color:#fff; text-decoration:none; padding:12px 20px; border-radius:8px; font-weight:600; font-size:14.5px; }
+  .cta a.ghost { background:#fff; color:var(--acc); border:1px solid var(--acc); }
+  .faq { background:#fff; border:1px solid var(--line); border-radius:8px; padding:16px 18px; margin-bottom:14px; }
+  .faq h3 { margin:0 0 6px; font-size:15.5px; }
+  .faq p { margin:0; font-size:14px; color:#333; }
+  footer.note { max-width:900px; margin:0 auto; padding:0 24px 30px; font-size:12.5px; color:var(--mut); }
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>The Job-Cost Truth Playbook for Trades</h1>
+  <p>Playbook #34 — FlowBench field playbooks. Stats are third-party and dated, not guarantees. Verify terms on vendor sites before buying.</p>
+</header>
+<main>
+  <div class="disc">
+    <strong>Independent, not accounting advice.</strong> This playbook describes a measurement process
+    for trade shops — your CPA owns your chart of accounts and your books. Every figure on this page is
+    third-party and dated — direction, not a promise for your market.
+  </div>
+
+  <div class="hard">
+    <h2>The constraints: measurement before motivation — read these before step 0</h2>
+    <p>Three hard gates, and they sit before step 0 because job-costing is the one playbook that fails
+    silently when the inputs lie. <strong>Gate 1 — garbage in, garbage out:</strong> the system is only
+    as honest as the daily time entry behind it. If crews clock "shop" for everything and the office
+    sorts it out later, there is no playbook here — there is fiction. Daily coding to job and cost code
+    is the non-negotiable. <strong>Gate 2 — the estimate must be comparable:</strong> step 0 breaks the
+    bid into the same cost codes the field reports against. An estimate that says "labor: $4,000" cannot
+    be compared to field time coded to "rough-in / trim / service" — the comparison needs the same
+    buckets on both sides. <strong>Gate 3 — reviews fix estimating, not crews:</strong> the post-job
+    review compares estimate to actual so the <em>next bid</em> gets better. It is a pricing process, not
+    a performance process — the moment crews think the flash report is a scorecard, the time entries
+    become political and the data dies. Run the cost-code structure and the review cadence past your
+    accountant once; then run the playbook.</p>
+  </div>
+
+  <div class="verdict">
+    <h2>The short version</h2>
+    <p>Most trade shops are flying half blind on the only question that matters: which jobs made money
+    and which ones lost it. An <strong>August 2026 study by CMiC and Dodge Construction Network</strong>
+    found that <strong>fewer than half of contractors (41%) can identify cost overruns while they are
+    still manageable on even half of their projects</strong>, and only <strong>6% have a fully connected
+    project-controls environment</strong> (GlobeNewswire, August 5, 2026 — vendor-commissioned study, so
+    read it as directional, but the gap it names is the gap every practitioner recognizes). The 2026
+    Barnes Dennig contractor compensation survey names the pressure behind it: <strong>labor costs are a
+    top operational issue for 67% of contractors</strong>, and <strong>margin pressure from competition
+    for 48%</strong> — and labor is exactly the cost that leaks when it isn't tracked to the job. The
+    practitioner's version is blunter: without job-level financial visibility updated through the month,
+    you know which jobs are running but not "which ones are tracking above margin, which are tracking
+    below" (constructioncfo.net, The Construction CFO), and as the EdgeStrat Finance job-cost health
+    check puts it — if field labor isn't consistently coded to the correct job, "job profitability
+    becomes guesswork." The job of this playbook is to end the guessing: <strong>budget the job in cost
+    codes before mobilization → code every labor hour and every receipt to the job, daily → flash the
+    estimated-vs-actual margin every Friday → review the closed job → feed the actuals back into the
+    next estimate.</strong> The build is <strong>Make</strong> (the Friday flash: timesheets +
+    invoices + the estimate, aggregated into one margin-per-job report with at-risk flags),
+    <strong>Synthflow</strong> (the foreman's end-of-day voice log — 30 seconds of spoken day-totals
+    coded to job and cost code, for crews who hate apps), <strong>ElevenLabs</strong> voices so the
+    check-in call sounds like the office, and a <strong>free-tier time-tracking app</strong> for the raw
+    clock-ins. All stats above are third-party and dated — direction, not a guarantee for your
+    market.</p>
+  </div>
+
+  <h2 class="sec">Step 0 — The job budget before mobilization</h2>
+  <div class="step">
+    <h2><span class="n">0</span>Break the bid into cost codes — the same buckets the field reports</h2>
+    <p>Nothing in this playbook works until the estimate speaks the same language as the field. So every
+    job gets set up before a dollar is spent: the contract value, then a budget in simple cost codes —
+    labor (by phase: rough-in, trim, service), materials, subcontractors, equipment, permits. The
+    EdgeStrat Finance job-cost health check frames the test: "Every job starts with a budget tied to
+    cost codes. If this is No, overruns stay hidden until the end." Keep the code list short — 6 to 10
+    buckets, plain words the crew understands. A cost-code structure "clearly understood" by the field is
+    one of the same health check's gates, because a confused crew codes everything to "miscellaneous"
+    and the system records history instead of finding problems. One owner sets up the job budget in the
+    system before mobilization — same week the bid is signed.</p>
+    <p class="tools">Runs on: your estimating tool's cost-code output + 10 minutes of setup per job in your books.</p>
+  </div>
+
+  <h2 class="sec">Step 1 — Labor coded to the job, daily</h2>
+  <div class="step">
+    <h2><span class="n">1</span>Every hour lands on a job and a cost code the same day it is worked</h2>
+    <p>Labor is the biggest cost and the leakiest bucket — so it gets the strictest rule: every crew
+    hour is assigned to a job and a cost code the day it is worked. The field mechanic that survives
+    contact with real crews is the <strong>30-second end-of-day voice log</strong>: the foreman gets an
+    AI voice call at 4:30 PM, says who worked where on what (job + cost code), and the totals land in
+    the tracker coded — no app the crew has to love, no paperwork at the kitchen table. GPS-verified
+    clock-in apps (free tiers exist for small crews) are the buy option for shops that want the
+    raw time records without the call — vendors like TaskTag sell exactly this (cost-code attribution
+    at clock-in, per their own September 2026 write-up; vendor numbers, read as ceiling). The discipline
+    rule is the whole game: "Labor is assigned to jobs weekly or more often. If this is No, labor
+    problems surface too late to correct" (EdgeStrat Finance). Friday-late time sheets are not a time
+    sheet — they are a memory exercise. Enforce daily; automate the nag with Make.</p>
+    <p class="tools">Runs on: Synthflow + ElevenLabs for the foreman voice log; Make for the missing-entry nag; a free-tier time-tracking app as the buy option.</p>
+  </div>
+
+  <h2 class="sec">Step 2 — Materials and subs tied to the job</h2>
+  <div class="step">
+    <h2><span class="n">2</span>No receipt, no sub invoice, no equipment rental drifts into "general"</h2>
+    <p>Labor truth dies if the other half of the cost floats free. So every material purchase, every
+    sub invoice, every rental gets tagged to the job at the point of entry — the supply-house receipt
+    is photographed and coded the day it is bought, not at month-end. Subcontractor costs get tied to
+    the job specifically, "not to a general expense category" (primeentrybookkeeping.com's job
+    profitability review, which exists as a post-job checklist for exactly this). The office rule is
+    binary: an untagged cost gets coded before it gets booked. Week one is painful; week four is
+    habit.</p>
+    <p class="tools">Runs on: your books' job-tagging (every mainstream accounting tool has it) + a receipt-photo inbox the office clears daily.</p>
+  </div>
+
+  <h2 class="sec">Step 3 — The Friday flash</h2>
+  <div class="step">
+    <h2><span class="n">3</span>Estimated vs actual, per job, every Friday — the at-risk jobs flag themselves</h2>
+    <p>This is the step the 41% from the CMiC/Dodge study never built: a weekly margin report that
+    lands while there is still time to act. Every Friday, Make pulls the week's coded labor hours, the
+    tagged materials and sub costs, and the step-0 budget, and produces one page per active job:
+    <strong>estimated cost vs actual-to-date, margin consumed vs percent complete, and a flag on any job
+    where labor is burning faster than progress</strong>. A job at 40% complete with 60% of its labor
+    budget spent is not "running a little hot" — it is a margin fire with a date on it, and the flash
+    names it while the crew is still on site. The owner reads it in 15 minutes on Friday afternoon;
+    Monday's schedule gets adjusted from the flags, not from gut feel. This is the automation leg that
+    makes the whole playbook passive after setup — the discipline is steps 0–2, the payoff is this.</p>
+    <p class="tools">Runs on: Make for the Friday aggregation + flags; your books as the cost source of truth.</p>
+  </div>
+
+  <h2 class="sec">Step 4 — The post-job review</h2>
+  <div class="step">
+    <h2><span class="n">4</span>Close the job by asking: did the estimate survive contact with the job?</h2>
+    <p>When a job closes, the revenue is visible — "what's harder to see is whether the margin held,
+    and if it didn't, where it went" (primeentrybookkeeping.com). So every significant job gets a 30-
+    minute review inside two weeks of closeout, before memory smooths the details: estimated vs actual
+    labor by phase, material variance, sub cost variance, the callback and change-order events (playbooks
+    #25 and #26 own those motions; this review harvests their cost impact). The review answers four
+    questions — were all hours recorded and assigned, did any hours hide in overhead, where did the
+    estimate miss, and what was the actual labor cost per hour delivered on this job. Write it down in
+    one page. File it with the job.</p>
+    <p class="tools">Runs on: a one-page review template + the Friday flashes from the job's life; 30 minutes inside 2 weeks of closeout.</p>
+  </div>
+
+  <h2 class="sec">Step 5 — The estimate-feedback loop</h2>
+  <div class="step">
+    <h2><span class="n">5</span>Actuals become the next bid — the pricing gets smarter every quarter</h2>
+    <p>The review is worthless as a document and priceless as a feed. Every quarter, the estimator sits
+    with the review file and revises the bid templates: the phases that consistently overrun get more
+    hours, the winners get held, the "actual labor cost per hour delivered" becomes the loaded rate the
+    next bid uses instead of the rate the owner wishes were true. This is the compound leg of the whole
+    playbook — and it is what makes this different from every money-in playbook in the family (below).
+    The 6%-connected-shops from the CMiC/Dodge study are connected precisely because their estimating
+    and their field data talk to each other. Yours do too, now — on a quarterly cadence the estimator
+    owns.</p>
+    <p class="tools">Runs on: the review file + the bid template; Make can stage the quarterly actuals-vs-estimate rollup automatically.</p>
+  </div>
+
+  <h2 class="sec">Not a re-skin: where this playbook sits in the family</h2>
+  <div class="step">
+    <p><strong>vs playbook #24 (flat-rate pricebook):</strong> #24 sets the sell-side price — what the
+    customer pays for each task. This playbook measures the cost side — what the job actually consumed.
+    The pricebook is the menu; this is the kitchen scale. Different job, different direction, and step 5
+    feeds #24's prices with actuals. <strong>vs playbook #25 (change-order capture):</strong> #25
+    captures revenue the scope tried to escape — extra work billed. This captures <em>cost truth</em> on
+    the base scope — the hours and materials the estimate assumed. One grows the top line, the other
+    protects the bottom. <strong>vs playbook #9 (overdue-invoice recovery) and #33 (retainage
+    recovery):</strong> those two <em>collect</em> money — residential invoices owed now, commercial
+    money withheld by contract. This one <em>measures</em> money — it finds out whether the collected
+    money was ever profit. Collection playbooks need a number to collect toward; this playbook produces
+    the number.</p>
+  </div>
+
+  <h2 class="sec">Build vs buy</h2>
+  <table>
+    <tr><th>Piece</th><th>Build (Make + your stack)</th><th>Buy / use the free tier</th></tr>
+    <tr><td>The Friday flash</td><td>Make scenario aggregating coded time + tagged costs + the step-0 budget into one margin-per-job report with at-risk flags — the core build, an afternoon.</td><td class="src">Your accounting software's job-cost reports if they already do this — most small shops aren't looking at them, which is the problem.</td></tr>
+    <tr><td>The daily time capture</td><td>The foreman voice log: Synthflow + ElevenLabs call at day's end, totals coded to job + cost code. No app the crew must adopt.</td><td class="src">A GPS time-tracking app's free tier for raw clock-ins (vendor free tiers are the honest buy here — check the current tier on their site).</td></tr>
+    <tr><td>The post-job review</td><td>A one-page template + a Make reminder 2 weeks after closeout — nearly free.</td><td class="src">Your accountant for the quarterly cost-code sanity check (one hour, once a quarter).</td></tr>
+  </table>
+
+  <h2 class="sec">Questions shops actually ask</h2>
+  <div class="faq">
+    <h3>We already have accounting software with job costing. Why this playbook?</h3>
+    <p>Because the CMiC/Dodge August 2026 study says 94% of contractors lack fully connected project
+    controls — the software is usually there and the visibility isn't. The playbook isn't a new
+    ledger; it's the discipline loop (daily coding, weekly flash, post-job review, quarterly estimate
+    feed) that makes the software you already pay for tell you the truth while there's still time to
+    act.</p>
+  </div>
+  <div class="faq">
+    <h3>My crews will never fill out timesheets properly.</h3>
+    <p>That's exactly why step 1 leads with the foreman voice log instead of an app — one 30-second
+    call where the foreman says who worked where on what, coded by automation. Gate 1 is honest about
+    this: if the input lies, the system is fiction. Start with the lowest-friction capture that still
+    codes to job and cost code daily.</p>
+  </div>
+  <div class="faq">
+    <h3>How many cost codes do we need?</h3>
+    <p>Six to ten, in words the crew already uses. The failure mode is 40 codes nobody understands
+    (everything goes to "miscellaneous") — and the success mode is a short list where the estimate
+    buckets and the field buckets are the same list. Your accountant blesses the list once.</p>
+  </div>
+  <div class="faq">
+    <h3>When does this pay for itself?</h3>
+    <p>First at-risk flag in step 3 — one labor overrun caught mid-job usually funds the whole system.
+    Then quarterly, when step 5's actuals stop the estimate from repeating the same miss. There are no
+    vendor promises on this page; the payoff is the discipline, and the discipline is yours.</p>
+  </div>
+  <div class="faq">
+    <h3>Isn't this just job costing? Every contractor knows job costing.</h3>
+    <p>Every contractor knows <em>of</em> job costing — 41% can catch overruns while they're manageable
+    on even half their projects (CMiC/Dodge, August 2026). Knowing the concept and running the loop are
+    different things. This playbook is the loop: budget, code, flash, review, feed back — every week,
+    every job.</p>
+  </div>
+
+  <h2 class="sec">More field playbooks</h2>
+  <div class="cta">
+    <a class="ghost" href="voice-agent-playbook-for-contractors.html">Read playbook #1 (missed-call recovery)</a>
+    <a class="ghost" href="voice-agent-playbook-for-dental.html">Read playbook #2 (dental new-patient recovery)</a>
+    <a class="ghost" href="speed-to-lead-playbook-for-real-estate.html">Read playbook #3 (real-estate speed-to-lead)</a>
+    <a class="ghost" href="estimate-recovery-playbook-for-contractors.html">Read playbook #4 (unsold-estimate recovery)</a>
+    <a class="ghost" href="after-hours-dispatch-triage-playbook.html">Read playbook #5 (after-hours dispatch triage)</a>
+    <a class="ghost" href="review-capture-playbook-for-home-services.html">Read playbook #6 (review capture)</a>
+    <a class="ghost" href="no-show-recovery-playbook-for-dental.html">Read playbook #7 (dental no-show recovery)</a>
+    <a class="ghost" href="maintenance-plan-enrollment-playbook-for-hvac.html">Read playbook #8 (HVAC maintenance-plan enrollment)</a>
+    <a class="ghost" href="overdue-invoice-recovery-playbook-for-trades.html">Read playbook #9 (overdue-invoice recovery)</a>
+    <a class="ghost" href="post-season-tune-up-blitz-playbook-for-trades.html">Read playbook #10 (post-season tune-up blitz)</a>
+    <a class="ghost" href="post-job-upsell-playbook-for-trades.html">Read playbook #11 (post-job upsell)</a>
+    <a class="ghost" href="dormant-customer-reactivation-playbook-for-trades.html">Read playbook #12 (dormant-customer reactivation)</a>
+    <a class="ghost" href="same-day-reschedule-save-playbook-for-trades.html">Read playbook #13 (same-day reschedule save)</a>
+    <a class="ghost" href="referral-engine-playbook-for-trades.html">Read playbook #14 (referral engine)</a>
+    <a class="ghost" href="new-mover-playbook-for-home-services.html">Read playbook #15 (new-mover welcome)</a>
+    <a class="ghost" href="property-manager-contract-playbook-for-trades.html">Read playbook #16 (property-manager contracts)</a>
+    <a class="ghost" href="storm-response-playbook-for-exterior-trades.html">Read playbook #17 (storm response)</a>
+    <a class="ghost" href="end-of-life-equipment-ledger-playbook-for-trades.html">Read playbook #18 (end-of-life equipment ledger)</a>
+    <a class="ghost" href="subcontractor-coi-compliance-playbook-for-gcs.html">Read playbook #20 (subcontractor COI compliance)</a>
+    <a class="ghost" href="jobsite-video-content-engine-playbook-for-trades.html">Read playbook #21 (jobsite video engine)</a>
+    <a class="ghost" href="technician-hiring-funnel-playbook-for-trades.html">Read playbook #22 (technician hiring funnel)</a>
+    <a class="ghost" href="parts-ready-van-stock-playbook-for-trades.html">Read playbook #23 (parts-ready van stock)</a>
+    <a class="ghost" href="flat-rate-pricebook-playbook-for-trades.html">Read playbook #24 (flat-rate pricebook)</a>
+    <a class="ghost" href="change-order-capture-playbook-for-trades.html">Read playbook #25 (change-order capture)</a>
+    <a class="ghost" href="callback-containment-playbook-for-trades.html">Read playbook #26 (callback containment)</a>
+    <a class="ghost" href="financing-offer-playbook-for-trades.html">Read playbook #27 (financing offers)</a>
+    <a class="ghost" href="warranty-claims-recovery-playbook-for-trades.html">Read playbook #28 (warranty-claims recovery)</a>
+    <a class="ghost" href="workers-comp-audit-defense-playbook-for-trades.html">Read playbook #29 (workers-comp audit defense)</a>
+    <a class="ghost" href="lien-rights-preservation-playbook-for-trades.html">Read playbook #30 (lien-rights preservation)</a>
+    <a class="ghost" href="deposit-and-milestone-billing-playbook-for-trades.html">Read playbook #31 (deposit &amp;amp; milestone billing)</a>
+    <a class="ghost" href="annual-price-increase-playbook-for-trades.html">Read playbook #32 (annual price-increase)</a>
+    <a class="ghost" href="retainage-recovery-playbook-for-subcontractors.html">Read playbook #33 (retainage recovery)</a>
+    <a class="ghost" href="n8n-vs-make-workflow-automation.html">Compare the stack: n8n vs Make</a>
+</div>
+
+  <p style="font-size:13px;color:var(--mut)">Affiliate placeholders in this family: Make, Synthflow, ElevenLabs — terms checked on their own pages October 1–2, 2026. n8n is the self-hosted bench option. Every figure on this page is third-party and dated; confirm current terms and pricing on each vendor's own site before buying.</p>
+
+</main>
+<footer class="note">
+  FlowBench — independent automation playbooks for small business. Stats are third-party and dated, not guarantees. Verify terms on vendor sites before buying.
+</footer>
+</body>
+</html>
